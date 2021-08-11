@@ -144,7 +144,18 @@
   <metadata name="BalanceColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="rjButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="removeAccountButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAATJJREFUSEvt
+        1klKQ0EUheG3CQfGBtdhswBBg9uwzVoyUxQHDp0b3UkSXIXNTMX8BwxIcasvm0EOfPAI3FtUpV7V6xb5
+        j1nHKR4wwesXPeu3E6yhWVZwgXd8RnzgFhuoygFeYA0S8ow+ijKAZmA1TqHaM2RFM60ZdE49kme+ipLl
+        9dGy9xDNNawGNS4RjF6ZlN2bSz21kt5oM1iFLRzDm3tYRS3cwZtHWEUt6ITzRjvQLdhEbrbh9lFvb6yB
+        t5CbHbh9ggNP4Ra0MoY3f7a5dLVZRS0cwhvdpz9xgLwheIAoV7CKa5wjGl381u4u9YRlJGUXLZZc1+I+
+        sqJzu/ZDQN9oRdElXrLsWt49VGUJQ2hnWoN8p1neIPk/TYleB11tI+gU0leK6FmHwxGir8wiv5yumwFn
+        w6UPdw5vgQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="transferBudgetButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAATJJREFUSEvt
         1klKQ0EUheG3CQfGBtdhswBBg9uwzVoyUxQHDp0b3UkSXIXNTMX8BwxIcasvm0EOfPAI3FtUpV7V6xb5

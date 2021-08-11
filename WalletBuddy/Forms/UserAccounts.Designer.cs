@@ -37,7 +37,8 @@ namespace WalletBuddy.Forms
       this.DescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.StartingAmountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.BalanceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.rjButton1 = new WalletBuddy.CustomControl.RJButton();
+      this.removeAccountButton = new WalletBuddy.CustomControl.RJButton();
+      this.transferBudgetButton = new WalletBuddy.CustomControl.RJButton();
       ((System.ComponentModel.ISupportInitialize)(this.AccountDataGridView)).BeginInit();
       this.SuspendLayout();
       // 
@@ -113,35 +114,59 @@ namespace WalletBuddy.Forms
       this.BalanceColumn.HeaderText = "Balance";
       this.BalanceColumn.Name = "BalanceColumn";
       // 
-      // rjButton1
+      // removeAccountButton
       // 
-      this.rjButton1.BackColor = System.Drawing.Color.White;
-      this.rjButton1.BackgroundColor = System.Drawing.Color.White;
-      this.rjButton1.BorderColor = System.Drawing.Color.Black;
-      this.rjButton1.BorderRadius = 10;
-      this.rjButton1.BorderSize = 1;
-      this.rjButton1.FlatAppearance.BorderSize = 0;
-      this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.rjButton1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.rjButton1.ForeColor = System.Drawing.Color.SlateGray;
-      this.rjButton1.Image = ((System.Drawing.Image)(resources.GetObject("rjButton1.Image")));
-      this.rjButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.rjButton1.Location = new System.Drawing.Point(129, 5);
-      this.rjButton1.Margin = new System.Windows.Forms.Padding(2);
-      this.rjButton1.Name = "rjButton1";
-      this.rjButton1.Size = new System.Drawing.Size(143, 37);
-      this.rjButton1.TabIndex = 3;
-      this.rjButton1.Text = "Remove Account";
-      this.rjButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-      this.rjButton1.TextColor = System.Drawing.Color.SlateGray;
-      this.rjButton1.UseVisualStyleBackColor = false;
+      this.removeAccountButton.BackColor = System.Drawing.Color.White;
+      this.removeAccountButton.BackgroundColor = System.Drawing.Color.White;
+      this.removeAccountButton.BorderColor = System.Drawing.Color.Black;
+      this.removeAccountButton.BorderRadius = 10;
+      this.removeAccountButton.BorderSize = 1;
+      this.removeAccountButton.FlatAppearance.BorderSize = 0;
+      this.removeAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.removeAccountButton.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.removeAccountButton.ForeColor = System.Drawing.Color.SlateGray;
+      this.removeAccountButton.Image = ((System.Drawing.Image)(resources.GetObject("removeAccountButton.Image")));
+      this.removeAccountButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      this.removeAccountButton.Location = new System.Drawing.Point(129, 5);
+      this.removeAccountButton.Margin = new System.Windows.Forms.Padding(2);
+      this.removeAccountButton.Name = "removeAccountButton";
+      this.removeAccountButton.Size = new System.Drawing.Size(143, 37);
+      this.removeAccountButton.TabIndex = 3;
+      this.removeAccountButton.Text = "Remove Account";
+      this.removeAccountButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      this.removeAccountButton.TextColor = System.Drawing.Color.SlateGray;
+      this.removeAccountButton.UseVisualStyleBackColor = false;
+      // 
+      // transferBudgetButton
+      // 
+      this.transferBudgetButton.BackColor = System.Drawing.Color.White;
+      this.transferBudgetButton.BackgroundColor = System.Drawing.Color.White;
+      this.transferBudgetButton.BorderColor = System.Drawing.Color.Black;
+      this.transferBudgetButton.BorderRadius = 10;
+      this.transferBudgetButton.BorderSize = 1;
+      this.transferBudgetButton.FlatAppearance.BorderSize = 0;
+      this.transferBudgetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.transferBudgetButton.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.transferBudgetButton.ForeColor = System.Drawing.Color.SlateGray;
+      this.transferBudgetButton.Image = ((System.Drawing.Image)(resources.GetObject("transferBudgetButton.Image")));
+      this.transferBudgetButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      this.transferBudgetButton.Location = new System.Drawing.Point(276, 5);
+      this.transferBudgetButton.Margin = new System.Windows.Forms.Padding(2);
+      this.transferBudgetButton.Name = "transferBudgetButton";
+      this.transferBudgetButton.Size = new System.Drawing.Size(143, 37);
+      this.transferBudgetButton.TabIndex = 3;
+      this.transferBudgetButton.Text = "Transfer Budget";
+      this.transferBudgetButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      this.transferBudgetButton.TextColor = System.Drawing.Color.SlateGray;
+      this.transferBudgetButton.UseVisualStyleBackColor = false;
       // 
       // UserAccounts
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(928, 421);
-      this.Controls.Add(this.rjButton1);
+      this.Controls.Add(this.transferBudgetButton);
+      this.Controls.Add(this.removeAccountButton);
       this.Controls.Add(this.addAccountButton);
       this.Controls.Add(this.AccountDataGridView);
       this.Margin = new System.Windows.Forms.Padding(2);
@@ -156,11 +181,12 @@ namespace WalletBuddy.Forms
 
     private CustomControl.RJButton addAccountButton;
     private ComponentFactory.Krypton.Toolkit.KryptonDataGridView AccountDataGridView;
-    private CustomControl.RJButton rjButton1;
+    private CustomControl.RJButton removeAccountButton;
     private System.Windows.Forms.DataGridViewTextBoxColumn AccountNameColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn AccountTypeColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn DescriptionColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn StartingAmountColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn BalanceColumn;
+    private CustomControl.RJButton transferBudgetButton;
   }
 }

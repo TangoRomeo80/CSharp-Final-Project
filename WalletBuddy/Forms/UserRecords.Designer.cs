@@ -97,6 +97,7 @@ namespace WalletBuddy.Forms
       this.recordWeeklyRadio.Text = "Weekly";
       this.recordWeeklyRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       this.recordWeeklyRadio.UseVisualStyleBackColor = false;
+      this.recordWeeklyRadio.CheckedChanged += new System.EventHandler(this.recordWeeklyRadio_CheckedChanged);
       // 
       // recordMonthlyRadio
       // 
@@ -113,6 +114,7 @@ namespace WalletBuddy.Forms
       this.recordMonthlyRadio.Text = "Monthly";
       this.recordMonthlyRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       this.recordMonthlyRadio.UseVisualStyleBackColor = false;
+      this.recordMonthlyRadio.CheckedChanged += new System.EventHandler(this.recordMonthlyRadio_CheckedChanged);
       // 
       // recordYearlyRadio
       // 
@@ -129,6 +131,7 @@ namespace WalletBuddy.Forms
       this.recordYearlyRadio.Text = "Yearly";
       this.recordYearlyRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       this.recordYearlyRadio.UseVisualStyleBackColor = false;
+      this.recordYearlyRadio.CheckedChanged += new System.EventHandler(this.recordYearlyRadio_CheckedChanged);
       // 
       // UserRecords
       // 

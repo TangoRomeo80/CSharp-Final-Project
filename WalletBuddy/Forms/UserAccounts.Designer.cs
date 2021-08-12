@@ -31,15 +31,14 @@ namespace WalletBuddy.Forms
     {
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserAccounts));
       this.addAccountButton = new WalletBuddy.CustomControl.RJButton();
-      this.AccountDataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+      this.accountDataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
       this.AccountNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.AccountTypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.DescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.StartingAmountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.BalanceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.removeAccountButton = new WalletBuddy.CustomControl.RJButton();
       this.transferBudgetButton = new WalletBuddy.CustomControl.RJButton();
-      ((System.ComponentModel.ISupportInitialize)(this.AccountDataGridView)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.accountDataGridView)).BeginInit();
       this.SuspendLayout();
       // 
       // addAccountButton
@@ -66,53 +65,54 @@ namespace WalletBuddy.Forms
       this.addAccountButton.UseVisualStyleBackColor = false;
       this.addAccountButton.Click += new System.EventHandler(this.addAccountButton_Click);
       // 
-      // AccountDataGridView
+      // accountDataGridView
       // 
-      this.AccountDataGridView.AllowUserToOrderColumns = true;
-      this.AccountDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-      this.AccountDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.AccountDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+      this.accountDataGridView.AllowUserToAddRows = false;
+      this.accountDataGridView.AllowUserToDeleteRows = false;
+      this.accountDataGridView.AllowUserToOrderColumns = true;
+      this.accountDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+      this.accountDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.accountDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AccountNameColumn,
-            this.AccountTypeColumn,
             this.DescriptionColumn,
             this.StartingAmountColumn,
             this.BalanceColumn});
-      this.AccountDataGridView.Location = new System.Drawing.Point(13, 47);
-      this.AccountDataGridView.Name = "AccountDataGridView";
-      this.AccountDataGridView.Size = new System.Drawing.Size(903, 369);
-      this.AccountDataGridView.StateCommon.Background.Color1 = System.Drawing.Color.LightGray;
-      this.AccountDataGridView.StateCommon.Background.Color2 = System.Drawing.Color.LightGray;
-      this.AccountDataGridView.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
-      this.AccountDataGridView.StateCommon.DataCell.Back.Color1 = System.Drawing.Color.DarkGray;
-      this.AccountDataGridView.StateCommon.DataCell.Back.Color2 = System.Drawing.Color.DarkGray;
-      this.AccountDataGridView.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.Gray;
-      this.AccountDataGridView.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.Color.Gray;
-      this.AccountDataGridView.TabIndex = 2;
+      this.accountDataGridView.Location = new System.Drawing.Point(13, 47);
+      this.accountDataGridView.Name = "accountDataGridView";
+      this.accountDataGridView.ReadOnly = true;
+      this.accountDataGridView.Size = new System.Drawing.Size(903, 369);
+      this.accountDataGridView.StateCommon.Background.Color1 = System.Drawing.Color.LightGray;
+      this.accountDataGridView.StateCommon.Background.Color2 = System.Drawing.Color.LightGray;
+      this.accountDataGridView.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+      this.accountDataGridView.StateCommon.DataCell.Back.Color1 = System.Drawing.Color.DarkGray;
+      this.accountDataGridView.StateCommon.DataCell.Back.Color2 = System.Drawing.Color.DarkGray;
+      this.accountDataGridView.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.Gray;
+      this.accountDataGridView.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.Color.Gray;
+      this.accountDataGridView.TabIndex = 2;
       // 
       // AccountNameColumn
       // 
       this.AccountNameColumn.HeaderText = "Account Name";
       this.AccountNameColumn.Name = "AccountNameColumn";
-      // 
-      // AccountTypeColumn
-      // 
-      this.AccountTypeColumn.HeaderText = "Account Type";
-      this.AccountTypeColumn.Name = "AccountTypeColumn";
+      this.AccountNameColumn.ReadOnly = true;
       // 
       // DescriptionColumn
       // 
       this.DescriptionColumn.HeaderText = "Description";
       this.DescriptionColumn.Name = "DescriptionColumn";
+      this.DescriptionColumn.ReadOnly = true;
       // 
       // StartingAmountColumn
       // 
       this.StartingAmountColumn.HeaderText = "Starting Amount";
       this.StartingAmountColumn.Name = "StartingAmountColumn";
+      this.StartingAmountColumn.ReadOnly = true;
       // 
       // BalanceColumn
       // 
       this.BalanceColumn.HeaderText = "Balance";
       this.BalanceColumn.Name = "BalanceColumn";
+      this.BalanceColumn.ReadOnly = true;
       // 
       // removeAccountButton
       // 
@@ -136,6 +136,7 @@ namespace WalletBuddy.Forms
       this.removeAccountButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
       this.removeAccountButton.TextColor = System.Drawing.Color.SlateGray;
       this.removeAccountButton.UseVisualStyleBackColor = false;
+      this.removeAccountButton.Click += new System.EventHandler(this.removeAccountButton_Click);
       // 
       // transferBudgetButton
       // 
@@ -168,11 +169,11 @@ namespace WalletBuddy.Forms
       this.Controls.Add(this.transferBudgetButton);
       this.Controls.Add(this.removeAccountButton);
       this.Controls.Add(this.addAccountButton);
-      this.Controls.Add(this.AccountDataGridView);
+      this.Controls.Add(this.accountDataGridView);
       this.Margin = new System.Windows.Forms.Padding(2);
       this.Name = "UserAccounts";
       this.Text = "UserAccounts";
-      ((System.ComponentModel.ISupportInitialize)(this.AccountDataGridView)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.accountDataGridView)).EndInit();
       this.ResumeLayout(false);
 
     }
@@ -180,13 +181,12 @@ namespace WalletBuddy.Forms
     #endregion
 
     private CustomControl.RJButton addAccountButton;
-    private ComponentFactory.Krypton.Toolkit.KryptonDataGridView AccountDataGridView;
+    private ComponentFactory.Krypton.Toolkit.KryptonDataGridView accountDataGridView;
     private CustomControl.RJButton removeAccountButton;
+    private CustomControl.RJButton transferBudgetButton;
     private System.Windows.Forms.DataGridViewTextBoxColumn AccountNameColumn;
-    private System.Windows.Forms.DataGridViewTextBoxColumn AccountTypeColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn DescriptionColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn StartingAmountColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn BalanceColumn;
-    private CustomControl.RJButton transferBudgetButton;
   }
 }

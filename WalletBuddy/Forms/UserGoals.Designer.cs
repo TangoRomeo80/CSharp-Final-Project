@@ -65,6 +65,8 @@ namespace WalletBuddy.Forms
       // 
       // GoalDataGridView
       // 
+      this.GoalDataGridView.AllowUserToAddRows = false;
+      this.GoalDataGridView.AllowUserToDeleteRows = false;
       this.GoalDataGridView.AllowUserToOrderColumns = true;
       this.GoalDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
       this.GoalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -75,6 +77,7 @@ namespace WalletBuddy.Forms
             this.RemainingIncomeColumn});
       this.GoalDataGridView.Location = new System.Drawing.Point(13, 47);
       this.GoalDataGridView.Name = "GoalDataGridView";
+      this.GoalDataGridView.ReadOnly = true;
       this.GoalDataGridView.Size = new System.Drawing.Size(903, 369);
       this.GoalDataGridView.StateCommon.Background.Color1 = System.Drawing.Color.LightSkyBlue;
       this.GoalDataGridView.StateCommon.Background.Color2 = System.Drawing.Color.LightSkyBlue;
@@ -89,21 +92,25 @@ namespace WalletBuddy.Forms
       // 
       this.GoalDurationColumn.HeaderText = "Goal Duration";
       this.GoalDurationColumn.Name = "GoalDurationColumn";
+      this.GoalDurationColumn.ReadOnly = true;
       // 
       // TargetSavingsColumn
       // 
       this.TargetSavingsColumn.HeaderText = "Target Savings";
       this.TargetSavingsColumn.Name = "TargetSavingsColumn";
+      this.TargetSavingsColumn.ReadOnly = true;
       // 
       // CurrentExpenseColumn
       // 
       this.CurrentExpenseColumn.HeaderText = "Current Expense";
       this.CurrentExpenseColumn.Name = "CurrentExpenseColumn";
+      this.CurrentExpenseColumn.ReadOnly = true;
       // 
       // RemainingIncomeColumn
       // 
       this.RemainingIncomeColumn.HeaderText = "Remaining income to spend";
       this.RemainingIncomeColumn.Name = "RemainingIncomeColumn";
+      this.RemainingIncomeColumn.ReadOnly = true;
       // 
       // UserGoals
       // 

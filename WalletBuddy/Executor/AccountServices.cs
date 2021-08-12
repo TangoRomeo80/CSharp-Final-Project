@@ -17,6 +17,21 @@ namespace WalletBuddy.Executor
       this.accountDataAccess = new AccountDataAccess();
     }
 
+    public List<Account> GetAccountList(User user)
+    {
+      return accountDataAccess.GetAccountList(user);
+    }
+
+    public int AddAccount(Account account)
+    {
+      return accountDataAccess.AddAccount(account);
+    }
+
+    public int RemoveAccount(User user, Account account)
+    {
+      return accountDataAccess.RemoveAccount(user, account);
+    }
+
     public int AddIncomeToAccount(Account account, User user, int amount)
     {
       return accountDataAccess.AddIncomeToAccount(account, user, amount);

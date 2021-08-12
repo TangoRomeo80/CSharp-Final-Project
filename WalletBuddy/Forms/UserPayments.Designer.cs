@@ -66,6 +66,8 @@ namespace WalletBuddy.Forms
       // 
       // PaymentDataGridView
       // 
+      this.PaymentDataGridView.AllowUserToAddRows = false;
+      this.PaymentDataGridView.AllowUserToDeleteRows = false;
       this.PaymentDataGridView.AllowUserToOrderColumns = true;
       this.PaymentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
       this.PaymentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -77,6 +79,7 @@ namespace WalletBuddy.Forms
             this.DueDateColumn});
       this.PaymentDataGridView.Location = new System.Drawing.Point(13, 47);
       this.PaymentDataGridView.Name = "PaymentDataGridView";
+      this.PaymentDataGridView.ReadOnly = true;
       this.PaymentDataGridView.Size = new System.Drawing.Size(903, 369);
       this.PaymentDataGridView.StateCommon.Background.Color1 = System.Drawing.Color.LightGray;
       this.PaymentDataGridView.StateCommon.Background.Color2 = System.Drawing.Color.LightGray;
@@ -91,26 +94,31 @@ namespace WalletBuddy.Forms
       // 
       this.PaymentNameColumn.HeaderText = "Payment Name";
       this.PaymentNameColumn.Name = "PaymentNameColumn";
+      this.PaymentNameColumn.ReadOnly = true;
       // 
       // PaymentRecieverColumn
       // 
       this.PaymentRecieverColumn.HeaderText = "Payment Reciever";
       this.PaymentRecieverColumn.Name = "PaymentRecieverColumn";
+      this.PaymentRecieverColumn.ReadOnly = true;
       // 
       // DescriptionColumn
       // 
       this.DescriptionColumn.HeaderText = "Description";
       this.DescriptionColumn.Name = "DescriptionColumn";
+      this.DescriptionColumn.ReadOnly = true;
       // 
       // AmountColumn
       // 
       this.AmountColumn.HeaderText = "Amount";
       this.AmountColumn.Name = "AmountColumn";
+      this.AmountColumn.ReadOnly = true;
       // 
       // DueDateColumn
       // 
       this.DueDateColumn.HeaderText = "Due Date";
       this.DueDateColumn.Name = "DueDateColumn";
+      this.DueDateColumn.ReadOnly = true;
       // 
       // UserPayments
       // 

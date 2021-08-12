@@ -30,28 +30,29 @@ namespace WalletBuddy.Forms
     private void InitializeComponent()
     {
       this.recordsDataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-      this.TransactionIDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.TransactionTypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.AmountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.recordWeeklyRadio = new System.Windows.Forms.RadioButton();
       this.recordMonthlyRadio = new System.Windows.Forms.RadioButton();
       this.recordYearlyRadio = new System.Windows.Forms.RadioButton();
+      this.TransactionTypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.AmountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       ((System.ComponentModel.ISupportInitialize)(this.recordsDataGridView)).BeginInit();
       this.SuspendLayout();
       // 
       // recordsDataGridView
       // 
+      this.recordsDataGridView.AllowUserToAddRows = false;
+      this.recordsDataGridView.AllowUserToDeleteRows = false;
       this.recordsDataGridView.AllowUserToOrderColumns = true;
       this.recordsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
       this.recordsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
       this.recordsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TransactionIDColumn,
             this.TransactionTypeColumn,
             this.AmountColumn,
             this.DateColumn});
       this.recordsDataGridView.Location = new System.Drawing.Point(13, 47);
       this.recordsDataGridView.Name = "recordsDataGridView";
+      this.recordsDataGridView.ReadOnly = true;
       this.recordsDataGridView.Size = new System.Drawing.Size(903, 369);
       this.recordsDataGridView.StateCommon.Background.Color1 = System.Drawing.Color.LightGray;
       this.recordsDataGridView.StateCommon.Background.Color2 = System.Drawing.Color.LightGray;
@@ -61,26 +62,6 @@ namespace WalletBuddy.Forms
       this.recordsDataGridView.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.Gray;
       this.recordsDataGridView.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.Color.Gray;
       this.recordsDataGridView.TabIndex = 4;
-      // 
-      // TransactionIDColumn
-      // 
-      this.TransactionIDColumn.HeaderText = "Transaction ID";
-      this.TransactionIDColumn.Name = "TransactionIDColumn";
-      // 
-      // TransactionTypeColumn
-      // 
-      this.TransactionTypeColumn.HeaderText = "Transaction Type";
-      this.TransactionTypeColumn.Name = "TransactionTypeColumn";
-      // 
-      // AmountColumn
-      // 
-      this.AmountColumn.HeaderText = "Amount";
-      this.AmountColumn.Name = "AmountColumn";
-      // 
-      // DateColumn
-      // 
-      this.DateColumn.HeaderText = "Date";
-      this.DateColumn.Name = "DateColumn";
       // 
       // recordWeeklyRadio
       // 
@@ -133,6 +114,24 @@ namespace WalletBuddy.Forms
       this.recordYearlyRadio.UseVisualStyleBackColor = false;
       this.recordYearlyRadio.CheckedChanged += new System.EventHandler(this.recordYearlyRadio_CheckedChanged);
       // 
+      // TransactionTypeColumn
+      // 
+      this.TransactionTypeColumn.HeaderText = "Transaction Type";
+      this.TransactionTypeColumn.Name = "TransactionTypeColumn";
+      this.TransactionTypeColumn.ReadOnly = true;
+      // 
+      // AmountColumn
+      // 
+      this.AmountColumn.HeaderText = "Amount";
+      this.AmountColumn.Name = "AmountColumn";
+      this.AmountColumn.ReadOnly = true;
+      // 
+      // DateColumn
+      // 
+      this.DateColumn.HeaderText = "Date";
+      this.DateColumn.Name = "DateColumn";
+      this.DateColumn.ReadOnly = true;
+      // 
       // UserRecords
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,7 +155,6 @@ namespace WalletBuddy.Forms
     private System.Windows.Forms.RadioButton recordWeeklyRadio;
     private System.Windows.Forms.RadioButton recordMonthlyRadio;
     private System.Windows.Forms.RadioButton recordYearlyRadio;
-    private System.Windows.Forms.DataGridViewTextBoxColumn TransactionIDColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn TransactionTypeColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn AmountColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn DateColumn;

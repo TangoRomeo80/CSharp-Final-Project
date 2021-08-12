@@ -31,7 +31,7 @@ namespace WalletBuddy.Forms
       List<Expense> expenseList = expenseServices.GetExpenseList(this.user);
       foreach (Expense expense in expenseList)
       {
-        expenseDataGridView.Rows.Add(expense.TransactionId, expense.PaymentTo, expense.Description, expense.AccountName, expense.Amount, expense.Date.ToString("dd/MM/yyyy"));
+        expenseDataGridView.Rows.Add(expense.PaymentTo, expense.Description, expense.AccountName, expense.Amount, expense.Date.ToString("dd/MM/yyyy"));
       }
     }
 

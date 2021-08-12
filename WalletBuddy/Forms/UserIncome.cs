@@ -31,7 +31,7 @@ namespace WalletBuddy.Forms
       List<Income> incomeList = incomeServices.GetIncomeList(this.user);
       foreach(Income income in incomeList)
       {
-        incomeDataGridView.Rows.Add(income.TransactionId, income.PaymentFrom, income.Description, income.AccountName, income.Amount, income.Date.ToString("dd/MM/yyyy"));
+        incomeDataGridView.Rows.Add(income.PaymentFrom, income.Description, income.AccountName, income.Amount, income.Date.ToString("dd/MM/yyyy"));
       }
     }
 

@@ -31,23 +31,23 @@ namespace WalletBuddy.Forms
     {
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserExpense));
       this.expenseDataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-      this.TransactionIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.addExpenseButton = new WalletBuddy.CustomControl.RJButton();
       this.PaymentToColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.DescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.AccountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.AmountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.addExpenseButton = new WalletBuddy.CustomControl.RJButton();
       ((System.ComponentModel.ISupportInitialize)(this.expenseDataGridView)).BeginInit();
       this.SuspendLayout();
       // 
       // expenseDataGridView
       // 
+      this.expenseDataGridView.AllowUserToAddRows = false;
+      this.expenseDataGridView.AllowUserToDeleteRows = false;
       this.expenseDataGridView.AllowUserToOrderColumns = true;
       this.expenseDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
       this.expenseDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
       this.expenseDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TransactionIdColumn,
             this.PaymentToColumn,
             this.DescriptionColumn,
             this.AccountColumn,
@@ -55,6 +55,7 @@ namespace WalletBuddy.Forms
             this.DateColumn});
       this.expenseDataGridView.Location = new System.Drawing.Point(13, 49);
       this.expenseDataGridView.Name = "expenseDataGridView";
+      this.expenseDataGridView.ReadOnly = true;
       this.expenseDataGridView.Size = new System.Drawing.Size(903, 369);
       this.expenseDataGridView.StateCommon.Background.Color1 = System.Drawing.Color.LightPink;
       this.expenseDataGridView.StateCommon.Background.Color2 = System.Drawing.Color.LightPink;
@@ -64,36 +65,6 @@ namespace WalletBuddy.Forms
       this.expenseDataGridView.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.Crimson;
       this.expenseDataGridView.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.Color.Crimson;
       this.expenseDataGridView.TabIndex = 0;
-      // 
-      // TransactionIdColumn
-      // 
-      this.TransactionIdColumn.HeaderText = "Transaction ID";
-      this.TransactionIdColumn.Name = "TransactionIdColumn";
-      // 
-      // PaymentToColumn
-      // 
-      this.PaymentToColumn.HeaderText = "Payment To";
-      this.PaymentToColumn.Name = "PaymentToColumn";
-      // 
-      // DescriptionColumn
-      // 
-      this.DescriptionColumn.HeaderText = "Description";
-      this.DescriptionColumn.Name = "DescriptionColumn";
-      // 
-      // AccountColumn
-      // 
-      this.AccountColumn.HeaderText = "Account";
-      this.AccountColumn.Name = "AccountColumn";
-      // 
-      // AmountColumn
-      // 
-      this.AmountColumn.HeaderText = "Amount";
-      this.AmountColumn.Name = "AmountColumn";
-      // 
-      // DateColumn
-      // 
-      this.DateColumn.HeaderText = "Date";
-      this.DateColumn.Name = "DateColumn";
       // 
       // addExpenseButton
       // 
@@ -119,6 +90,36 @@ namespace WalletBuddy.Forms
       this.addExpenseButton.UseVisualStyleBackColor = false;
       this.addExpenseButton.Click += new System.EventHandler(this.addExpenseButton_Click);
       // 
+      // PaymentToColumn
+      // 
+      this.PaymentToColumn.HeaderText = "Payment To";
+      this.PaymentToColumn.Name = "PaymentToColumn";
+      this.PaymentToColumn.ReadOnly = true;
+      // 
+      // DescriptionColumn
+      // 
+      this.DescriptionColumn.HeaderText = "Description";
+      this.DescriptionColumn.Name = "DescriptionColumn";
+      this.DescriptionColumn.ReadOnly = true;
+      // 
+      // AccountColumn
+      // 
+      this.AccountColumn.HeaderText = "Account";
+      this.AccountColumn.Name = "AccountColumn";
+      this.AccountColumn.ReadOnly = true;
+      // 
+      // AmountColumn
+      // 
+      this.AmountColumn.HeaderText = "Amount";
+      this.AmountColumn.Name = "AmountColumn";
+      this.AmountColumn.ReadOnly = true;
+      // 
+      // DateColumn
+      // 
+      this.DateColumn.HeaderText = "Date";
+      this.DateColumn.Name = "DateColumn";
+      this.DateColumn.ReadOnly = true;
+      // 
       // UserExpense
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,7 +139,6 @@ namespace WalletBuddy.Forms
 
     private ComponentFactory.Krypton.Toolkit.KryptonDataGridView expenseDataGridView;
     private CustomControl.RJButton addExpenseButton;
-    private System.Windows.Forms.DataGridViewTextBoxColumn TransactionIdColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn PaymentToColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn DescriptionColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn AccountColumn;

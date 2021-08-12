@@ -31,7 +31,7 @@ namespace WalletBuddy.Forms
       List<Transaction> transactionList = transactionServices.GetAllTransactionList(this.user);
       foreach (Transaction transaction in transactionList)
       {
-        recordsDataGridView.Rows.Add(transaction.TransactionId, transaction.TransactionType, transaction.Amount, transaction.Date.ToString("dd/MM/yyyy"));
+        recordsDataGridView.Rows.Add(transaction.TransactionType, transaction.Amount, transaction.Date.ToString("dd/MM/yyyy"));
       }
     }
 
@@ -48,7 +48,7 @@ namespace WalletBuddy.Forms
       }
       foreach (Transaction transaction in weeklyTransactionList)
       {
-        recordsDataGridView.Rows.Add(transaction.TransactionId, transaction.TransactionType, transaction.Amount, transaction.Date.ToString("dd/MM/yyyy"));
+        recordsDataGridView.Rows.Add(transaction.TransactionType, transaction.Amount, transaction.Date.ToString("dd/MM/yyyy"));
       }
     }
 
@@ -65,7 +65,7 @@ namespace WalletBuddy.Forms
       }
       foreach (Transaction transaction in monthlyTransactionList)
       {
-        recordsDataGridView.Rows.Add(transaction.TransactionId, transaction.TransactionType, transaction.Amount, transaction.Date.ToString("dd/MM/yyyy"));
+        recordsDataGridView.Rows.Add(transaction.TransactionType, transaction.Amount, transaction.Date.ToString("dd/MM/yyyy"));
       }
     }
 
@@ -82,7 +82,7 @@ namespace WalletBuddy.Forms
       }
       foreach (Transaction transaction in yearlyTransactionList)
       {
-        recordsDataGridView.Rows.Add(transaction.TransactionId, transaction.TransactionType, transaction.Amount, transaction.Date.ToString("dd/MM/yyyy"));
+        recordsDataGridView.Rows.Add(transaction.TransactionType, transaction.Amount, transaction.Date.ToString("dd/MM/yyyy"));
       }
     }
 

@@ -160,6 +160,7 @@ namespace WalletBuddy.Forms
       this.transferBudgetButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
       this.transferBudgetButton.TextColor = System.Drawing.Color.SlateGray;
       this.transferBudgetButton.UseVisualStyleBackColor = false;
+      this.transferBudgetButton.Click += new System.EventHandler(this.transferBudgetButton_Click);
       // 
       // UserAccounts
       // 

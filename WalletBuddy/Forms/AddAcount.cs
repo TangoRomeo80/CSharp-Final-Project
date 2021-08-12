@@ -43,6 +43,7 @@ namespace WalletBuddy.Forms
           UserName = user.UserName,
           StartingAmount = Convert.ToInt32(startingAmountTextBox.Texts),
           AccountName = accountNameTextBox.Texts,
+          Balance = 0 + Convert.ToInt32(startingAmountTextBox.Texts),
           AccountDescription = descriptionTextBox.Texts
         };
         int success = accountServices.AddAccount(account);

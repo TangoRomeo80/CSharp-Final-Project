@@ -88,6 +88,12 @@
     <Compile Include="Executor\IncomeServices.cs" />
     <Compile Include="Executor\TransactionServices.cs" />
     <Compile Include="Executor\UserServices.cs" />
+    <Compile Include="Forms\TransferBudget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransferBudget.Designer.cs">
+      <DependentUpon>TransferBudget.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     <EmbeddedResource Include="CustomControl\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransferBudget.resx">
+      <DependentUpon>TransferBudget.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +365,7 @@
     <Content Include="Resources\Splash.png" />
     <Content Include="Resources\Support Icon.png" />
     <Content Include="Resources\Tick icon.png" />
+    <Content Include="Resources\Transfer icon.png" />
     <Content Include="Resources\User icon.png" />
     <Content Include="Resources\User List Icon.png" />
   </ItemGroup>

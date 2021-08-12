@@ -70,5 +70,16 @@ namespace WalletBuddy.DB
       string query2 = "UPDATE ACCOUNT_TBL SET BALANCE = '" + balance + "' WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_NAME = '" + user.UserName + "'";
       return this.ExecuteQuery(query2);
     }
+
+    public string CheckAccountName(Account account, User user)
+    {
+      string query = "SELECT * FROM ACCOUNT_TBL WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_NAME = '" + user.UserName + "'";
+      SqlDataReader reader = GetData(query);
+      if (reader.Read())
+      {
+        return reader["ACCOUNT_NAME"].ToString();
+      }
+      return null;
+    }
   }
 }

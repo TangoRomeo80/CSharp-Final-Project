@@ -48,22 +48,35 @@ namespace WalletBuddy.Forms
 
     private void removeAccountButton_Click(object sender, EventArgs e)
     {
-      string accountName = accountDataGridView.SelectedRows[0].Cells[0].Value.ToString();
-      AccountServices accountServices = new AccountServices();
-      Account account = new Account()
+      if (accountDataGridView.SelectedRows.Count <= 0)
       {
-        AccountName = accountName
-      };
-      int success = accountServices.RemoveAccount(this.user, account);
-      if(success > 0)
-      {
-        MessageBox.Show("Account record Removed successfully");
-        UpdateDataGrid();
+        MessageBox.Show("No account is selected for removal");
       }
       else
       {
-        MessageBox.Show("An Unexpected error Occured. Record could not be Removed.");
+        string accountName = accountDataGridView.SelectedRows[0].Cells[0].Value.ToString();
+        AccountServices accountServices = new AccountServices();
+        Account account = new Account()
+        {
+          AccountName = accountName
+        };
+        int success = accountServices.RemoveAccount(this.user, account);
+        if (success > 0)
+        {
+          MessageBox.Show("Account record Removed successfully");
+          UpdateDataGrid();
+        }
+        else
+        {
+          MessageBox.Show("An Unexpected error Occured. Record could not be Removed.");
+        }
       }
+    }
+
+    private void transferBudgetButton_Click(object sender, EventArgs e)
+    {
+      TransferBudget transferBudget = new TransferBudget(this.user, this);
+      transferBudget.Show();
     }
   }
 }

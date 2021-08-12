@@ -42,5 +42,18 @@ namespace WalletBuddy.Executor
       return accountDataAccess.AddExpenseToAccount(account, user, amount);
     }
 
+    public string CheckAccountName(Account account, User user)
+    {
+      return this.accountDataAccess.CheckAccountName(account, user);
+    }
+
+    public int TransferBalance(Account senderAccount, Account recieverAccount, User user, int amount)
+    {
+      int success = 0;
+      success = AddIncomeToAccount(recieverAccount, user, amount);
+      success = AddExpenseToAccount(senderAccount, user, amount);
+      return success;
+    }
+
   }
 }

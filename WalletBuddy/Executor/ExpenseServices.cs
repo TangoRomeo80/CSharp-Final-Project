@@ -37,6 +37,17 @@ namespace WalletBuddy.Executor
       };
       AccountServices accountServices = new AccountServices();
       success = accountServices.AddExpenseToAccount(account, user, expense.Amount);
+
+      Transaction transaction = new Transaction()
+      {
+        UserName = expense.UserName,
+        Amount = expense.Amount,
+        TransactionType = "Expense",
+        Date = expense.Date
+      };
+      TransactionServices transactionServices = new TransactionServices();
+      success = transactionServices.AddTransaction(transaction);
+
       return success;
     }
 

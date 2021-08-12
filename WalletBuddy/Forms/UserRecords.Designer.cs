@@ -29,38 +29,58 @@ namespace WalletBuddy.Forms
     /// </summary>
     private void InitializeComponent()
     {
-      this.RecordsDataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-      this.recordWeeklyRadio = new System.Windows.Forms.RadioButton();
-      this.recordMonthlyRadio = new System.Windows.Forms.RadioButton();
-      this.recordYearlyRadio = new System.Windows.Forms.RadioButton();
+      this.recordsDataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
       this.TransactionIDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.TransactionTypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.AmountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      ((System.ComponentModel.ISupportInitialize)(this.RecordsDataGridView)).BeginInit();
+      this.recordWeeklyRadio = new System.Windows.Forms.RadioButton();
+      this.recordMonthlyRadio = new System.Windows.Forms.RadioButton();
+      this.recordYearlyRadio = new System.Windows.Forms.RadioButton();
+      ((System.ComponentModel.ISupportInitialize)(this.recordsDataGridView)).BeginInit();
       this.SuspendLayout();
       // 
-      // RecordsDataGridView
+      // recordsDataGridView
       // 
-      this.RecordsDataGridView.AllowUserToOrderColumns = true;
-      this.RecordsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-      this.RecordsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.RecordsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+      this.recordsDataGridView.AllowUserToOrderColumns = true;
+      this.recordsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+      this.recordsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.recordsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TransactionIDColumn,
             this.TransactionTypeColumn,
             this.AmountColumn,
             this.DateColumn});
-      this.RecordsDataGridView.Location = new System.Drawing.Point(13, 47);
-      this.RecordsDataGridView.Name = "RecordsDataGridView";
-      this.RecordsDataGridView.Size = new System.Drawing.Size(903, 369);
-      this.RecordsDataGridView.StateCommon.Background.Color1 = System.Drawing.Color.LightGray;
-      this.RecordsDataGridView.StateCommon.Background.Color2 = System.Drawing.Color.LightGray;
-      this.RecordsDataGridView.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
-      this.RecordsDataGridView.StateCommon.DataCell.Back.Color1 = System.Drawing.Color.DarkGray;
-      this.RecordsDataGridView.StateCommon.DataCell.Back.Color2 = System.Drawing.Color.DarkGray;
-      this.RecordsDataGridView.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.Gray;
-      this.RecordsDataGridView.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.Color.Gray;
-      this.RecordsDataGridView.TabIndex = 4;
+      this.recordsDataGridView.Location = new System.Drawing.Point(13, 47);
+      this.recordsDataGridView.Name = "recordsDataGridView";
+      this.recordsDataGridView.Size = new System.Drawing.Size(903, 369);
+      this.recordsDataGridView.StateCommon.Background.Color1 = System.Drawing.Color.LightGray;
+      this.recordsDataGridView.StateCommon.Background.Color2 = System.Drawing.Color.LightGray;
+      this.recordsDataGridView.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+      this.recordsDataGridView.StateCommon.DataCell.Back.Color1 = System.Drawing.Color.DarkGray;
+      this.recordsDataGridView.StateCommon.DataCell.Back.Color2 = System.Drawing.Color.DarkGray;
+      this.recordsDataGridView.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.Gray;
+      this.recordsDataGridView.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.Color.Gray;
+      this.recordsDataGridView.TabIndex = 4;
+      // 
+      // TransactionIDColumn
+      // 
+      this.TransactionIDColumn.HeaderText = "Transaction ID";
+      this.TransactionIDColumn.Name = "TransactionIDColumn";
+      // 
+      // TransactionTypeColumn
+      // 
+      this.TransactionTypeColumn.HeaderText = "Transaction Type";
+      this.TransactionTypeColumn.Name = "TransactionTypeColumn";
+      // 
+      // AmountColumn
+      // 
+      this.AmountColumn.HeaderText = "Amount";
+      this.AmountColumn.Name = "AmountColumn";
+      // 
+      // DateColumn
+      // 
+      this.DateColumn.HeaderText = "Date";
+      this.DateColumn.Name = "DateColumn";
       // 
       // recordWeeklyRadio
       // 
@@ -110,26 +130,6 @@ namespace WalletBuddy.Forms
       this.recordYearlyRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       this.recordYearlyRadio.UseVisualStyleBackColor = false;
       // 
-      // TransactionIDColumn
-      // 
-      this.TransactionIDColumn.HeaderText = "Transaction ID";
-      this.TransactionIDColumn.Name = "TransactionIDColumn";
-      // 
-      // TransactionTypeColumn
-      // 
-      this.TransactionTypeColumn.HeaderText = "Transaction Type";
-      this.TransactionTypeColumn.Name = "TransactionTypeColumn";
-      // 
-      // AmountColumn
-      // 
-      this.AmountColumn.HeaderText = "Amount";
-      this.AmountColumn.Name = "AmountColumn";
-      // 
-      // DateColumn
-      // 
-      this.DateColumn.HeaderText = "Date";
-      this.DateColumn.Name = "DateColumn";
-      // 
       // UserRecords
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,18 +138,18 @@ namespace WalletBuddy.Forms
       this.Controls.Add(this.recordYearlyRadio);
       this.Controls.Add(this.recordMonthlyRadio);
       this.Controls.Add(this.recordWeeklyRadio);
-      this.Controls.Add(this.RecordsDataGridView);
+      this.Controls.Add(this.recordsDataGridView);
       this.Margin = new System.Windows.Forms.Padding(2);
       this.Name = "UserRecords";
       this.Text = "UserRecords";
-      ((System.ComponentModel.ISupportInitialize)(this.RecordsDataGridView)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.recordsDataGridView)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
     }
 
     #endregion
-    private ComponentFactory.Krypton.Toolkit.KryptonDataGridView RecordsDataGridView;
+    private ComponentFactory.Krypton.Toolkit.KryptonDataGridView recordsDataGridView;
     private System.Windows.Forms.RadioButton recordWeeklyRadio;
     private System.Windows.Forms.RadioButton recordMonthlyRadio;
     private System.Windows.Forms.RadioButton recordYearlyRadio;

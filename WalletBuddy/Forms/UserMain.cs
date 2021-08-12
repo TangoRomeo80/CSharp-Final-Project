@@ -135,7 +135,7 @@ namespace WalletBuddy.Forms
 
     private void recordsButton_Click(object sender, EventArgs e)
     {
-      OpenChildForm(new UserRecords(), sender);
+      OpenChildForm(new UserRecords(this.user), sender);
     }
 
     private void goalsButton_Click(object sender, EventArgs e)

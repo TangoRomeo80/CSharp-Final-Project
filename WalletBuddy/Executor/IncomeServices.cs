@@ -31,12 +31,24 @@ namespace WalletBuddy.Executor
     {
       int success = 0;
       success = incomeDataAccess.AddIncome(income);
+
       Account account = new Account()
       {
         AccountName = income.AccountName
       };
       AccountServices accountServices = new AccountServices();
       success = accountServices.AddIncomeToAccount(account, user, income.Amount);
+
+      Transaction transaction = new Transaction()
+      {
+        UserName = income.UserName,
+        Amount = income.Amount,
+        TransactionType = "Income",
+        Date = income.Date
+      };
+      TransactionServices transactionServices = new TransactionServices();
+      success = transactionServices.AddTransaction(transaction);
+
       return success;
     }
   }

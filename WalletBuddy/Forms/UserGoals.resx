@@ -120,17 +120,17 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="addGoalButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAI1SURBVEhL5VS/axRBFF5JwD8gEBAighZJEURQsBAhWMSbXYRYiKWVlYWNYKuNCiGZ2TNNihSB
-        NEljYRcIJCRXWFhpIf643M7eiYWIUUKIqOs3e28vs7ObbG5uLUI++Lh5733vezs3s+scb7girLlCRmXQ
-        E3KdbIuRZ9ALybYYec29kGyLkdfcC8m2GFZNBqw8rJoMWHlYNRmw8tCbyiDZdnz3fcX0pjJItsX/gi4o
-        g2R7BAczEd4lSQb4zK7k9SiSxG4wLsTbW0tRn8vlPcbDWZ3utLwUU8i/Zp8i2Vru2A8rN55vjmD9K1uT
-        r5woOuH5wUKmBpKt1eDldj58iZ3/RPzHqOMY5G13pn4G6x2zFpsCebkUdAH4uyLC84w3rrXjsMaqH06y
-        qjxHuWXS1VUe9acUd0i23Q3GTl57vnyA31ac43L1Om+cIqnSvk+0Hm946oGSOCFJu96x4ra6RGrnJHHU
-        mbq8eWFPE7wbexT1Mx5Utb6Y1NHV4E+eCB7enGkOUCmG6wf38Wo9w6V6kmgZlxMeD85ivZvkElLboQfv
-        4pbeoVSM9hnK+aQOfqb1hqrjfJcoTjFuBvJyKegCJoLHKjc++XEQ8Qa4gzOf099jPOBFDL2MWnnvsRoC
-        jmK9CX5RA0iWAmprSY9JkhxmcPBDE70x4q6JC3fFm5ZXOzlffqdRaaD4oiP6H+RykUalURGtYQi+ZRpK
-        IL4HX1m1OUSjshifap2mW7plNltyS+30wKHHAI7zD0ZPVMzvPr7NAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAjVJREFUSEvl
+        VL9rFEEUXknAPyAQECKCFkkRRFCwECFYxJtdhFiIpZWVhY1gq40KIZnZM02KFIE0SWNhFwgkJFdYWGkh
+        /rjczt6JhYhRQoio6zd7by+zs5tsbm4tQj74uHnvfe97Ozez6xxvuCKsuUJGZdATcp1si5Fn0AvJthh5
+        zb2QbIuR19wLybYYVk0GrDysmgxYeVg1GbDy0JvKINl2fPd9xfSmMki2xf+CLiiDZHsEBzMR3iVJBvjM
+        ruT1KJLEbjAuxNtbS1Gfy+U9xsNZne60vBRTyL9mnyLZWu7YDys3nm+OYP0rW5OvnCg64fnBQqYGkq3V
+        4OV2PnyJnf9E/Meo4xjkbXemfgbrHbMWmwJ5uRR0Afi7IsLzjDeuteOwxqofTrKqPEe5ZdLVVR71pxR3
+        SLbdDcZOXnu+fIDfVpzjcvU6b5wiqdK+T7Qeb3jqgZI4IUm73rHitrpEauckcdSZurx5YU8TvBt7FPUz
+        HlS1vpjU0dXgT54IHt6caQ5QKYbrB/fxaj3DpXqSaBmXEx4PzmK9m+QSUtuhB+/ilt6hVIz2Gcr5pA5+
+        pvWGquN8lyhOMW4G8nIp6AImgscqNz75cRDxBriDM5/T32M84EUMvYxaee+xGgKOYr0JflEDSJYCamtJ
+        j0mSHGZw8EMTvTHirokLd8Wbllc7OV9+p1FpoPiiI/of5HKRRqVREa1hCL5lGkogvgdfWbU5RKOyGJ9q
+        naZbumU2W3JL7fTAoccAjvMPRk9UzO8+vs0AAAAASUVORK5CYII=
 </value>
   </data>
 </root>

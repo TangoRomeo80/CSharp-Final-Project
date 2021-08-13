@@ -29,31 +29,16 @@ namespace WalletBuddy.Forms
     /// </summary>
     private void InitializeComponent()
     {
-      this.goalDurationLabel = new System.Windows.Forms.Label();
       this.panel1 = new System.Windows.Forms.Panel();
       this.durationComboBox = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
       this.cancelButton = new WalletBuddy.CustomControl.RJButton();
       this.durationLabel = new System.Windows.Forms.Label();
       this.addButton = new WalletBuddy.CustomControl.RJButton();
-      this.accountTypeTextBox = new WalletBuddy.CustomControl.RJTextBox();
-      this.goalDurationTextBox = new WalletBuddy.CustomControl.RJTextBox();
+      this.targetSavingTextBox = new WalletBuddy.CustomControl.RJTextBox();
       this.targetSavingsLabel = new System.Windows.Forms.Label();
       this.panel1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.durationComboBox)).BeginInit();
       this.SuspendLayout();
-      // 
-      // goalDurationLabel
-      // 
-      this.goalDurationLabel.AutoSize = true;
-      this.goalDurationLabel.BackColor = System.Drawing.Color.Transparent;
-      this.goalDurationLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.goalDurationLabel.ForeColor = System.Drawing.Color.Black;
-      this.goalDurationLabel.Location = new System.Drawing.Point(91, 22);
-      this.goalDurationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-      this.goalDurationLabel.Name = "goalDurationLabel";
-      this.goalDurationLabel.Size = new System.Drawing.Size(99, 19);
-      this.goalDurationLabel.TabIndex = 6;
-      this.goalDurationLabel.Text = "Goal Duration";
       // 
       // panel1
       // 
@@ -62,10 +47,8 @@ namespace WalletBuddy.Forms
       this.panel1.Controls.Add(this.cancelButton);
       this.panel1.Controls.Add(this.durationLabel);
       this.panel1.Controls.Add(this.addButton);
-      this.panel1.Controls.Add(this.accountTypeTextBox);
-      this.panel1.Controls.Add(this.goalDurationTextBox);
+      this.panel1.Controls.Add(this.targetSavingTextBox);
       this.panel1.Controls.Add(this.targetSavingsLabel);
-      this.panel1.Controls.Add(this.goalDurationLabel);
       this.panel1.Location = new System.Drawing.Point(12, 12);
       this.panel1.Name = "panel1";
       this.panel1.Size = new System.Drawing.Size(735, 397);
@@ -78,11 +61,11 @@ namespace WalletBuddy.Forms
             "Week",
             "Month",
             "Year"});
-      this.durationComboBox.Location = new System.Drawing.Point(204, 99);
+      this.durationComboBox.Location = new System.Drawing.Point(201, 73);
       this.durationComboBox.Name = "durationComboBox";
       this.durationComboBox.Size = new System.Drawing.Size(181, 21);
       this.durationComboBox.TabIndex = 9;
-      this.durationComboBox.Text = "Accounts";
+      this.durationComboBox.Text = "Duration";
       // 
       // cancelButton
       // 
@@ -111,7 +94,7 @@ namespace WalletBuddy.Forms
       this.durationLabel.BackColor = System.Drawing.Color.Transparent;
       this.durationLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.durationLabel.ForeColor = System.Drawing.Color.Black;
-      this.durationLabel.Location = new System.Drawing.Point(105, 99);
+      this.durationLabel.Location = new System.Drawing.Point(102, 73);
       this.durationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.durationLabel.Name = "durationLabel";
       this.durationLabel.Size = new System.Drawing.Size(85, 19);
@@ -137,50 +120,29 @@ namespace WalletBuddy.Forms
       this.addButton.Text = "Add";
       this.addButton.TextColor = System.Drawing.Color.White;
       this.addButton.UseVisualStyleBackColor = false;
+      this.addButton.Click += new System.EventHandler(this.addButton_Click);
       // 
-      // accountTypeTextBox
+      // targetSavingTextBox
       // 
-      this.accountTypeTextBox.BackColor = System.Drawing.SystemColors.Window;
-      this.accountTypeTextBox.BorderColor = System.Drawing.Color.CornflowerBlue;
-      this.accountTypeTextBox.BorderFocusColor = System.Drawing.Color.Blue;
-      this.accountTypeTextBox.BorderRadius = 10;
-      this.accountTypeTextBox.BorderSize = 2;
-      this.accountTypeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.accountTypeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.accountTypeTextBox.Location = new System.Drawing.Point(204, 57);
-      this.accountTypeTextBox.Margin = new System.Windows.Forms.Padding(4);
-      this.accountTypeTextBox.Multiline = false;
-      this.accountTypeTextBox.Name = "accountTypeTextBox";
-      this.accountTypeTextBox.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-      this.accountTypeTextBox.PasswordChar = false;
-      this.accountTypeTextBox.PlaceholderColor = System.Drawing.Color.Silver;
-      this.accountTypeTextBox.PlaceholderText = "Target Savings";
-      this.accountTypeTextBox.Size = new System.Drawing.Size(448, 29);
-      this.accountTypeTextBox.TabIndex = 5;
-      this.accountTypeTextBox.Texts = "";
-      this.accountTypeTextBox.UnderlinedStyle = false;
-      // 
-      // goalDurationTextBox
-      // 
-      this.goalDurationTextBox.BackColor = System.Drawing.SystemColors.Window;
-      this.goalDurationTextBox.BorderColor = System.Drawing.Color.CornflowerBlue;
-      this.goalDurationTextBox.BorderFocusColor = System.Drawing.Color.Blue;
-      this.goalDurationTextBox.BorderRadius = 10;
-      this.goalDurationTextBox.BorderSize = 2;
-      this.goalDurationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.goalDurationTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.goalDurationTextBox.Location = new System.Drawing.Point(204, 22);
-      this.goalDurationTextBox.Margin = new System.Windows.Forms.Padding(4);
-      this.goalDurationTextBox.Multiline = false;
-      this.goalDurationTextBox.Name = "goalDurationTextBox";
-      this.goalDurationTextBox.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-      this.goalDurationTextBox.PasswordChar = false;
-      this.goalDurationTextBox.PlaceholderColor = System.Drawing.Color.Silver;
-      this.goalDurationTextBox.PlaceholderText = "Goal Duration";
-      this.goalDurationTextBox.Size = new System.Drawing.Size(448, 29);
-      this.goalDurationTextBox.TabIndex = 5;
-      this.goalDurationTextBox.Texts = "";
-      this.goalDurationTextBox.UnderlinedStyle = false;
+      this.targetSavingTextBox.BackColor = System.Drawing.SystemColors.Window;
+      this.targetSavingTextBox.BorderColor = System.Drawing.Color.CornflowerBlue;
+      this.targetSavingTextBox.BorderFocusColor = System.Drawing.Color.Blue;
+      this.targetSavingTextBox.BorderRadius = 10;
+      this.targetSavingTextBox.BorderSize = 2;
+      this.targetSavingTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.targetSavingTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+      this.targetSavingTextBox.Location = new System.Drawing.Point(201, 31);
+      this.targetSavingTextBox.Margin = new System.Windows.Forms.Padding(4);
+      this.targetSavingTextBox.Multiline = false;
+      this.targetSavingTextBox.Name = "targetSavingTextBox";
+      this.targetSavingTextBox.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+      this.targetSavingTextBox.PasswordChar = false;
+      this.targetSavingTextBox.PlaceholderColor = System.Drawing.Color.Silver;
+      this.targetSavingTextBox.PlaceholderText = "Target Savings";
+      this.targetSavingTextBox.Size = new System.Drawing.Size(448, 29);
+      this.targetSavingTextBox.TabIndex = 5;
+      this.targetSavingTextBox.Texts = "";
+      this.targetSavingTextBox.UnderlinedStyle = false;
       // 
       // targetSavingsLabel
       // 
@@ -188,7 +150,7 @@ namespace WalletBuddy.Forms
       this.targetSavingsLabel.BackColor = System.Drawing.Color.Transparent;
       this.targetSavingsLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.targetSavingsLabel.ForeColor = System.Drawing.Color.Black;
-      this.targetSavingsLabel.Location = new System.Drawing.Point(87, 57);
+      this.targetSavingsLabel.Location = new System.Drawing.Point(84, 31);
       this.targetSavingsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.targetSavingsLabel.Name = "targetSavingsLabel";
       this.targetSavingsLabel.Size = new System.Drawing.Size(103, 19);
@@ -214,11 +176,8 @@ namespace WalletBuddy.Forms
     }
 
     #endregion
-
-    private CustomControl.RJTextBox goalDurationTextBox;
-    private System.Windows.Forms.Label goalDurationLabel;
     private System.Windows.Forms.Panel panel1;
-    private CustomControl.RJTextBox accountTypeTextBox;
+    private CustomControl.RJTextBox targetSavingTextBox;
     private System.Windows.Forms.Label targetSavingsLabel;
     private CustomControl.RJButton cancelButton;
     private CustomControl.RJButton addButton;

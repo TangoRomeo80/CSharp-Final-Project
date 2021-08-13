@@ -33,7 +33,7 @@ namespace WalletBuddy.Forms
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserMain));
       this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
       this.headerPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-      this.label2 = new System.Windows.Forms.Label();
+      this.logOutLabel = new System.Windows.Forms.Label();
       this.topUserNameLabel = new System.Windows.Forms.Label();
       this.label1 = new System.Windows.Forms.Label();
       this.logoutPicBox = new System.Windows.Forms.PictureBox();
@@ -68,7 +68,7 @@ namespace WalletBuddy.Forms
       // 
       // headerPanel
       // 
-      this.headerPanel.Controls.Add(this.label2);
+      this.headerPanel.Controls.Add(this.logOutLabel);
       this.headerPanel.Controls.Add(this.topUserNameLabel);
       this.headerPanel.Controls.Add(this.label1);
       this.headerPanel.Controls.Add(this.logoutPicBox);
@@ -77,25 +77,26 @@ namespace WalletBuddy.Forms
       this.headerPanel.Controls.Add(this.pictureBox1);
       this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
       this.headerPanel.Location = new System.Drawing.Point(0, 0);
-      this.headerPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.headerPanel.Margin = new System.Windows.Forms.Padding(2);
       this.headerPanel.Name = "headerPanel";
       this.headerPanel.Size = new System.Drawing.Size(927, 136);
       this.headerPanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
       this.headerPanel.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
       this.headerPanel.TabIndex = 0;
       // 
-      // label2
+      // logOutLabel
       // 
-      this.label2.AutoSize = true;
-      this.label2.BackColor = System.Drawing.Color.Transparent;
-      this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label2.ForeColor = System.Drawing.Color.White;
-      this.label2.Location = new System.Drawing.Point(704, 25);
-      this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-      this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(52, 17);
-      this.label2.TabIndex = 4;
-      this.label2.Text = "Log Out";
+      this.logOutLabel.AutoSize = true;
+      this.logOutLabel.BackColor = System.Drawing.Color.Transparent;
+      this.logOutLabel.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.logOutLabel.ForeColor = System.Drawing.Color.White;
+      this.logOutLabel.Location = new System.Drawing.Point(704, 25);
+      this.logOutLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.logOutLabel.Name = "logOutLabel";
+      this.logOutLabel.Size = new System.Drawing.Size(52, 17);
+      this.logOutLabel.TabIndex = 4;
+      this.logOutLabel.Text = "Log Out";
+      this.logOutLabel.Click += new System.EventHandler(this.logOutLabel_Click);
       // 
       // topUserNameLabel
       // 
@@ -128,7 +129,7 @@ namespace WalletBuddy.Forms
       this.logoutPicBox.BackColor = System.Drawing.Color.Transparent;
       this.logoutPicBox.Image = ((System.Drawing.Image)(resources.GetObject("logoutPicBox.Image")));
       this.logoutPicBox.Location = new System.Drawing.Point(675, 17);
-      this.logoutPicBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.logoutPicBox.Margin = new System.Windows.Forms.Padding(2);
       this.logoutPicBox.Name = "logoutPicBox";
       this.logoutPicBox.Size = new System.Drawing.Size(32, 32);
       this.logoutPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -140,7 +141,7 @@ namespace WalletBuddy.Forms
       this.userPicBox.BackColor = System.Drawing.Color.Transparent;
       this.userPicBox.Image = ((System.Drawing.Image)(resources.GetObject("userPicBox.Image")));
       this.userPicBox.Location = new System.Drawing.Point(770, 17);
-      this.userPicBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.userPicBox.Margin = new System.Windows.Forms.Padding(2);
       this.userPicBox.Name = "userPicBox";
       this.userPicBox.Size = new System.Drawing.Size(30, 30);
       this.userPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -165,7 +166,7 @@ namespace WalletBuddy.Forms
       this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
       this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
       this.pictureBox1.Location = new System.Drawing.Point(9, 10);
-      this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
       this.pictureBox1.Name = "pictureBox1";
       this.pictureBox1.Size = new System.Drawing.Size(46, 41);
       this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -183,7 +184,7 @@ namespace WalletBuddy.Forms
       this.buttonPanel.Controls.Add(this.incomeButton);
       this.buttonPanel.Controls.Add(this.dashButton);
       this.buttonPanel.Location = new System.Drawing.Point(0, 66);
-      this.buttonPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.buttonPanel.Margin = new System.Windows.Forms.Padding(2);
       this.buttonPanel.Name = "buttonPanel";
       this.buttonPanel.Size = new System.Drawing.Size(946, 71);
       this.buttonPanel.StateCommon.Color1 = System.Drawing.Color.AliceBlue;
@@ -204,7 +205,7 @@ namespace WalletBuddy.Forms
       this.goalsButton.Image = ((System.Drawing.Image)(resources.GetObject("goalsButton.Image")));
       this.goalsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.goalsButton.Location = new System.Drawing.Point(614, 13);
-      this.goalsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.goalsButton.Margin = new System.Windows.Forms.Padding(2);
       this.goalsButton.Name = "goalsButton";
       this.goalsButton.Size = new System.Drawing.Size(112, 37);
       this.goalsButton.TabIndex = 0;
@@ -228,7 +229,7 @@ namespace WalletBuddy.Forms
       this.paymentButton.Image = ((System.Drawing.Image)(resources.GetObject("paymentButton.Image")));
       this.paymentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.paymentButton.Location = new System.Drawing.Point(498, 13);
-      this.paymentButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.paymentButton.Margin = new System.Windows.Forms.Padding(2);
       this.paymentButton.Name = "paymentButton";
       this.paymentButton.Size = new System.Drawing.Size(112, 37);
       this.paymentButton.TabIndex = 0;
@@ -251,7 +252,7 @@ namespace WalletBuddy.Forms
       this.settingsButton.ForeColor = System.Drawing.Color.SlateGray;
       this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
       this.settingsButton.Location = new System.Drawing.Point(876, 13);
-      this.settingsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.settingsButton.Margin = new System.Windows.Forms.Padding(2);
       this.settingsButton.Name = "settingsButton";
       this.settingsButton.Size = new System.Drawing.Size(40, 37);
       this.settingsButton.TabIndex = 0;
@@ -274,7 +275,7 @@ namespace WalletBuddy.Forms
       this.recordsButton.Image = ((System.Drawing.Image)(resources.GetObject("recordsButton.Image")));
       this.recordsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.recordsButton.Location = new System.Drawing.Point(730, 13);
-      this.recordsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.recordsButton.Margin = new System.Windows.Forms.Padding(2);
       this.recordsButton.Name = "recordsButton";
       this.recordsButton.Size = new System.Drawing.Size(112, 37);
       this.recordsButton.TabIndex = 0;
@@ -298,7 +299,7 @@ namespace WalletBuddy.Forms
       this.accountsButton.Image = ((System.Drawing.Image)(resources.GetObject("accountsButton.Image")));
       this.accountsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.accountsButton.Location = new System.Drawing.Point(382, 13);
-      this.accountsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.accountsButton.Margin = new System.Windows.Forms.Padding(2);
       this.accountsButton.Name = "accountsButton";
       this.accountsButton.Size = new System.Drawing.Size(112, 37);
       this.accountsButton.TabIndex = 0;
@@ -322,7 +323,7 @@ namespace WalletBuddy.Forms
       this.expenseButton.Image = ((System.Drawing.Image)(resources.GetObject("expenseButton.Image")));
       this.expenseButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.expenseButton.Location = new System.Drawing.Point(266, 13);
-      this.expenseButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.expenseButton.Margin = new System.Windows.Forms.Padding(2);
       this.expenseButton.Name = "expenseButton";
       this.expenseButton.Size = new System.Drawing.Size(112, 37);
       this.expenseButton.TabIndex = 0;
@@ -346,7 +347,7 @@ namespace WalletBuddy.Forms
       this.incomeButton.Image = ((System.Drawing.Image)(resources.GetObject("incomeButton.Image")));
       this.incomeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.incomeButton.Location = new System.Drawing.Point(150, 13);
-      this.incomeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.incomeButton.Margin = new System.Windows.Forms.Padding(2);
       this.incomeButton.Name = "incomeButton";
       this.incomeButton.Size = new System.Drawing.Size(112, 37);
       this.incomeButton.TabIndex = 0;
@@ -370,7 +371,7 @@ namespace WalletBuddy.Forms
       this.dashButton.Image = ((System.Drawing.Image)(resources.GetObject("dashButton.Image")));
       this.dashButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.dashButton.Location = new System.Drawing.Point(34, 13);
-      this.dashButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.dashButton.Margin = new System.Windows.Forms.Padding(2);
       this.dashButton.Name = "dashButton";
       this.dashButton.Size = new System.Drawing.Size(112, 37);
       this.dashButton.TabIndex = 0;
@@ -384,7 +385,7 @@ namespace WalletBuddy.Forms
       // 
       this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
       this.panelDesktopPane.Location = new System.Drawing.Point(0, 136);
-      this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(2);
       this.panelDesktopPane.Name = "panelDesktopPane";
       this.panelDesktopPane.Size = new System.Drawing.Size(927, 430);
       this.panelDesktopPane.TabIndex = 2;
@@ -399,7 +400,7 @@ namespace WalletBuddy.Forms
       this.Controls.Add(this.buttonPanel);
       this.Controls.Add(this.headerPanel);
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-      this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.Margin = new System.Windows.Forms.Padding(2);
       this.Name = "UserMain";
       this.Palette = this.kryptonPalette1;
       this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
@@ -434,7 +435,7 @@ namespace WalletBuddy.Forms
     private CustomControl.RJButton recordsButton;
     private CustomControl.RJButton paymentButton;
     private CustomControl.RJButton goalsButton;
-    private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.Label logOutLabel;
     private System.Windows.Forms.Label topUserNameLabel;
     private System.Windows.Forms.PictureBox logoutPicBox;
     private CustomControl.RJButton settingsButton;

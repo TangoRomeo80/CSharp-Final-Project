@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WalletBuddy.Executor;
+using WalletBuddy.Model;
 
 namespace WalletBuddy.Forms
 {
   public partial class AddGoal : Form
   {
-    public AddGoal()
+    private User user;
+    private UserGoals parentForm;
+
+    public AddGoal(User user, UserGoals parentForm)
     {
       InitializeComponent();
+      this.user = user;
+      this.parentForm = parentForm;
     }
 
     private void cancelButton_Click(object sender, EventArgs e)
@@ -22,5 +29,38 @@ namespace WalletBuddy.Forms
       this.Close();
     }
 
+    private void addButton_Click(object sender, EventArgs e)
+    {
+      if (targetSavingTextBox.Texts == "")
+      {
+        MessageBox.Show("Target savings fields cannot be empty.");
+      }
+      else if (durationComboBox.SelectedIndex < 0)
+      {
+        MessageBox.Show("A duration for the goal needs to be selected.");
+      }
+      else
+      {
+        GoalsServices goalsServices = new GoalsServices();
+        Goals goal = new Goals()
+        {
+          UserName = user.UserName,
+          GoalDuration = durationComboBox.SelectedItem.ToString(),
+          TargetSavings = Convert.ToInt32(targetSavingTextBox.Texts),
+          
+        };
+        int success = goalsServices.AddGoals(goal);
+        if (success > 0)
+        {
+          targetSavingTextBox.Texts = "";
+          MessageBox.Show("Goals record added successfully");
+          parentForm.UpdateDataGrid();
+        }
+        else
+        {
+          MessageBox.Show("An Unexpected error Occured. Record could not be added.");
+        }
+      }
+    }
   }
 }

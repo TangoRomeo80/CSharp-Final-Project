@@ -141,7 +141,7 @@ namespace WalletBuddy.Forms
 
     private void goalsButton_Click(object sender, EventArgs e)
     {
-      OpenChildForm(new UserGoals(), sender);
+      OpenChildForm(new UserGoals(this.user), sender);
     }
 
     private void settingsButton_Click(object sender, EventArgs e)
@@ -149,5 +149,11 @@ namespace WalletBuddy.Forms
       OpenUserInfo(new SettingsInfo(), sender);
     }
 
+    private void logOutLabel_Click(object sender, EventArgs e)
+    {
+      LoginUser login = new LoginUser();
+      login.Show();
+      this.Hide();
+    }
   }
 }

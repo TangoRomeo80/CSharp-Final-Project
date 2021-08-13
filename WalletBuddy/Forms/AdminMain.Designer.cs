@@ -33,7 +33,7 @@ namespace WalletBuddy.Forms
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMain));
       this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
       this.headerPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-      this.label2 = new System.Windows.Forms.Label();
+      this.logOutLabel = new System.Windows.Forms.Label();
       this.topAdminLabel = new System.Windows.Forms.Label();
       this.label1 = new System.Windows.Forms.Label();
       this.logoutPicBox = new System.Windows.Forms.PictureBox();
@@ -41,10 +41,10 @@ namespace WalletBuddy.Forms
       this.mainLabel = new System.Windows.Forms.Label();
       this.pictureBox1 = new System.Windows.Forms.PictureBox();
       this.buttonPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+      this.settingsButton = new WalletBuddy.CustomControl.RJButton();
       this.supportButton = new WalletBuddy.CustomControl.RJButton();
       this.userListButton = new WalletBuddy.CustomControl.RJButton();
       this.panelDesktopPane = new System.Windows.Forms.Panel();
-      this.settingsButton = new WalletBuddy.CustomControl.RJButton();
       ((System.ComponentModel.ISupportInitialize)(this.headerPanel)).BeginInit();
       this.headerPanel.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.logoutPicBox)).BeginInit();
@@ -63,7 +63,7 @@ namespace WalletBuddy.Forms
       // 
       // headerPanel
       // 
-      this.headerPanel.Controls.Add(this.label2);
+      this.headerPanel.Controls.Add(this.logOutLabel);
       this.headerPanel.Controls.Add(this.topAdminLabel);
       this.headerPanel.Controls.Add(this.label1);
       this.headerPanel.Controls.Add(this.logoutPicBox);
@@ -79,18 +79,19 @@ namespace WalletBuddy.Forms
       this.headerPanel.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
       this.headerPanel.TabIndex = 0;
       // 
-      // label2
+      // logOutLabel
       // 
-      this.label2.AutoSize = true;
-      this.label2.BackColor = System.Drawing.Color.Transparent;
-      this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label2.ForeColor = System.Drawing.Color.White;
-      this.label2.Location = new System.Drawing.Point(711, 25);
-      this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-      this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(52, 17);
-      this.label2.TabIndex = 4;
-      this.label2.Text = "Log Out";
+      this.logOutLabel.AutoSize = true;
+      this.logOutLabel.BackColor = System.Drawing.Color.Transparent;
+      this.logOutLabel.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.logOutLabel.ForeColor = System.Drawing.Color.White;
+      this.logOutLabel.Location = new System.Drawing.Point(705, 25);
+      this.logOutLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.logOutLabel.Name = "logOutLabel";
+      this.logOutLabel.Size = new System.Drawing.Size(52, 17);
+      this.logOutLabel.TabIndex = 4;
+      this.logOutLabel.Text = "Log Out";
+      this.logOutLabel.Click += new System.EventHandler(this.logOutLabel_Click);
       // 
       // topAdminLabel
       // 
@@ -180,6 +181,28 @@ namespace WalletBuddy.Forms
       this.buttonPanel.StateCommon.Color2 = System.Drawing.Color.AliceBlue;
       this.buttonPanel.TabIndex = 1;
       // 
+      // settingsButton
+      // 
+      this.settingsButton.BackColor = System.Drawing.Color.White;
+      this.settingsButton.BackgroundColor = System.Drawing.Color.White;
+      this.settingsButton.BorderColor = System.Drawing.Color.Blue;
+      this.settingsButton.BorderRadius = 10;
+      this.settingsButton.BorderSize = 1;
+      this.settingsButton.FlatAppearance.BorderSize = 0;
+      this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.settingsButton.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.settingsButton.ForeColor = System.Drawing.Color.SlateGray;
+      this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
+      this.settingsButton.Location = new System.Drawing.Point(876, 13);
+      this.settingsButton.Margin = new System.Windows.Forms.Padding(2);
+      this.settingsButton.Name = "settingsButton";
+      this.settingsButton.Size = new System.Drawing.Size(40, 37);
+      this.settingsButton.TabIndex = 3;
+      this.settingsButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      this.settingsButton.TextColor = System.Drawing.Color.SlateGray;
+      this.settingsButton.UseVisualStyleBackColor = false;
+      this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
+      // 
       // supportButton
       // 
       this.supportButton.BackColor = System.Drawing.Color.White;
@@ -237,28 +260,6 @@ namespace WalletBuddy.Forms
       this.panelDesktopPane.Size = new System.Drawing.Size(927, 430);
       this.panelDesktopPane.TabIndex = 2;
       // 
-      // settingsButton
-      // 
-      this.settingsButton.BackColor = System.Drawing.Color.White;
-      this.settingsButton.BackgroundColor = System.Drawing.Color.White;
-      this.settingsButton.BorderColor = System.Drawing.Color.Blue;
-      this.settingsButton.BorderRadius = 10;
-      this.settingsButton.BorderSize = 1;
-      this.settingsButton.FlatAppearance.BorderSize = 0;
-      this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.settingsButton.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.settingsButton.ForeColor = System.Drawing.Color.SlateGray;
-      this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
-      this.settingsButton.Location = new System.Drawing.Point(876, 13);
-      this.settingsButton.Margin = new System.Windows.Forms.Padding(2);
-      this.settingsButton.Name = "settingsButton";
-      this.settingsButton.Size = new System.Drawing.Size(40, 37);
-      this.settingsButton.TabIndex = 3;
-      this.settingsButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-      this.settingsButton.TextColor = System.Drawing.Color.SlateGray;
-      this.settingsButton.UseVisualStyleBackColor = false;
-      this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
-      // 
       // AdminMain
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,7 +299,7 @@ namespace WalletBuddy.Forms
     private System.Windows.Forms.PictureBox userPicBox;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Panel panelDesktopPane;
-    private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.Label logOutLabel;
     private System.Windows.Forms.Label topAdminLabel;
     private System.Windows.Forms.PictureBox logoutPicBox;
     private CustomControl.RJButton supportButton;

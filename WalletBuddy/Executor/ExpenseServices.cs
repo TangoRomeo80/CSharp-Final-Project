@@ -22,6 +22,54 @@ namespace WalletBuddy.Executor
       return expenseDataAccess.GetExpenseList(user);
     }
 
+    public int GetWeeklyExpense(User user)
+    {
+      int totalExpense = 0;
+      List<Expense> expenseList = GetExpenseList(user);
+      List<Expense> weeklyExpenseList = new List<Expense>();
+      foreach (Expense expense in expenseList)
+      {
+        if ((DateTime.Now - expense.Date).TotalDays < 7) weeklyExpenseList.Add(expense);
+      }
+      foreach (Expense expense in weeklyExpenseList)
+      {
+        totalExpense += expense.Amount;
+      }
+      return totalExpense;
+    }
+
+    public int GetMonthlyExpense(User user)
+    {
+      int totalExpense = 0;
+      List<Expense> expenseList = GetExpenseList(user);
+      List<Expense> monthlyExpenseList = new List<Expense>();
+      foreach (Expense expense in expenseList)
+      {
+        if ((DateTime.Now - expense.Date).TotalDays < 30) monthlyExpenseList.Add(expense);
+      }
+      foreach (Expense expense in monthlyExpenseList)
+      {
+        totalExpense += expense.Amount;
+      }
+      return totalExpense;
+    }
+
+    public int GetYearlyExpense(User user)
+    {
+      int totalExpense = 0;
+      List<Expense> expenseList = GetExpenseList(user);
+      List<Expense> yearlyExpenseList = new List<Expense>();
+      foreach (Expense expense in expenseList)
+      {
+        if ((DateTime.Now - expense.Date).TotalDays < 365) yearlyExpenseList.Add(expense);
+      }
+      foreach (Expense expense in yearlyExpenseList)
+      {
+        totalExpense += expense.Amount;
+      }
+      return totalExpense;
+    }
+
     public List<string> GetAccountNames(User user)
     {
       return expenseDataAccess.GetAccountNames(user);

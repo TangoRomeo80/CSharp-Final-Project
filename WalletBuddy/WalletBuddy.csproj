@@ -80,12 +80,14 @@
     <Compile Include="DB\AccountDataAccess.cs" />
     <Compile Include="DB\DataAccess.cs" />
     <Compile Include="DB\ExpenseDataAccess.cs" />
+    <Compile Include="DB\GoalsDataAccess.cs" />
     <Compile Include="DB\IncomeDataAccess.cs" />
     <Compile Include="DB\PaymentDataAccess.cs" />
     <Compile Include="DB\TransactionDataAccess.cs" />
     <Compile Include="DB\UserDataAccess.cs" />
     <Compile Include="Executor\AccountServices.cs" />
     <Compile Include="Executor\ExpenseServices.cs" />
+    <Compile Include="Executor\GoalsServices.cs" />
     <Compile Include="Executor\IncomeServices.cs" />
     <Compile Include="Executor\PaymentServices.cs" />
     <Compile Include="Executor\TransactionServices.cs" />

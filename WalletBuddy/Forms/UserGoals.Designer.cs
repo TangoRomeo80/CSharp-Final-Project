@@ -31,12 +31,12 @@ namespace WalletBuddy.Forms
     {
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserGoals));
       this.addGoalButton = new WalletBuddy.CustomControl.RJButton();
-      this.GoalDataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+      this.goalDataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
       this.GoalDurationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.TargetSavingsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.CurrentExpenseColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.RemainingIncomeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      ((System.ComponentModel.ISupportInitialize)(this.GoalDataGridView)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.goalDataGridView)).BeginInit();
       this.SuspendLayout();
       // 
       // addGoalButton
@@ -63,30 +63,30 @@ namespace WalletBuddy.Forms
       this.addGoalButton.UseVisualStyleBackColor = false;
       this.addGoalButton.Click += new System.EventHandler(this.addGoalButton_Click);
       // 
-      // GoalDataGridView
+      // goalDataGridView
       // 
-      this.GoalDataGridView.AllowUserToAddRows = false;
-      this.GoalDataGridView.AllowUserToDeleteRows = false;
-      this.GoalDataGridView.AllowUserToOrderColumns = true;
-      this.GoalDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-      this.GoalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.GoalDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+      this.goalDataGridView.AllowUserToAddRows = false;
+      this.goalDataGridView.AllowUserToDeleteRows = false;
+      this.goalDataGridView.AllowUserToOrderColumns = true;
+      this.goalDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+      this.goalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.goalDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.GoalDurationColumn,
             this.TargetSavingsColumn,
             this.CurrentExpenseColumn,
             this.RemainingIncomeColumn});
-      this.GoalDataGridView.Location = new System.Drawing.Point(13, 47);
-      this.GoalDataGridView.Name = "GoalDataGridView";
-      this.GoalDataGridView.ReadOnly = true;
-      this.GoalDataGridView.Size = new System.Drawing.Size(903, 369);
-      this.GoalDataGridView.StateCommon.Background.Color1 = System.Drawing.Color.LightSkyBlue;
-      this.GoalDataGridView.StateCommon.Background.Color2 = System.Drawing.Color.LightSkyBlue;
-      this.GoalDataGridView.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
-      this.GoalDataGridView.StateCommon.DataCell.Back.Color1 = System.Drawing.Color.DodgerBlue;
-      this.GoalDataGridView.StateCommon.DataCell.Back.Color2 = System.Drawing.Color.DodgerBlue;
-      this.GoalDataGridView.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.Blue;
-      this.GoalDataGridView.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.Color.Blue;
-      this.GoalDataGridView.TabIndex = 6;
+      this.goalDataGridView.Location = new System.Drawing.Point(13, 47);
+      this.goalDataGridView.Name = "goalDataGridView";
+      this.goalDataGridView.ReadOnly = true;
+      this.goalDataGridView.Size = new System.Drawing.Size(903, 369);
+      this.goalDataGridView.StateCommon.Background.Color1 = System.Drawing.Color.LightSkyBlue;
+      this.goalDataGridView.StateCommon.Background.Color2 = System.Drawing.Color.LightSkyBlue;
+      this.goalDataGridView.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+      this.goalDataGridView.StateCommon.DataCell.Back.Color1 = System.Drawing.Color.DodgerBlue;
+      this.goalDataGridView.StateCommon.DataCell.Back.Color2 = System.Drawing.Color.DodgerBlue;
+      this.goalDataGridView.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.Blue;
+      this.goalDataGridView.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.Color.Blue;
+      this.goalDataGridView.TabIndex = 6;
       // 
       // GoalDurationColumn
       // 
@@ -118,11 +118,11 @@ namespace WalletBuddy.Forms
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(928, 421);
       this.Controls.Add(this.addGoalButton);
-      this.Controls.Add(this.GoalDataGridView);
+      this.Controls.Add(this.goalDataGridView);
       this.Margin = new System.Windows.Forms.Padding(2);
       this.Name = "UserGoals";
       this.Text = "UserGoals";
-      ((System.ComponentModel.ISupportInitialize)(this.GoalDataGridView)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.goalDataGridView)).EndInit();
       this.ResumeLayout(false);
 
     }
@@ -130,7 +130,7 @@ namespace WalletBuddy.Forms
     #endregion
 
     private CustomControl.RJButton addGoalButton;
-    private ComponentFactory.Krypton.Toolkit.KryptonDataGridView GoalDataGridView;
+    private ComponentFactory.Krypton.Toolkit.KryptonDataGridView goalDataGridView;
     private System.Windows.Forms.DataGridViewTextBoxColumn GoalDurationColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn TargetSavingsColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn CurrentExpenseColumn;

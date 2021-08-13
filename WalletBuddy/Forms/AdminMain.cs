@@ -93,6 +93,7 @@ namespace WalletBuddy.Forms
 
     private void Init_Load(object sender, System.EventArgs e)
     {
+      this.topAdminLabel.Text = this.user.UserName;
       AdminUserList childForm = new AdminUserList();
       if (activeForm != null)
         activeForm.Close();
@@ -120,6 +121,13 @@ namespace WalletBuddy.Forms
     private void settingsButton_Click(object sender, EventArgs e)
     {
       OpenUserInfo(new SettingsInfo(), sender);
+    }
+
+    private void logOutLabel_Click(object sender, EventArgs e)
+    {
+      LoginUser login = new LoginUser();
+      login.Show();
+      this.Hide();
     }
   }
 }

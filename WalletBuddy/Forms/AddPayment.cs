@@ -29,5 +29,40 @@ namespace WalletBuddy.Forms
       this.Close();
     }
 
+    private void addButton_Click(object sender, EventArgs e)
+    {
+      if (paymentNameTextBox.Texts == "" || paymentRecieverTextBox.Texts == "" || descriptionTextBox.Texts == "" || paymentAmountTextBox.Texts == "")
+      {
+        MessageBox.Show("Payment name, payment reciever, amount or description fields cannot be empty.");
+      }
+      else
+      {
+        PaymentServices paymentServices = new PaymentServices();
+        Payment payment = new Payment()
+        {
+          PaymentName = paymentNameTextBox.Texts,
+          UserName = user.UserName,
+          PaymentReciever = paymentRecieverTextBox.Texts,
+          Description = descriptionTextBox.Texts,
+          Amount = Convert.ToInt32(paymentAmountTextBox.Texts),
+          Date = dueDatePicker.Value
+        };
+        int success = paymentServices.AddPayment(payment);
+        if(success > 0)
+        {
+          paymentNameTextBox.Texts = "";
+          paymentRecieverTextBox.Texts = "";
+          descriptionTextBox.Texts = "";
+          paymentAmountTextBox.Texts = "";
+          MessageBox.Show("Payment record added successfully");
+          parentForm.UpdateDataGrid();
+        }
+        else
+        {
+          MessageBox.Show("An Unexpected error Occured. Record could not be added.");
+        }
+      }
+
+    }
   }
 }

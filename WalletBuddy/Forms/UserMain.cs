@@ -94,6 +94,7 @@ namespace WalletBuddy.Forms
 
     private void Init_Load(object sender, System.EventArgs e)
     {
+      this.topUserNameLabel.Text = this.user.UserName;
       UserDash childForm = new UserDash(this.user);
       if (activeForm != null)
         activeForm.Close();

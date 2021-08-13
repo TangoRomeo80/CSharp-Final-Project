@@ -30,13 +30,13 @@ namespace WalletBuddy.Forms
     private void InitializeComponent()
     {
       this.panel1 = new System.Windows.Forms.Panel();
+      this.changePasswordButton = new WalletBuddy.CustomControl.RJButton();
+      this.changeInfoButton = new WalletBuddy.CustomControl.RJButton();
       this.emailTextlabel = new System.Windows.Forms.Label();
       this.emailLabel = new System.Windows.Forms.Label();
       this.usernameTextLabel = new System.Windows.Forms.Label();
       this.userNameLabel = new System.Windows.Forms.Label();
       this.HeaderLabel = new System.Windows.Forms.Label();
-      this.changeInfoButton = new WalletBuddy.CustomControl.RJButton();
-      this.changePasswordButton = new WalletBuddy.CustomControl.RJButton();
       this.panel1.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -54,6 +54,48 @@ namespace WalletBuddy.Forms
       this.panel1.Name = "panel1";
       this.panel1.Size = new System.Drawing.Size(904, 397);
       this.panel1.TabIndex = 0;
+      // 
+      // changePasswordButton
+      // 
+      this.changePasswordButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
+      this.changePasswordButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
+      this.changePasswordButton.BorderColor = System.Drawing.Color.Blue;
+      this.changePasswordButton.BorderRadius = 20;
+      this.changePasswordButton.BorderSize = 1;
+      this.changePasswordButton.FlatAppearance.BorderSize = 0;
+      this.changePasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.changePasswordButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.changePasswordButton.ForeColor = System.Drawing.Color.White;
+      this.changePasswordButton.Location = new System.Drawing.Point(471, 273);
+      this.changePasswordButton.Margin = new System.Windows.Forms.Padding(2);
+      this.changePasswordButton.Name = "changePasswordButton";
+      this.changePasswordButton.Size = new System.Drawing.Size(205, 50);
+      this.changePasswordButton.TabIndex = 7;
+      this.changePasswordButton.Text = "Change Password";
+      this.changePasswordButton.TextColor = System.Drawing.Color.White;
+      this.changePasswordButton.UseVisualStyleBackColor = false;
+      this.changePasswordButton.Click += new System.EventHandler(this.changePasswordButton_Click);
+      // 
+      // changeInfoButton
+      // 
+      this.changeInfoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
+      this.changeInfoButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
+      this.changeInfoButton.BorderColor = System.Drawing.Color.Blue;
+      this.changeInfoButton.BorderRadius = 20;
+      this.changeInfoButton.BorderSize = 1;
+      this.changeInfoButton.FlatAppearance.BorderSize = 0;
+      this.changeInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.changeInfoButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.changeInfoButton.ForeColor = System.Drawing.Color.White;
+      this.changeInfoButton.Location = new System.Drawing.Point(222, 273);
+      this.changeInfoButton.Margin = new System.Windows.Forms.Padding(2);
+      this.changeInfoButton.Name = "changeInfoButton";
+      this.changeInfoButton.Size = new System.Drawing.Size(205, 50);
+      this.changeInfoButton.TabIndex = 7;
+      this.changeInfoButton.Text = "Change Information";
+      this.changeInfoButton.TextColor = System.Drawing.Color.White;
+      this.changeInfoButton.UseVisualStyleBackColor = false;
+      this.changeInfoButton.Click += new System.EventHandler(this.changeInfoButton_Click);
       // 
       // emailTextlabel
       // 
@@ -121,48 +163,6 @@ namespace WalletBuddy.Forms
       this.HeaderLabel.Size = new System.Drawing.Size(209, 33);
       this.HeaderLabel.TabIndex = 4;
       this.HeaderLabel.Text = "User Information";
-      // 
-      // changeInfoButton
-      // 
-      this.changeInfoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
-      this.changeInfoButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
-      this.changeInfoButton.BorderColor = System.Drawing.Color.Blue;
-      this.changeInfoButton.BorderRadius = 20;
-      this.changeInfoButton.BorderSize = 1;
-      this.changeInfoButton.FlatAppearance.BorderSize = 0;
-      this.changeInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.changeInfoButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.changeInfoButton.ForeColor = System.Drawing.Color.White;
-      this.changeInfoButton.Location = new System.Drawing.Point(196, 273);
-      this.changeInfoButton.Margin = new System.Windows.Forms.Padding(2);
-      this.changeInfoButton.Name = "changeInfoButton";
-      this.changeInfoButton.Size = new System.Drawing.Size(205, 50);
-      this.changeInfoButton.TabIndex = 7;
-      this.changeInfoButton.Text = "Change Information";
-      this.changeInfoButton.TextColor = System.Drawing.Color.White;
-      this.changeInfoButton.UseVisualStyleBackColor = false;
-      this.changeInfoButton.Click += new System.EventHandler(this.changeInfoButton_Click);
-      // 
-      // changePasswordButton
-      // 
-      this.changePasswordButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
-      this.changePasswordButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
-      this.changePasswordButton.BorderColor = System.Drawing.Color.Blue;
-      this.changePasswordButton.BorderRadius = 20;
-      this.changePasswordButton.BorderSize = 1;
-      this.changePasswordButton.FlatAppearance.BorderSize = 0;
-      this.changePasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.changePasswordButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.changePasswordButton.ForeColor = System.Drawing.Color.White;
-      this.changePasswordButton.Location = new System.Drawing.Point(448, 273);
-      this.changePasswordButton.Margin = new System.Windows.Forms.Padding(2);
-      this.changePasswordButton.Name = "changePasswordButton";
-      this.changePasswordButton.Size = new System.Drawing.Size(205, 50);
-      this.changePasswordButton.TabIndex = 7;
-      this.changePasswordButton.Text = "Change Password";
-      this.changePasswordButton.TextColor = System.Drawing.Color.White;
-      this.changePasswordButton.UseVisualStyleBackColor = false;
-      this.changePasswordButton.Click += new System.EventHandler(this.changePasswordButton_Click);
       // 
       // SettingsInfo
       // 

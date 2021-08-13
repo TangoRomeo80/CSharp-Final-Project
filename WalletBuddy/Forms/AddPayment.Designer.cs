@@ -31,6 +31,8 @@ namespace WalletBuddy.Forms
     {
       this.paymentNameLabel = new System.Windows.Forms.Label();
       this.panel1 = new System.Windows.Forms.Panel();
+      this.dueDatePicker = new System.Windows.Forms.DateTimePicker();
+      this.dueDate = new System.Windows.Forms.Label();
       this.cancelButton = new WalletBuddy.CustomControl.RJButton();
       this.addButton = new WalletBuddy.CustomControl.RJButton();
       this.descriptionTextBox = new WalletBuddy.CustomControl.RJTextBox();
@@ -40,8 +42,6 @@ namespace WalletBuddy.Forms
       this.descriptionLabel = new System.Windows.Forms.Label();
       this.paymentAmountLabel = new System.Windows.Forms.Label();
       this.paymentRecieverLabel = new System.Windows.Forms.Label();
-      this.dueDate = new System.Windows.Forms.Label();
-      this.dueDatePicker = new System.Windows.Forms.DateTimePicker();
       this.panel1.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -77,6 +77,26 @@ namespace WalletBuddy.Forms
       this.panel1.Name = "panel1";
       this.panel1.Size = new System.Drawing.Size(735, 397);
       this.panel1.TabIndex = 7;
+      // 
+      // dueDatePicker
+      // 
+      this.dueDatePicker.Location = new System.Drawing.Point(204, 252);
+      this.dueDatePicker.Name = "dueDatePicker";
+      this.dueDatePicker.Size = new System.Drawing.Size(200, 20);
+      this.dueDatePicker.TabIndex = 11;
+      // 
+      // dueDate
+      // 
+      this.dueDate.AutoSize = true;
+      this.dueDate.BackColor = System.Drawing.Color.Transparent;
+      this.dueDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.dueDate.ForeColor = System.Drawing.Color.Black;
+      this.dueDate.Location = new System.Drawing.Point(128, 254);
+      this.dueDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.dueDate.Name = "dueDate";
+      this.dueDate.Size = new System.Drawing.Size(70, 19);
+      this.dueDate.TabIndex = 10;
+      this.dueDate.Text = "Due Date";
       // 
       // cancelButton
       // 
@@ -118,6 +138,7 @@ namespace WalletBuddy.Forms
       this.addButton.Text = "Add";
       this.addButton.TextColor = System.Drawing.Color.White;
       this.addButton.UseVisualStyleBackColor = false;
+      this.addButton.Click += new System.EventHandler(this.addButton_Click);
       // 
       // descriptionTextBox
       // 
@@ -245,26 +266,6 @@ namespace WalletBuddy.Forms
       this.paymentRecieverLabel.Size = new System.Drawing.Size(125, 19);
       this.paymentRecieverLabel.TabIndex = 6;
       this.paymentRecieverLabel.Text = "Payment Reciever";
-      // 
-      // dueDate
-      // 
-      this.dueDate.AutoSize = true;
-      this.dueDate.BackColor = System.Drawing.Color.Transparent;
-      this.dueDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.dueDate.ForeColor = System.Drawing.Color.Black;
-      this.dueDate.Location = new System.Drawing.Point(128, 254);
-      this.dueDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-      this.dueDate.Name = "dueDate";
-      this.dueDate.Size = new System.Drawing.Size(70, 19);
-      this.dueDate.TabIndex = 10;
-      this.dueDate.Text = "Due Date";
-      // 
-      // dueDatePicker
-      // 
-      this.dueDatePicker.Location = new System.Drawing.Point(204, 252);
-      this.dueDatePicker.Name = "dueDatePicker";
-      this.dueDatePicker.Size = new System.Drawing.Size(200, 20);
-      this.dueDatePicker.TabIndex = 11;
       // 
       // AddPayment
       // 

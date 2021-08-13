@@ -31,12 +31,15 @@ namespace WalletBuddy.Forms
     {
       this.goalDurationLabel = new System.Windows.Forms.Label();
       this.panel1 = new System.Windows.Forms.Panel();
+      this.durationComboBox = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
       this.cancelButton = new WalletBuddy.CustomControl.RJButton();
+      this.durationLabel = new System.Windows.Forms.Label();
       this.addButton = new WalletBuddy.CustomControl.RJButton();
       this.accountTypeTextBox = new WalletBuddy.CustomControl.RJTextBox();
       this.goalDurationTextBox = new WalletBuddy.CustomControl.RJTextBox();
       this.targetSavingsLabel = new System.Windows.Forms.Label();
       this.panel1.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.durationComboBox)).BeginInit();
       this.SuspendLayout();
       // 
       // goalDurationLabel
@@ -55,7 +58,9 @@ namespace WalletBuddy.Forms
       // panel1
       // 
       this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+      this.panel1.Controls.Add(this.durationComboBox);
       this.panel1.Controls.Add(this.cancelButton);
+      this.panel1.Controls.Add(this.durationLabel);
       this.panel1.Controls.Add(this.addButton);
       this.panel1.Controls.Add(this.accountTypeTextBox);
       this.panel1.Controls.Add(this.goalDurationTextBox);
@@ -65,6 +70,19 @@ namespace WalletBuddy.Forms
       this.panel1.Name = "panel1";
       this.panel1.Size = new System.Drawing.Size(735, 397);
       this.panel1.TabIndex = 7;
+      // 
+      // durationComboBox
+      // 
+      this.durationComboBox.DropDownWidth = 181;
+      this.durationComboBox.Items.AddRange(new object[] {
+            "Week",
+            "Month",
+            "Year"});
+      this.durationComboBox.Location = new System.Drawing.Point(204, 99);
+      this.durationComboBox.Name = "durationComboBox";
+      this.durationComboBox.Size = new System.Drawing.Size(181, 21);
+      this.durationComboBox.TabIndex = 9;
+      this.durationComboBox.Text = "Accounts";
       // 
       // cancelButton
       // 
@@ -86,6 +104,19 @@ namespace WalletBuddy.Forms
       this.cancelButton.TextColor = System.Drawing.Color.White;
       this.cancelButton.UseVisualStyleBackColor = false;
       this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+      // 
+      // durationLabel
+      // 
+      this.durationLabel.AutoSize = true;
+      this.durationLabel.BackColor = System.Drawing.Color.Transparent;
+      this.durationLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.durationLabel.ForeColor = System.Drawing.Color.Black;
+      this.durationLabel.Location = new System.Drawing.Point(105, 99);
+      this.durationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.durationLabel.Name = "durationLabel";
+      this.durationLabel.Size = new System.Drawing.Size(85, 19);
+      this.durationLabel.TabIndex = 8;
+      this.durationLabel.Text = "Goal set for";
       // 
       // addButton
       // 
@@ -177,6 +208,7 @@ namespace WalletBuddy.Forms
       this.Text = "AddIncome";
       this.panel1.ResumeLayout(false);
       this.panel1.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.durationComboBox)).EndInit();
       this.ResumeLayout(false);
 
     }
@@ -190,5 +222,7 @@ namespace WalletBuddy.Forms
     private System.Windows.Forms.Label targetSavingsLabel;
     private CustomControl.RJButton cancelButton;
     private CustomControl.RJButton addButton;
+    private ComponentFactory.Krypton.Toolkit.KryptonComboBox durationComboBox;
+    private System.Windows.Forms.Label durationLabel;
   }
 }

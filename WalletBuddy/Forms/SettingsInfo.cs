@@ -32,7 +32,7 @@ namespace WalletBuddy.Forms
 
     private void changePasswordButton_Click(object sender, EventArgs e)
     {
-      ChangePassword changePassword = new ChangePassword();
+      ChangePassword changePassword = new ChangePassword(userToModify, this);
       changePassword.Show();
     }
 

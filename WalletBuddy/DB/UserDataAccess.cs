@@ -80,10 +80,11 @@ namespace WalletBuddy.DB
     public int ChangeInfo(User user, User userToModify)
     {
       int success = 0;
-      string query = "UPDATE USER_TBL SET USER_NAME = '" + user.UserName + "' WHERE USER_NAME = '" + userToModify.UserName + "'";
+      string query = "UPDATE USER_TBL SET USER_EMAIL = '" + user.UserEmail + "' WHERE USER_NAME = '" + userToModify.UserName + "'";
       success = this.ExecuteQuery(query);
-      query = "UPDATE USER_TBL SET USER_EMAIL = '" + user.UserEmail + "' WHERE USER_NAME = '" + userToModify.UserName + "'";
-      success = ExecuteQuery(query);
+      query = "UPDATE USER_TBL SET USER_NAME = '" + user.UserName + "' WHERE USER_NAME = '" + userToModify.UserName + "'";
+      success = this.ExecuteQuery(query);
+
       return success;
     }
 

@@ -33,9 +33,12 @@ namespace WalletBuddy.Forms
       this.panel1 = new System.Windows.Forms.Panel();
       this.cancelButton = new WalletBuddy.CustomControl.RJButton();
       this.changeButton = new WalletBuddy.CustomControl.RJButton();
+      this.confNewPasswordTextBox = new WalletBuddy.CustomControl.RJTextBox();
       this.newPasswordTextBox = new WalletBuddy.CustomControl.RJTextBox();
       this.previousPasswordTextBox = new WalletBuddy.CustomControl.RJTextBox();
+      this.confNewPasswordLabel = new System.Windows.Forms.Label();
       this.newPasswordLabel = new System.Windows.Forms.Label();
+      this.showPassCheckBox = new System.Windows.Forms.CheckBox();
       this.panel1.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -55,10 +58,13 @@ namespace WalletBuddy.Forms
       // panel1
       // 
       this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+      this.panel1.Controls.Add(this.showPassCheckBox);
       this.panel1.Controls.Add(this.cancelButton);
       this.panel1.Controls.Add(this.changeButton);
+      this.panel1.Controls.Add(this.confNewPasswordTextBox);
       this.panel1.Controls.Add(this.newPasswordTextBox);
       this.panel1.Controls.Add(this.previousPasswordTextBox);
+      this.panel1.Controls.Add(this.confNewPasswordLabel);
       this.panel1.Controls.Add(this.newPasswordLabel);
       this.panel1.Controls.Add(this.previousPasswordLabel);
       this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -106,6 +112,29 @@ namespace WalletBuddy.Forms
       this.changeButton.Text = "Change";
       this.changeButton.TextColor = System.Drawing.Color.White;
       this.changeButton.UseVisualStyleBackColor = false;
+      this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
+      // 
+      // confNewPasswordTextBox
+      // 
+      this.confNewPasswordTextBox.BackColor = System.Drawing.SystemColors.Window;
+      this.confNewPasswordTextBox.BorderColor = System.Drawing.Color.CornflowerBlue;
+      this.confNewPasswordTextBox.BorderFocusColor = System.Drawing.Color.Blue;
+      this.confNewPasswordTextBox.BorderRadius = 10;
+      this.confNewPasswordTextBox.BorderSize = 2;
+      this.confNewPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.confNewPasswordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+      this.confNewPasswordTextBox.Location = new System.Drawing.Point(204, 94);
+      this.confNewPasswordTextBox.Margin = new System.Windows.Forms.Padding(4);
+      this.confNewPasswordTextBox.Multiline = false;
+      this.confNewPasswordTextBox.Name = "confNewPasswordTextBox";
+      this.confNewPasswordTextBox.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+      this.confNewPasswordTextBox.PasswordChar = true;
+      this.confNewPasswordTextBox.PlaceholderColor = System.Drawing.Color.Silver;
+      this.confNewPasswordTextBox.PlaceholderText = "Confirm Password";
+      this.confNewPasswordTextBox.Size = new System.Drawing.Size(448, 29);
+      this.confNewPasswordTextBox.TabIndex = 5;
+      this.confNewPasswordTextBox.Texts = "";
+      this.confNewPasswordTextBox.UnderlinedStyle = false;
       // 
       // newPasswordTextBox
       // 
@@ -121,7 +150,7 @@ namespace WalletBuddy.Forms
       this.newPasswordTextBox.Multiline = false;
       this.newPasswordTextBox.Name = "newPasswordTextBox";
       this.newPasswordTextBox.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-      this.newPasswordTextBox.PasswordChar = false;
+      this.newPasswordTextBox.PasswordChar = true;
       this.newPasswordTextBox.PlaceholderColor = System.Drawing.Color.Silver;
       this.newPasswordTextBox.PlaceholderText = "New Password";
       this.newPasswordTextBox.Size = new System.Drawing.Size(448, 29);
@@ -143,13 +172,26 @@ namespace WalletBuddy.Forms
       this.previousPasswordTextBox.Multiline = false;
       this.previousPasswordTextBox.Name = "previousPasswordTextBox";
       this.previousPasswordTextBox.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-      this.previousPasswordTextBox.PasswordChar = false;
+      this.previousPasswordTextBox.PasswordChar = true;
       this.previousPasswordTextBox.PlaceholderColor = System.Drawing.Color.Silver;
       this.previousPasswordTextBox.PlaceholderText = "Previous Password";
       this.previousPasswordTextBox.Size = new System.Drawing.Size(448, 29);
       this.previousPasswordTextBox.TabIndex = 5;
       this.previousPasswordTextBox.Texts = "";
       this.previousPasswordTextBox.UnderlinedStyle = false;
+      // 
+      // confNewPasswordLabel
+      // 
+      this.confNewPasswordLabel.AutoSize = true;
+      this.confNewPasswordLabel.BackColor = System.Drawing.Color.Transparent;
+      this.confNewPasswordLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.confNewPasswordLabel.ForeColor = System.Drawing.Color.Black;
+      this.confNewPasswordLabel.Location = new System.Drawing.Point(73, 94);
+      this.confNewPasswordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.confNewPasswordLabel.Name = "confNewPasswordLabel";
+      this.confNewPasswordLabel.Size = new System.Drawing.Size(125, 19);
+      this.confNewPasswordLabel.TabIndex = 6;
+      this.confNewPasswordLabel.Text = "Confirm Password";
       // 
       // newPasswordLabel
       // 
@@ -163,6 +205,21 @@ namespace WalletBuddy.Forms
       this.newPasswordLabel.Size = new System.Drawing.Size(104, 19);
       this.newPasswordLabel.TabIndex = 6;
       this.newPasswordLabel.Text = "New Password";
+      // 
+      // showPassCheckBox
+      // 
+      this.showPassCheckBox.AutoSize = true;
+      this.showPassCheckBox.BackColor = System.Drawing.Color.Transparent;
+      this.showPassCheckBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.showPassCheckBox.ForeColor = System.Drawing.Color.DimGray;
+      this.showPassCheckBox.Location = new System.Drawing.Point(204, 139);
+      this.showPassCheckBox.Margin = new System.Windows.Forms.Padding(2);
+      this.showPassCheckBox.Name = "showPassCheckBox";
+      this.showPassCheckBox.Size = new System.Drawing.Size(121, 23);
+      this.showPassCheckBox.TabIndex = 8;
+      this.showPassCheckBox.Text = "Show Pasword";
+      this.showPassCheckBox.UseVisualStyleBackColor = false;
+      this.showPassCheckBox.CheckedChanged += new System.EventHandler(this.showPassCheckBox_CheckedChanged);
       // 
       // ChangePassword
       // 
@@ -190,5 +247,8 @@ namespace WalletBuddy.Forms
     private System.Windows.Forms.Label newPasswordLabel;
     private CustomControl.RJButton cancelButton;
     private CustomControl.RJButton changeButton;
+    private CustomControl.RJTextBox confNewPasswordTextBox;
+    private System.Windows.Forms.Label confNewPasswordLabel;
+    private System.Windows.Forms.CheckBox showPassCheckBox;
   }
 }

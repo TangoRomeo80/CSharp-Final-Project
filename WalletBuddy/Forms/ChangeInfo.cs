@@ -49,7 +49,17 @@ namespace WalletBuddy.Forms
           UserEmail = newEmailTextBox.Texts
         };
         int success = userServices.ChangeInfo(user, userToModify);
-        
+        if(success > 0)
+        {
+          newUsernameTextBox.Texts = "";
+          newEmailTextBox.Texts = "";
+          MessageBox.Show("Information changed successfully");
+          parentForm.UpdateUserInfo(user);
+        }
+        else
+        {
+          MessageBox.Show("An Unexpected error Occured. Information could not be changed.");
+        }
       }
     }
   }

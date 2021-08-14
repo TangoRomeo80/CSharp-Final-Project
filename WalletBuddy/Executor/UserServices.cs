@@ -58,5 +58,16 @@ namespace WalletBuddy.Executor
     {
       return userDataAccess.GetUserInfo(user);
     }
+
+    public int ChangeInfo(User user, User userToModify)
+    {
+      return userDataAccess.ChangeInfo(user, userToModify);
+    }
+
+    public int ChangePassword(User user, User userToModify)
+    {
+      return userDataAccess.ChangePassword(user, userToModify);
+    }
+
   }
 }

@@ -87,5 +87,11 @@ namespace WalletBuddy.DB
       return success;
     }
 
+    public int ChangePassword(User user, User userToModify)
+    {
+      string query = "UPDATE ACCOUNT_TBL SET USER_PASSWORD = '" + user.UserPassword + "' WHERE USER_NAME = '" + userToModify.UserName + "'";
+      return this.ExecuteQuery(query);
+    }
+
   }
 }

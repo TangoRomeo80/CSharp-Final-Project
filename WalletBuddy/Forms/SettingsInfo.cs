@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WalletBuddy.Executor;
+using WalletBuddy.Model;
 
 namespace WalletBuddy.Forms
 {
   public partial class SettingsInfo : Form
   {
-    public SettingsInfo()
+    private User user;
+    private User userToModify;
+
+    public SettingsInfo(User user)
     {
       InitializeComponent();
+      this.user = user;
+      Load += new EventHandler(Init_Load);
     }
 
     private void changeInfoButton_Click(object sender, EventArgs e)
@@ -27,6 +34,19 @@ namespace WalletBuddy.Forms
     {
       ChangePassword changePassword = new ChangePassword();
       changePassword.Show();
+    }
+
+    public void UpdateUserInfo()
+    {
+      UserServices userServices = new UserServices();
+      userToModify = userServices.GetUserInfo(this.user);
+      usernameTextLabel.Text = userToModify.UserName;
+      emailTextlabel.Text = userToModify.UserEmail;
+    }
+
+    private void Init_Load(object sender, System.EventArgs e)
+    {
+      UpdateUserInfo();
     }
   }
 }

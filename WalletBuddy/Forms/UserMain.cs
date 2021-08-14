@@ -146,7 +146,7 @@ namespace WalletBuddy.Forms
 
     private void settingsButton_Click(object sender, EventArgs e)
     {
-      OpenUserInfo(new SettingsInfo(), sender);
+      OpenUserInfo(new SettingsInfo(this.user), sender);
     }
 
     private void logOutLabel_Click(object sender, EventArgs e)

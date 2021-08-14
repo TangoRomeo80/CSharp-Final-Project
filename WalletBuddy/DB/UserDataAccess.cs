@@ -55,5 +55,37 @@ namespace WalletBuddy.DB
       }
     }
 
+    public User GetUserInfo(User user)
+    {
+      string query = "SELECT * FROM USER_TBL WHERE USER_NAME='" + user.UserName + "'";
+      SqlDataReader reader = GetData(query);
+      if (reader.Read())
+      {
+        User userToReturn = new User()
+        {
+          UserId = Convert.ToInt32(reader["USER_ID"]),
+          UserName = reader["USER_NAME"].ToString(),
+          UserEmail = reader["USER_EMAIL"].ToString(),
+          UserType = reader["USER_TYPE"].ToString(),
+          UserPassword = reader["USER_PASSWORD"].ToString()
+        };
+        return userToReturn;
+      }
+      else
+      {
+        return null;
+      }
+    }
+
+    public int ChangeInfo(User user, User userToModify)
+    {
+      int success = 0;
+      string query = "UPDATE ACCOUNT_TBL SET USER_NAME = '" + user.UserName + "' WHERE USER_NAME = '" + userToModify.UserName + "'";
+      success = this.ExecuteQuery(query);
+      query = "UPDATE ACCOUNT_TBL SET USER_EMAIL = '" + user.UserEmail + "' WHERE USER_NAME = '" + userToModify.UserName + "'";
+      success = ExecuteQuery(query);
+      return success;
+    }
+
   }
 }

@@ -53,5 +53,10 @@ namespace WalletBuddy.Executor
 
       return userDataAccess.UserLoginValidate(user);
     }
+
+    public User GetUserInfo(User user)
+    {
+      return userDataAccess.GetUserInfo(user);
+    }
   }
 }

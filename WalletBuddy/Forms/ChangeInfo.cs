@@ -48,8 +48,8 @@ namespace WalletBuddy.Forms
           UserName = newUsernameTextBox.Texts,
           UserEmail = newEmailTextBox.Texts
         };
-        userServices.ChangeInfo(user, userToModify);
-        parentForm.UpdateUserInfo();
+        int success = userServices.ChangeInfo(user, userToModify);
+        
       }
     }
   }

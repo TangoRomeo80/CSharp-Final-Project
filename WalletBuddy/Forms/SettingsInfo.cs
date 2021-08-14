@@ -36,17 +36,17 @@ namespace WalletBuddy.Forms
       changePassword.Show();
     }
 
-    public void UpdateUserInfo()
+    public void UpdateUserInfo(User user)
     {
       UserServices userServices = new UserServices();
-      userToModify = userServices.GetUserInfo(this.user);
+      userToModify = userServices.GetUserInfo(user);
       usernameTextLabel.Text = userToModify.UserName;
       emailTextlabel.Text = userToModify.UserEmail;
     }
 
     private void Init_Load(object sender, System.EventArgs e)
     {
-      UpdateUserInfo();
+      UpdateUserInfo(this.user);
     }
   }
 }

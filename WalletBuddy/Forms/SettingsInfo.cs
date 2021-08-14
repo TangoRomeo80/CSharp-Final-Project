@@ -26,7 +26,7 @@ namespace WalletBuddy.Forms
 
     private void changeInfoButton_Click(object sender, EventArgs e)
     {
-      ChangeInfo changeInfo = new ChangeInfo();
+      ChangeInfo changeInfo = new ChangeInfo(userToModify, this);
       changeInfo.Show();
     }
 

@@ -106,6 +106,7 @@ namespace WalletBuddy.Forms
       this.changeButton.Text = "Change";
       this.changeButton.TextColor = System.Drawing.Color.White;
       this.changeButton.UseVisualStyleBackColor = false;
+      this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
       // 
       // newEmailTextBox
       // 

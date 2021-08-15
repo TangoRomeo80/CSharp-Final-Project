@@ -35,14 +35,14 @@ namespace WalletBuddy.Forms
       this.UserEmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.UserTypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.panel1 = new System.Windows.Forms.Panel();
-      this.buttonReove = new WalletBuddy.CustomControl.RJButton();
+      this.removeButton = new WalletBuddy.CustomControl.RJButton();
       this.updateButton = new WalletBuddy.CustomControl.RJButton();
       this.userTypeTextBox = new WalletBuddy.CustomControl.RJTextBox();
       this.emailTextBox = new WalletBuddy.CustomControl.RJTextBox();
       this.userNameTextBox = new WalletBuddy.CustomControl.RJTextBox();
-      this.editUserButton = new WalletBuddy.CustomControl.RJButton();
       this.searchUserButton = new WalletBuddy.CustomControl.RJButton();
       this.userSearchTextBox = new WalletBuddy.CustomControl.RJTextBox();
+      this.editUserButton = new WalletBuddy.CustomControl.RJButton();
       ((System.ComponentModel.ISupportInitialize)(this.userListDataGridView)).BeginInit();
       this.panel1.SuspendLayout();
       this.SuspendLayout();
@@ -92,7 +92,7 @@ namespace WalletBuddy.Forms
       // panel1
       // 
       this.panel1.BackColor = System.Drawing.Color.White;
-      this.panel1.Controls.Add(this.buttonReove);
+      this.panel1.Controls.Add(this.removeButton);
       this.panel1.Controls.Add(this.updateButton);
       this.panel1.Controls.Add(this.userTypeTextBox);
       this.panel1.Controls.Add(this.emailTextBox);
@@ -102,25 +102,26 @@ namespace WalletBuddy.Forms
       this.panel1.Size = new System.Drawing.Size(348, 322);
       this.panel1.TabIndex = 11;
       // 
-      // buttonReove
+      // removeButton
       // 
-      this.buttonReove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
-      this.buttonReove.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
-      this.buttonReove.BorderColor = System.Drawing.Color.Blue;
-      this.buttonReove.BorderRadius = 20;
-      this.buttonReove.BorderSize = 1;
-      this.buttonReove.FlatAppearance.BorderSize = 0;
-      this.buttonReove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.buttonReove.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.buttonReove.ForeColor = System.Drawing.Color.White;
-      this.buttonReove.Location = new System.Drawing.Point(74, 232);
-      this.buttonReove.Margin = new System.Windows.Forms.Padding(2);
-      this.buttonReove.Name = "buttonReove";
-      this.buttonReove.Size = new System.Drawing.Size(205, 50);
-      this.buttonReove.TabIndex = 9;
-      this.buttonReove.Text = "Remove";
-      this.buttonReove.TextColor = System.Drawing.Color.White;
-      this.buttonReove.UseVisualStyleBackColor = false;
+      this.removeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
+      this.removeButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
+      this.removeButton.BorderColor = System.Drawing.Color.Blue;
+      this.removeButton.BorderRadius = 20;
+      this.removeButton.BorderSize = 1;
+      this.removeButton.FlatAppearance.BorderSize = 0;
+      this.removeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.removeButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.removeButton.ForeColor = System.Drawing.Color.White;
+      this.removeButton.Location = new System.Drawing.Point(74, 232);
+      this.removeButton.Margin = new System.Windows.Forms.Padding(2);
+      this.removeButton.Name = "removeButton";
+      this.removeButton.Size = new System.Drawing.Size(205, 50);
+      this.removeButton.TabIndex = 9;
+      this.removeButton.Text = "Remove";
+      this.removeButton.TextColor = System.Drawing.Color.White;
+      this.removeButton.UseVisualStyleBackColor = false;
+      this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
       // 
       // updateButton
       // 
@@ -141,6 +142,7 @@ namespace WalletBuddy.Forms
       this.updateButton.Text = "Update";
       this.updateButton.TextColor = System.Drawing.Color.White;
       this.updateButton.UseVisualStyleBackColor = false;
+      this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
       // 
       // userTypeTextBox
       // 
@@ -208,29 +210,6 @@ namespace WalletBuddy.Forms
       this.userNameTextBox.Texts = "";
       this.userNameTextBox.UnderlinedStyle = false;
       // 
-      // editUserButton
-      // 
-      this.editUserButton.BackColor = System.Drawing.Color.White;
-      this.editUserButton.BackgroundColor = System.Drawing.Color.White;
-      this.editUserButton.BorderColor = System.Drawing.Color.DodgerBlue;
-      this.editUserButton.BorderRadius = 10;
-      this.editUserButton.BorderSize = 1;
-      this.editUserButton.FlatAppearance.BorderSize = 0;
-      this.editUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.editUserButton.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.editUserButton.ForeColor = System.Drawing.Color.SlateGray;
-      this.editUserButton.Image = ((System.Drawing.Image)(resources.GetObject("editUserButton.Image")));
-      this.editUserButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.editUserButton.Location = new System.Drawing.Point(387, 36);
-      this.editUserButton.Margin = new System.Windows.Forms.Padding(2);
-      this.editUserButton.Name = "editUserButton";
-      this.editUserButton.Size = new System.Drawing.Size(148, 29);
-      this.editUserButton.TabIndex = 9;
-      this.editUserButton.Text = "Edit/Remove User";
-      this.editUserButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-      this.editUserButton.TextColor = System.Drawing.Color.SlateGray;
-      this.editUserButton.UseVisualStyleBackColor = false;
-      // 
       // searchUserButton
       // 
       this.searchUserButton.BackColor = System.Drawing.Color.White;
@@ -276,6 +255,30 @@ namespace WalletBuddy.Forms
       this.userSearchTextBox.Texts = "";
       this.userSearchTextBox.UnderlinedStyle = false;
       // 
+      // editUserButton
+      // 
+      this.editUserButton.BackColor = System.Drawing.Color.White;
+      this.editUserButton.BackgroundColor = System.Drawing.Color.White;
+      this.editUserButton.BorderColor = System.Drawing.Color.DodgerBlue;
+      this.editUserButton.BorderRadius = 10;
+      this.editUserButton.BorderSize = 1;
+      this.editUserButton.FlatAppearance.BorderSize = 0;
+      this.editUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.editUserButton.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.editUserButton.ForeColor = System.Drawing.Color.SlateGray;
+      this.editUserButton.Image = ((System.Drawing.Image)(resources.GetObject("editUserButton.Image")));
+      this.editUserButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      this.editUserButton.Location = new System.Drawing.Point(387, 36);
+      this.editUserButton.Margin = new System.Windows.Forms.Padding(2);
+      this.editUserButton.Name = "editUserButton";
+      this.editUserButton.Size = new System.Drawing.Size(148, 29);
+      this.editUserButton.TabIndex = 9;
+      this.editUserButton.Text = "Edit/Remove User";
+      this.editUserButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      this.editUserButton.TextColor = System.Drawing.Color.SlateGray;
+      this.editUserButton.UseVisualStyleBackColor = false;
+      this.editUserButton.Click += new System.EventHandler(this.editUserButton_Click);
+      // 
       // AdminUserList
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,12 +305,12 @@ namespace WalletBuddy.Forms
     private System.Windows.Forms.DataGridViewTextBoxColumn UserTypeColumn;
     private CustomControl.RJTextBox userSearchTextBox;
     private CustomControl.RJButton searchUserButton;
-    private CustomControl.RJButton editUserButton;
     private System.Windows.Forms.Panel panel1;
     private CustomControl.RJTextBox userTypeTextBox;
     private CustomControl.RJTextBox emailTextBox;
     private CustomControl.RJTextBox userNameTextBox;
-    private CustomControl.RJButton buttonReove;
+    private CustomControl.RJButton removeButton;
     private CustomControl.RJButton updateButton;
+    private CustomControl.RJButton editUserButton;
   }
 }

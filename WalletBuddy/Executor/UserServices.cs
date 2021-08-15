@@ -29,6 +29,11 @@ namespace WalletBuddy.Executor
       return this.userDataAccess.AddUser(user);
     }
 
+    public int RemoveUser(User user)
+    {
+      return userDataAccess.RemoveUser(user);
+    }
+
     public string CheckUserName(string userName)
     {
       User user = new User()

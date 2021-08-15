@@ -83,6 +83,7 @@
     <Compile Include="DB\GoalsDataAccess.cs" />
     <Compile Include="DB\IncomeDataAccess.cs" />
     <Compile Include="DB\PaymentDataAccess.cs" />
+    <Compile Include="DB\TokenDataAccess.cs" />
     <Compile Include="DB\TransactionDataAccess.cs" />
     <Compile Include="DB\UserDataAccess.cs" />
     <Compile Include="Executor\AccountServices.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Executor\GoalsServices.cs" />
     <Compile Include="Executor\IncomeServices.cs" />
     <Compile Include="Executor\PaymentServices.cs" />
+    <Compile Include="Executor\TokenServices.cs" />
     <Compile Include="Executor\TransactionServices.cs" />
     <Compile Include="Executor\UserServices.cs" />
     <Compile Include="Forms\TransferBudget.cs">

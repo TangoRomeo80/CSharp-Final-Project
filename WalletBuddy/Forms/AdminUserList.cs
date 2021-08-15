@@ -40,5 +40,83 @@ namespace WalletBuddy.Forms
       UpdateDataGrid();
     }
 
+    private void editUserButton_Click(object sender, EventArgs e)
+    {
+      if (userListDataGridView.SelectedRows.Count <= 0)
+      {
+        MessageBox.Show("No user is selected.");
+      }
+      else
+      {
+        userNameTextBox.Texts = userListDataGridView.SelectedRows[0].Cells[0].Value.ToString();
+        emailTextBox.Texts = userListDataGridView.SelectedRows[0].Cells[1].Value.ToString();
+        userTypeTextBox.Texts = userListDataGridView.SelectedRows[0].Cells[2].Value.ToString();
+      }
+    }
+
+    private void updateButton_Click(object sender, EventArgs e)
+    {
+      UserServices userServices = new UserServices();
+      if (userNameTextBox.Texts == "" || emailTextBox.Texts == "" || userTypeTextBox.Texts == "")
+      {
+        MessageBox.Show("User detail fields cannot be empty.");
+      }
+      else
+      {
+        User oldUser = new User()
+        {
+          UserName = userListDataGridView.SelectedRows[0].Cells[0].Value.ToString()
+        };
+        User newUser = new User()
+        {
+          UserName = userNameTextBox.Texts,
+          UserEmail = emailTextBox.Texts,
+          UserType = userTypeTextBox.Texts
+        };
+        int success = userServices.ChangeInfo(newUser, oldUser);
+        if(success > 0)
+        {
+          userNameTextBox.Texts = "";
+          emailTextBox.Texts = "";
+          userTypeTextBox.Texts = "";
+          MessageBox.Show("User information updated successfully");
+          UpdateDataGrid();
+        }
+        else
+        {
+          MessageBox.Show("An Unexpected error Occured. Record could not be Removed.");
+        }
+      }
+
+    }
+
+    private void removeButton_Click(object sender, EventArgs e)
+    {
+      UserServices userServices = new UserServices();
+      if (userListDataGridView.SelectedRows.Count <= 0)
+      {
+        MessageBox.Show("No user is selected.");
+      }
+      else
+      {
+        User userToRemove = new User()
+        {
+          UserName = userListDataGridView.SelectedRows[0].Cells[0].Value.ToString(),
+        };
+        int success = userServices.RemoveUser(userToRemove);
+        if (success > 0)
+        {
+          userNameTextBox.Texts = "";
+          emailTextBox.Texts = "";
+          userTypeTextBox.Texts = "";
+          MessageBox.Show("User Removed successfully");
+          UpdateDataGrid();
+        }
+        else
+        {
+          MessageBox.Show("An Unexpected error Occured. User could not be Removed.");
+        }
+      }
+    }
   }
 }

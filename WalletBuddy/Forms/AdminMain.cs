@@ -115,7 +115,7 @@ namespace WalletBuddy.Forms
 
     private void supportButton_Click(object sender, EventArgs e)
     {
-      OpenChildForm(new AdminSupportList(), sender);
+      OpenChildForm(new AdminSupportList(this.user), sender);
     }
 
     private void settingsButton_Click(object sender, EventArgs e)
@@ -125,9 +125,13 @@ namespace WalletBuddy.Forms
 
     private void logOutLabel_Click(object sender, EventArgs e)
     {
-      LoginUser login = new LoginUser();
-      login.Show();
-      this.Hide();
+      DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Log out", MessageBoxButtons.YesNo);
+      if (result == DialogResult.Yes)
+      {
+        LoginUser login = new LoginUser();
+        login.Show();
+        this.Hide();
+      }
     }
   }
 }

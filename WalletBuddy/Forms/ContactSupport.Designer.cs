@@ -265,6 +265,7 @@ namespace WalletBuddy.Forms
       this.submitButton.Text = "Submit";
       this.submitButton.TextColor = System.Drawing.Color.White;
       this.submitButton.UseVisualStyleBackColor = false;
+      this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
       // 
       // backToWelcomeLabel
       // 

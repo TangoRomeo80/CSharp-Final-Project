@@ -126,17 +126,16 @@
   <metadata name="UserTypeColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="UserNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="UserEmailColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="UserTypeColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="editUserButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAQJJREFUSEvt
-        lrEOgjAQhnkY4+bm4GxiCO3q6EswOeqkLkLxlXwEdgXKqnFy1SsehGAhRnomRL7kT+Ba+nElBKyeTsNE
-        4kKukJB5yRjLtDA/XoPwUSRIbs4hneAwDW/Skpy081rxKyFOo6FBfsEpZshEEDzNqJG7ONyessARcofl
-        DC7iZSEN5ArL7dF2peu8UmuFVoqpdm6MJmke4/JPpFnIn6kuvfQb/kfKRWLDoup7qpflgZvDS8zBhVxo
-        ZXkopAom4plWqEIlVbB9OvyZlHlyVF7Y9uTA8aOp48dzkN4Jt1du67rifsTx0DwgPZNuaR3wGh1BeoKf
-        s43adiz3dBnLegJk0PPZP0Q11AAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="searchUserButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAiRJREFUSEvt
@@ -150,6 +149,16 @@
         HgaVgycc9sN8cS6Sw7bQkdAc8KrBeHrfZXtqTR1m88dX6oMM5w++MngtLgJfa3tYXlQq96ZX43qj5PjK
         oOGj94ZxuiMPgiZzYh9IreL0th4kJOtacl9M5c1/JunORPRriEP/nv+a/NKyf6V8OzB5VewLpXtuk1zu
         HLD58HQhxTvrAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="editUserButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAQJJREFUSEvt
+        lrEOgjAQhnkY4+bm4GxiCO3q6EswOeqkLkLxlXwEdgXKqnFy1SsehGAhRnomRL7kT+Ba+nElBKyeTsNE
+        4kKukJB5yRjLtDA/XoPwUSRIbs4hneAwDW/Skpy081rxKyFOo6FBfsEpZshEEDzNqJG7ONyessARcofl
+        DC7iZSEN5ArL7dF2peu8UmuFVoqpdm6MJmke4/JPpFnIn6kuvfQb/kfKRWLDoup7qpflgZvDS8zBhVxo
+        ZXkopAom4plWqEIlVbB9OvyZlHlyVF7Y9uTA8aOp48dzkN4Jt1du67rifsTx0DwgPZNuaR3wGh1BeoKf
+        s43adiz3dBnLegJk0PPZP0Q11AAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

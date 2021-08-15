@@ -37,6 +37,12 @@ namespace WalletBuddy.DB
       return this.ExecuteQuery(sql);
     }
 
+    public int RemoveUser(User user)
+    {
+      string sql = "DELETE FROM USER_TBL WHERE USER_NAME= '" + user.UserName + "'";
+      return this.ExecuteQuery(sql);
+    }
+
     public string CheckUserName(User user)
     {
       string query = "SELECT * FROM USER_TBL WHERE USER_NAME= '" + user.UserName + "'";

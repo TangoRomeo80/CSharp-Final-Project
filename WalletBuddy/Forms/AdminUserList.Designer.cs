@@ -40,9 +40,8 @@ namespace WalletBuddy.Forms
       this.userTypeTextBox = new WalletBuddy.CustomControl.RJTextBox();
       this.emailTextBox = new WalletBuddy.CustomControl.RJTextBox();
       this.userNameTextBox = new WalletBuddy.CustomControl.RJTextBox();
-      this.searchUserButton = new WalletBuddy.CustomControl.RJButton();
-      this.userSearchTextBox = new WalletBuddy.CustomControl.RJTextBox();
       this.editUserButton = new WalletBuddy.CustomControl.RJButton();
+      this.userSearchTextBox = new WalletBuddy.CustomControl.RJTextBox();
       ((System.ComponentModel.ISupportInitialize)(this.userListDataGridView)).BeginInit();
       this.panel1.SuspendLayout();
       this.SuspendLayout();
@@ -210,28 +209,29 @@ namespace WalletBuddy.Forms
       this.userNameTextBox.Texts = "";
       this.userNameTextBox.UnderlinedStyle = false;
       // 
-      // searchUserButton
+      // editUserButton
       // 
-      this.searchUserButton.BackColor = System.Drawing.Color.White;
-      this.searchUserButton.BackgroundColor = System.Drawing.Color.White;
-      this.searchUserButton.BorderColor = System.Drawing.Color.DodgerBlue;
-      this.searchUserButton.BorderRadius = 10;
-      this.searchUserButton.BorderSize = 1;
-      this.searchUserButton.FlatAppearance.BorderSize = 0;
-      this.searchUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.searchUserButton.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.searchUserButton.ForeColor = System.Drawing.Color.SlateGray;
-      this.searchUserButton.Image = ((System.Drawing.Image)(resources.GetObject("searchUserButton.Image")));
-      this.searchUserButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.searchUserButton.Location = new System.Drawing.Point(257, 36);
-      this.searchUserButton.Margin = new System.Windows.Forms.Padding(2);
-      this.searchUserButton.Name = "searchUserButton";
-      this.searchUserButton.Size = new System.Drawing.Size(126, 29);
-      this.searchUserButton.TabIndex = 9;
-      this.searchUserButton.Text = "Search User";
-      this.searchUserButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-      this.searchUserButton.TextColor = System.Drawing.Color.SlateGray;
-      this.searchUserButton.UseVisualStyleBackColor = false;
+      this.editUserButton.BackColor = System.Drawing.Color.White;
+      this.editUserButton.BackgroundColor = System.Drawing.Color.White;
+      this.editUserButton.BorderColor = System.Drawing.Color.DodgerBlue;
+      this.editUserButton.BorderRadius = 10;
+      this.editUserButton.BorderSize = 1;
+      this.editUserButton.FlatAppearance.BorderSize = 0;
+      this.editUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.editUserButton.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.editUserButton.ForeColor = System.Drawing.Color.SlateGray;
+      this.editUserButton.Image = ((System.Drawing.Image)(resources.GetObject("editUserButton.Image")));
+      this.editUserButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      this.editUserButton.Location = new System.Drawing.Point(257, 36);
+      this.editUserButton.Margin = new System.Windows.Forms.Padding(2);
+      this.editUserButton.Name = "editUserButton";
+      this.editUserButton.Size = new System.Drawing.Size(148, 29);
+      this.editUserButton.TabIndex = 9;
+      this.editUserButton.Text = "Edit/Remove User";
+      this.editUserButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      this.editUserButton.TextColor = System.Drawing.Color.SlateGray;
+      this.editUserButton.UseVisualStyleBackColor = false;
+      this.editUserButton.Click += new System.EventHandler(this.editUserButton_Click);
       // 
       // userSearchTextBox
       // 
@@ -254,30 +254,7 @@ namespace WalletBuddy.Forms
       this.userSearchTextBox.TabIndex = 8;
       this.userSearchTextBox.Texts = "";
       this.userSearchTextBox.UnderlinedStyle = false;
-      // 
-      // editUserButton
-      // 
-      this.editUserButton.BackColor = System.Drawing.Color.White;
-      this.editUserButton.BackgroundColor = System.Drawing.Color.White;
-      this.editUserButton.BorderColor = System.Drawing.Color.DodgerBlue;
-      this.editUserButton.BorderRadius = 10;
-      this.editUserButton.BorderSize = 1;
-      this.editUserButton.FlatAppearance.BorderSize = 0;
-      this.editUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.editUserButton.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.editUserButton.ForeColor = System.Drawing.Color.SlateGray;
-      this.editUserButton.Image = ((System.Drawing.Image)(resources.GetObject("editUserButton.Image")));
-      this.editUserButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.editUserButton.Location = new System.Drawing.Point(387, 36);
-      this.editUserButton.Margin = new System.Windows.Forms.Padding(2);
-      this.editUserButton.Name = "editUserButton";
-      this.editUserButton.Size = new System.Drawing.Size(148, 29);
-      this.editUserButton.TabIndex = 9;
-      this.editUserButton.Text = "Edit/Remove User";
-      this.editUserButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-      this.editUserButton.TextColor = System.Drawing.Color.SlateGray;
-      this.editUserButton.UseVisualStyleBackColor = false;
-      this.editUserButton.Click += new System.EventHandler(this.editUserButton_Click);
+      this.userSearchTextBox._TextChanged += new System.EventHandler(this.userSearchTextBox__TextChanged);
       // 
       // AdminUserList
       // 
@@ -286,7 +263,6 @@ namespace WalletBuddy.Forms
       this.ClientSize = new System.Drawing.Size(928, 421);
       this.Controls.Add(this.panel1);
       this.Controls.Add(this.editUserButton);
-      this.Controls.Add(this.searchUserButton);
       this.Controls.Add(this.userSearchTextBox);
       this.Controls.Add(this.userListDataGridView);
       this.Name = "AdminUserList";
@@ -304,7 +280,6 @@ namespace WalletBuddy.Forms
     private System.Windows.Forms.DataGridViewTextBoxColumn UserEmailColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn UserTypeColumn;
     private CustomControl.RJTextBox userSearchTextBox;
-    private CustomControl.RJButton searchUserButton;
     private System.Windows.Forms.Panel panel1;
     private CustomControl.RJTextBox userTypeTextBox;
     private CustomControl.RJTextBox emailTextBox;

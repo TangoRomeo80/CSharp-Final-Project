@@ -60,7 +60,6 @@ namespace WalletBuddy.Forms
       this.yearlyOverviewRadio = new System.Windows.Forms.RadioButton();
       this.panel1 = new System.Windows.Forms.Panel();
       this.expenseTrendPanel = new System.Windows.Forms.Panel();
-      this.expenseByCategoryPanel = new System.Windows.Forms.Panel();
       ((System.ComponentModel.ISupportInitialize)(this.incomeChart)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.expenseChart)).BeginInit();
       this.overviewPanel.SuspendLayout();
@@ -121,6 +120,7 @@ namespace WalletBuddy.Forms
       this.incomeWeeklyRadio.Text = "Weekly";
       this.incomeWeeklyRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       this.incomeWeeklyRadio.UseVisualStyleBackColor = false;
+      this.incomeWeeklyRadio.CheckedChanged += new System.EventHandler(this.incomeWeeklyRadio_CheckedChanged);
       // 
       // expenseWeeklyRadio
       // 
@@ -137,6 +137,7 @@ namespace WalletBuddy.Forms
       this.expenseWeeklyRadio.Text = "Weekly";
       this.expenseWeeklyRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       this.expenseWeeklyRadio.UseVisualStyleBackColor = false;
+      this.expenseWeeklyRadio.CheckedChanged += new System.EventHandler(this.expenseWeeklyRadio_CheckedChanged);
       // 
       // incomeMonthlyRadio
       // 
@@ -152,6 +153,7 @@ namespace WalletBuddy.Forms
       this.incomeMonthlyRadio.Text = "Monthly";
       this.incomeMonthlyRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       this.incomeMonthlyRadio.UseVisualStyleBackColor = false;
+      this.incomeMonthlyRadio.CheckedChanged += new System.EventHandler(this.incomeMonthlyRadio_CheckedChanged);
       // 
       // incomeYearlyRadio
       // 
@@ -167,6 +169,7 @@ namespace WalletBuddy.Forms
       this.incomeYearlyRadio.Text = "Yearly";
       this.incomeYearlyRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       this.incomeYearlyRadio.UseVisualStyleBackColor = false;
+      this.incomeYearlyRadio.CheckedChanged += new System.EventHandler(this.incomeYearlyRadio_CheckedChanged);
       // 
       // expenseMonthlyRadio
       // 
@@ -183,6 +186,7 @@ namespace WalletBuddy.Forms
       this.expenseMonthlyRadio.Text = "Monthly";
       this.expenseMonthlyRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       this.expenseMonthlyRadio.UseVisualStyleBackColor = false;
+      this.expenseMonthlyRadio.CheckedChanged += new System.EventHandler(this.expenseMonthlyRadio_CheckedChanged);
       // 
       // expenseYearlyRadio
       // 
@@ -199,6 +203,7 @@ namespace WalletBuddy.Forms
       this.expenseYearlyRadio.Text = "Yearly";
       this.expenseYearlyRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       this.expenseYearlyRadio.UseVisualStyleBackColor = false;
+      this.expenseYearlyRadio.CheckedChanged += new System.EventHandler(this.expenseYearlyRadio_CheckedChanged);
       // 
       // overviewPanel
       // 
@@ -216,16 +221,16 @@ namespace WalletBuddy.Forms
       this.overviewPanel.Controls.Add(this.weeklyOverviewRadio);
       this.overviewPanel.Controls.Add(this.monthlyOverviewRadio);
       this.overviewPanel.Controls.Add(this.yearlyOverviewRadio);
-      this.overviewPanel.Location = new System.Drawing.Point(475, 218);
+      this.overviewPanel.Location = new System.Drawing.Point(12, 218);
       this.overviewPanel.Name = "overviewPanel";
-      this.overviewPanel.Size = new System.Drawing.Size(441, 191);
+      this.overviewPanel.Size = new System.Drawing.Size(904, 191);
       this.overviewPanel.TabIndex = 3;
       // 
       // balanceOverviewLabel
       // 
       this.balanceOverviewLabel.AutoSize = true;
       this.balanceOverviewLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.balanceOverviewLabel.Location = new System.Drawing.Point(60, 147);
+      this.balanceOverviewLabel.Location = new System.Drawing.Point(388, 130);
       this.balanceOverviewLabel.Name = "balanceOverviewLabel";
       this.balanceOverviewLabel.Size = new System.Drawing.Size(153, 23);
       this.balanceOverviewLabel.TabIndex = 6;
@@ -235,7 +240,7 @@ namespace WalletBuddy.Forms
       // 
       this.expenseOverviewLabel.AutoSize = true;
       this.expenseOverviewLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.expenseOverviewLabel.Location = new System.Drawing.Point(60, 101);
+      this.expenseOverviewLabel.Location = new System.Drawing.Point(388, 84);
       this.expenseOverviewLabel.Name = "expenseOverviewLabel";
       this.expenseOverviewLabel.Size = new System.Drawing.Size(113, 23);
       this.expenseOverviewLabel.TabIndex = 5;
@@ -245,7 +250,7 @@ namespace WalletBuddy.Forms
       // 
       this.balanceLabel.AutoSize = true;
       this.balanceLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.balanceLabel.Location = new System.Drawing.Point(252, 147);
+      this.balanceLabel.Location = new System.Drawing.Point(580, 130);
       this.balanceLabel.Name = "balanceLabel";
       this.balanceLabel.Size = new System.Drawing.Size(40, 23);
       this.balanceLabel.TabIndex = 4;
@@ -255,7 +260,7 @@ namespace WalletBuddy.Forms
       // 
       this.expenselabel.AutoSize = true;
       this.expenselabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.expenselabel.Location = new System.Drawing.Point(252, 101);
+      this.expenselabel.Location = new System.Drawing.Point(580, 84);
       this.expenselabel.Name = "expenselabel";
       this.expenselabel.Size = new System.Drawing.Size(40, 23);
       this.expenselabel.TabIndex = 4;
@@ -265,7 +270,7 @@ namespace WalletBuddy.Forms
       // 
       this.incomeLabel.AutoSize = true;
       this.incomeLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.incomeLabel.Location = new System.Drawing.Point(252, 59);
+      this.incomeLabel.Location = new System.Drawing.Point(580, 42);
       this.incomeLabel.Name = "incomeLabel";
       this.incomeLabel.Size = new System.Drawing.Size(40, 23);
       this.incomeLabel.TabIndex = 4;
@@ -275,7 +280,7 @@ namespace WalletBuddy.Forms
       // 
       this.incomeOverviewLabel.AutoSize = true;
       this.incomeOverviewLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.incomeOverviewLabel.Location = new System.Drawing.Point(59, 59);
+      this.incomeOverviewLabel.Location = new System.Drawing.Point(387, 42);
       this.incomeOverviewLabel.Name = "incomeOverviewLabel";
       this.incomeOverviewLabel.Size = new System.Drawing.Size(106, 23);
       this.incomeOverviewLabel.TabIndex = 4;
@@ -284,7 +289,7 @@ namespace WalletBuddy.Forms
       // balanceOverviewIcon
       // 
       this.balanceOverviewIcon.Image = ((System.Drawing.Image)(resources.GetObject("balanceOverviewIcon.Image")));
-      this.balanceOverviewIcon.Location = new System.Drawing.Point(18, 147);
+      this.balanceOverviewIcon.Location = new System.Drawing.Point(346, 130);
       this.balanceOverviewIcon.Name = "balanceOverviewIcon";
       this.balanceOverviewIcon.Size = new System.Drawing.Size(32, 32);
       this.balanceOverviewIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -294,7 +299,7 @@ namespace WalletBuddy.Forms
       // ExpenseOverviewIcon
       // 
       this.ExpenseOverviewIcon.Image = ((System.Drawing.Image)(resources.GetObject("ExpenseOverviewIcon.Image")));
-      this.ExpenseOverviewIcon.Location = new System.Drawing.Point(18, 101);
+      this.ExpenseOverviewIcon.Location = new System.Drawing.Point(346, 84);
       this.ExpenseOverviewIcon.Name = "ExpenseOverviewIcon";
       this.ExpenseOverviewIcon.Size = new System.Drawing.Size(32, 32);
       this.ExpenseOverviewIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -304,7 +309,7 @@ namespace WalletBuddy.Forms
       // incomeOverviewIcon
       // 
       this.incomeOverviewIcon.Image = ((System.Drawing.Image)(resources.GetObject("incomeOverviewIcon.Image")));
-      this.incomeOverviewIcon.Location = new System.Drawing.Point(18, 59);
+      this.incomeOverviewIcon.Location = new System.Drawing.Point(346, 42);
       this.incomeOverviewIcon.Name = "incomeOverviewIcon";
       this.incomeOverviewIcon.Size = new System.Drawing.Size(32, 32);
       this.incomeOverviewIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -315,7 +320,7 @@ namespace WalletBuddy.Forms
       // 
       this.overviewLabel.AutoSize = true;
       this.overviewLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.overviewLabel.Location = new System.Drawing.Point(186, 0);
+      this.overviewLabel.Location = new System.Drawing.Point(402, 0);
       this.overviewLabel.Name = "overviewLabel";
       this.overviewLabel.Size = new System.Drawing.Size(91, 26);
       this.overviewLabel.TabIndex = 0;
@@ -328,7 +333,7 @@ namespace WalletBuddy.Forms
       this.weeklyOverviewRadio.BackColor = System.Drawing.Color.Transparent;
       this.weeklyOverviewRadio.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.weeklyOverviewRadio.ForeColor = System.Drawing.Color.Black;
-      this.weeklyOverviewRadio.Location = new System.Drawing.Point(18, 34);
+      this.weeklyOverviewRadio.Location = new System.Drawing.Point(252, 42);
       this.weeklyOverviewRadio.Name = "weeklyOverviewRadio";
       this.weeklyOverviewRadio.Size = new System.Drawing.Size(65, 19);
       this.weeklyOverviewRadio.TabIndex = 2;
@@ -336,6 +341,7 @@ namespace WalletBuddy.Forms
       this.weeklyOverviewRadio.Text = "Weekly";
       this.weeklyOverviewRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       this.weeklyOverviewRadio.UseVisualStyleBackColor = false;
+      this.weeklyOverviewRadio.CheckedChanged += new System.EventHandler(this.weeklyOverviewRadio_CheckedChanged);
       // 
       // monthlyOverviewRadio
       // 
@@ -344,7 +350,7 @@ namespace WalletBuddy.Forms
       this.monthlyOverviewRadio.BackColor = System.Drawing.Color.Transparent;
       this.monthlyOverviewRadio.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.monthlyOverviewRadio.ForeColor = System.Drawing.Color.Black;
-      this.monthlyOverviewRadio.Location = new System.Drawing.Point(109, 34);
+      this.monthlyOverviewRadio.Location = new System.Drawing.Point(252, 67);
       this.monthlyOverviewRadio.Name = "monthlyOverviewRadio";
       this.monthlyOverviewRadio.Size = new System.Drawing.Size(71, 19);
       this.monthlyOverviewRadio.TabIndex = 2;
@@ -352,6 +358,7 @@ namespace WalletBuddy.Forms
       this.monthlyOverviewRadio.Text = "Monthly";
       this.monthlyOverviewRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       this.monthlyOverviewRadio.UseVisualStyleBackColor = false;
+      this.monthlyOverviewRadio.CheckedChanged += new System.EventHandler(this.monthlyOverviewRadio_CheckedChanged);
       // 
       // yearlyOverviewRadio
       // 
@@ -360,7 +367,7 @@ namespace WalletBuddy.Forms
       this.yearlyOverviewRadio.BackColor = System.Drawing.Color.Transparent;
       this.yearlyOverviewRadio.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.yearlyOverviewRadio.ForeColor = System.Drawing.Color.Black;
-      this.yearlyOverviewRadio.Location = new System.Drawing.Point(208, 34);
+      this.yearlyOverviewRadio.Location = new System.Drawing.Point(252, 92);
       this.yearlyOverviewRadio.Name = "yearlyOverviewRadio";
       this.yearlyOverviewRadio.Size = new System.Drawing.Size(58, 19);
       this.yearlyOverviewRadio.TabIndex = 2;
@@ -368,6 +375,7 @@ namespace WalletBuddy.Forms
       this.yearlyOverviewRadio.Text = "Yearly";
       this.yearlyOverviewRadio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       this.yearlyOverviewRadio.UseVisualStyleBackColor = false;
+      this.yearlyOverviewRadio.CheckedChanged += new System.EventHandler(this.yearlyOverviewRadio_CheckedChanged);
       // 
       // panel1
       // 
@@ -393,19 +401,10 @@ namespace WalletBuddy.Forms
       this.expenseTrendPanel.Size = new System.Drawing.Size(441, 191);
       this.expenseTrendPanel.TabIndex = 5;
       // 
-      // expenseByCategoryPanel
-      // 
-      this.expenseByCategoryPanel.BackColor = System.Drawing.Color.White;
-      this.expenseByCategoryPanel.Location = new System.Drawing.Point(12, 218);
-      this.expenseByCategoryPanel.Name = "expenseByCategoryPanel";
-      this.expenseByCategoryPanel.Size = new System.Drawing.Size(441, 191);
-      this.expenseByCategoryPanel.TabIndex = 6;
-      // 
       // UserDash
       // 
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
       this.ClientSize = new System.Drawing.Size(928, 421);
-      this.Controls.Add(this.expenseByCategoryPanel);
       this.Controls.Add(this.expenseTrendPanel);
       this.Controls.Add(this.panel1);
       this.Controls.Add(this.overviewPanel);
@@ -449,7 +448,6 @@ namespace WalletBuddy.Forms
     private System.Windows.Forms.PictureBox incomeOverviewIcon;
     private System.Windows.Forms.Panel panel1;
     private System.Windows.Forms.Panel expenseTrendPanel;
-    private System.Windows.Forms.Panel expenseByCategoryPanel;
     private System.Windows.Forms.Label balanceLabel;
     private System.Windows.Forms.Label expenselabel;
     private System.Windows.Forms.Label incomeLabel;

@@ -22,6 +22,39 @@ namespace WalletBuddy.Executor
       return incomeDataAccess.GetIncomeList(user);
     }
 
+    public List<Income> GetWeeklyIncomeList(User user)
+    {
+      List<Income> allIncomeList = incomeDataAccess.GetIncomeList(user);
+      List<Income> weeklyIncomeList = new List<Income>();
+      foreach(Income income in allIncomeList)
+      {
+        if ((DateTime.Now - income.Date).TotalDays < 7) weeklyIncomeList.Add(income);
+      }
+      return weeklyIncomeList;
+    }
+
+    public List<Income> GetMonthlyIncomeList(User user)
+    {
+      List<Income> allIncomeList = incomeDataAccess.GetIncomeList(user);
+      List<Income> monthlyIncomeList = new List<Income>();
+      foreach (Income income in allIncomeList)
+      {
+        if ((DateTime.Now - income.Date).TotalDays < 30) monthlyIncomeList.Add(income);
+      }
+      return monthlyIncomeList;
+    }
+
+    public List<Income> GetYearlyIncomeList(User user)
+    {
+      List<Income> allIncomeList = incomeDataAccess.GetIncomeList(user);
+      List<Income> yearlyIncomeList = new List<Income>();
+      foreach (Income income in allIncomeList)
+      {
+        if ((DateTime.Now - income.Date).TotalDays < 30) yearlyIncomeList.Add(income);
+      }
+      return yearlyIncomeList;
+    }
+
     public int GetWeeklyIncome(User user)
     {
       int totalIncome = 0;

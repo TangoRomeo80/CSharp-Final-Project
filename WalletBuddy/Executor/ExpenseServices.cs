@@ -22,6 +22,39 @@ namespace WalletBuddy.Executor
       return expenseDataAccess.GetExpenseList(user);
     }
 
+    public List<Expense> GetWeeklyExpenseList(User user)
+    {
+      List<Expense> allExpenseList = expenseDataAccess.GetExpenseList(user);
+      List<Expense> weeklyExpenseList = new List<Expense>();
+      foreach (Expense expense in allExpenseList)
+      {
+        if ((DateTime.Now - expense.Date).TotalDays < 7) weeklyExpenseList.Add(expense);
+      }
+      return weeklyExpenseList;
+    }
+
+    public List<Expense> GetMonthlyExpenseList(User user)
+    {
+      List<Expense> allExpenseList = expenseDataAccess.GetExpenseList(user);
+      List<Expense> monthlyExpenseList = new List<Expense>();
+      foreach (Expense expense in allExpenseList)
+      {
+        if ((DateTime.Now - expense.Date).TotalDays < 30) monthlyExpenseList.Add(expense);
+      }
+      return monthlyExpenseList;
+    }
+
+    public List<Expense> GetYearlyExpenseList(User user)
+    {
+      List<Expense> allExpenseList = expenseDataAccess.GetExpenseList(user);
+      List<Expense> yearlyExpenseList = new List<Expense>();
+      foreach (Expense expense in allExpenseList)
+      {
+        if ((DateTime.Now - expense.Date).TotalDays < 30) yearlyExpenseList.Add(expense);
+      }
+      return yearlyExpenseList;
+    }
+
     public int GetWeeklyExpense(User user)
     {
       int totalExpense = 0;

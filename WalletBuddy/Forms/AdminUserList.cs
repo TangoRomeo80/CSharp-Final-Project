@@ -40,6 +40,7 @@ namespace WalletBuddy.Forms
       UpdateDataGrid();
     }
 
+
     private void editUserButton_Click(object sender, EventArgs e)
     {
       if (userListDataGridView.SelectedRows.Count <= 0)
@@ -115,6 +116,21 @@ namespace WalletBuddy.Forms
         else
         {
           MessageBox.Show("An Unexpected error Occured. User could not be Removed.");
+        }
+      }
+    }
+
+    private void userSearchTextBox__TextChanged(object sender, EventArgs e)
+    {
+      userListDataGridView.Rows.Clear();
+
+      UserServices userServices = new UserServices();
+      List<User> userList = userServices.GetAllUserList();
+      foreach(User user in userList)
+      {
+        if (user.UserName.Contains(userSearchTextBox.Texts))
+        {
+          userListDataGridView.Rows.Add(user.UserName, user.UserEmail, user.UserType);
         }
       }
     }

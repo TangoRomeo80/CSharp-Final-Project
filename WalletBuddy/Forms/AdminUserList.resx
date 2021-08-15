@@ -126,31 +126,7 @@
   <metadata name="UserTypeColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="UserNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="UserEmailColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="UserTypeColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="searchUserButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAiRJREFUSEvt
-        ls9PE0EUxxtFLgI3SfgXwBt/gOUC2W1jwFj/BQJRUP6CHvmRuLtNPHhGIPEfMTG9IBIwrcSZJUHwCAc4
-        lfed+W5pIDidUpEDn+Rlt9+Z996+mdm3zd1zZyiVt3vDRL0KY70exmpXrifWzP0axjCH07tDIUpfSPCf
-        Yg2H1YtJOkW3zimXGw+kouWWwJvyey6oqOHxld+PYRPv1YhUOx8m+ls2L4jTRfgyjD8tSU/lfvpvwTAW
-        RHrGzrXJOeQHl9ckDSrpM8pOilGabyaP9CTl9jAHqbmnappy2xRiPQtfudZGP1YfUXbD02v2tJO9Kn1u
-        PBTfLcQIIvWSspsg1hvmiZP0DSVvJOFbG0N9ouRGTugP87Ryeil5Y067WTW1S8mN7M0xnPIfjvooefN8
-        6U+/qVhiUXLTjcRBpTbgnbgbS11I9FMmrlFyIw5rcEJHouRNGOkFEyNWq5TcNF8naYOdvk5S6XdbsSpR
-        dsMGUocj2iDltpF2+dpWq/fy5UYP5fbAV4bOp2iDlJ0Ukv0x8TmzvqpI2Q80+iy5LN0slpBDV8AYK82S
-        HgaVgycc9sN8cS6Sw7bQkdAc8KrBeHrfZXtqTR1m88dX6oMM5w++MngtLgJfa3tYXlQq96ZX43qj5PjK
-        oOGj94ZxuiMPgiZzYh9IreL0th4kJOtacl9M5c1/JunORPRriEP/nv+a/NKyf6V8OzB5VewLpXtuk1zu
-        HLD58HQhxTvrAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="editUserButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAQJJREFUSEvt

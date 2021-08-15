@@ -10,6 +10,27 @@ namespace WalletBuddy.DB
 {
   class UserDataAccess : DataAccess
   {
+
+    public List<User> GetAllUserList()
+    {
+      string query = "SELECT * FROM USER_TBL";
+      SqlDataReader reader = GetData(query);
+      List<User> userList = new List<User>();
+      while (reader.Read())
+      {
+        User user = new User()
+        {
+          UserId = Convert.ToInt32(reader["USER_ID"]),
+          UserName = reader["USER_NAME"].ToString(),
+          UserEmail = reader["USER_EMAIL"].ToString(),
+          UserPassword = reader["USER_PASSWORD"].ToString(),
+          UserType = reader["USER_TYPE"].ToString()
+        };
+        userList.Add(user);
+      }
+      return userList;
+    }
+
     public int AddUser(User user)
     {
       string sql = "INSERT INTO USER_TBL(USER_NAME,USER_EMAIL,USER_PASSWORD,USER_TYPE) VALUES('" + user.UserName + "','" + user.UserEmail + "','" + user.UserPassword + "','" + user.UserType + "')";

@@ -94,7 +94,7 @@ namespace WalletBuddy.Forms
     private void Init_Load(object sender, System.EventArgs e)
     {
       this.topAdminLabel.Text = this.user.UserName;
-      AdminUserList childForm = new AdminUserList();
+      AdminUserList childForm = new AdminUserList(this.user);
       if (activeForm != null)
         activeForm.Close();
       ActivateButton(userListButton);
@@ -110,7 +110,7 @@ namespace WalletBuddy.Forms
 
     private void userListButton_Click(object sender, EventArgs e)
     {
-      OpenChildForm(new AdminUserList(), sender);
+      OpenChildForm(new AdminUserList(this.user), sender);
     }
 
     private void supportButton_Click(object sender, EventArgs e)

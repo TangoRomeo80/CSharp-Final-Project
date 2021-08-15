@@ -17,6 +17,11 @@ namespace WalletBuddy.Executor
       this.userDataAccess = new UserDataAccess();
     }
 
+    public List<User> GetAllUserList()
+    {
+      return userDataAccess.GetAllUserList();
+    }
+
     public int AddUser(string userName, string userEmail, string userPassword, string userType)
     {
       User user = new User(0, userName, userEmail, userPassword, userType);

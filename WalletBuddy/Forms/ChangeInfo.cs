@@ -47,7 +47,7 @@ namespace WalletBuddy.Forms
         {
           UserName = newUsernameTextBox.Texts,
           UserEmail = newEmailTextBox.Texts,
-          //UserType = userToModify.UserType
+          UserType = userToModify.UserType
         };
         int success = userServices.ChangeInfo(user, userToModify);
         if(success > 0)

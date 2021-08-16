@@ -39,7 +39,7 @@ namespace WalletBuddy.Forms
       {
         string senderMail = "tanzeemRahatVal@gmail.com";
         string subject = "Response to your feedback from Wallet Buddy";
-        string credentialName = "tanzeemRahatVal@gmail.com";
+        string credentialName = "";
         string credentialPassword = "rahatOTG2769";
         MailMessage mail = new MailMessage(senderMail, eMail, subject, descriptionTextBox.Texts);
         SmtpClient client = new SmtpClient("smtp.gmail.com");

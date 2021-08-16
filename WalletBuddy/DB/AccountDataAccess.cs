@@ -81,5 +81,17 @@ namespace WalletBuddy.DB
       }
       return null;
     }
+
+    public int CheckAccountBalance(Account account, User user)
+    {
+      string query = "SELECT * FROM ACCOUNT_TBL WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_NAME = '" + user.UserName + "'";
+      SqlDataReader reader = GetData(query);
+      if (reader.Read())
+      {
+        return Convert.ToInt32(reader["BALANCE"]);
+      }
+      return 0;
+    }
+
   }
 }

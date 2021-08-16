@@ -50,30 +50,42 @@ namespace WalletBuddy.Forms
       {
         MessageBox.Show("An account needs to be selected.");
       }
+
       else
       {
-        ExpenseServices expenseServices = new ExpenseServices();
-        Expense expense = new Expense()
+        AccountServices accountServices = new AccountServices();
+        Account account = new Account() { AccountName = accountComboBox.SelectedItem.ToString() };
+        int accountBalance = accountServices.CheckAccountBalance(account, this.user);
+
+        if (accountBalance < Convert.ToInt32(paymentAmountTextBox.Texts))
         {
-          UserName = user.UserName,
-          Amount = Convert.ToInt32(paymentAmountTextBox.Texts),
-          PaymentTo = paymentToTextBox.Texts,
-          Description = descriptionTextBox.Texts,
-          AccountName = accountComboBox.SelectedItem.ToString(),
-          Date = DateTime.Now
-        };
-        int success = expenseServices.AddExpense(expense, this.user);
-        if (success > 0)
-        {
-          paymentAmountTextBox.Texts = "";
-          paymentToTextBox.Texts = "";
-          descriptionTextBox.Texts = "";
-          MessageBox.Show("Expense record added successfully");
-          parentForm.UpdateDataGrid();
+          MessageBox.Show("Account Balance is not sufficient.");
         }
         else
         {
-          MessageBox.Show("An Unexpected error Occured. Record could not be added.");
+          ExpenseServices expenseServices = new ExpenseServices();
+          Expense expense = new Expense()
+          {
+            UserName = user.UserName,
+            Amount = Convert.ToInt32(paymentAmountTextBox.Texts),
+            PaymentTo = paymentToTextBox.Texts,
+            Description = descriptionTextBox.Texts,
+            AccountName = accountComboBox.SelectedItem.ToString(),
+            Date = DateTime.Now
+          };
+          int success = expenseServices.AddExpense(expense, this.user);
+          if (success > 0)
+          {
+            paymentAmountTextBox.Texts = "";
+            paymentToTextBox.Texts = "";
+            descriptionTextBox.Texts = "";
+            MessageBox.Show("Expense record added successfully");
+            parentForm.UpdateDataGrid();
+          }
+          else
+          {
+            MessageBox.Show("An Unexpected error Occured. Record could not be added.");
+          }
         }
       }
     }

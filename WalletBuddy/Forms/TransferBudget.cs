@@ -43,35 +43,46 @@ namespace WalletBuddy.Forms
         {
           AccountName = senderAccountNameTextBox.Texts
         };
-        Account recieverAccount = new Account()
-        {
-          AccountName = recieverAccountNameTextBox.Texts
-        };
-        string senderExist = accountServices.CheckAccountName(senderAccount, user);
-        string recieverExist = accountServices.CheckAccountName(recieverAccount, user);
 
-        if (senderExist != senderAccountNameTextBox.Texts)
+        int accountBalance = accountServices.CheckAccountBalance(senderAccount, this.user);
+
+        if (accountBalance < amount)
         {
-          MessageBox.Show("Sending account name does not exist.");
+          MessageBox.Show("Account Balance is not sufficient.");
         }
-        else if (recieverExist != recieverAccountNameTextBox.Texts)
-        {
-          MessageBox.Show("Recieving account name does not exist.");
-        }
+
         else
         {
-          int success = accountServices.TransferBalance(senderAccount, recieverAccount, user, amount);
-          if (success > 0)
+          Account recieverAccount = new Account()
           {
-            senderAccountNameTextBox.Texts = "";
-            recieverAccountNameTextBox.Texts = "";
-            amountTextBox.Texts = "";
-            MessageBox.Show("Transfer Successfull.");
-            parentForm.UpdateDataGrid();
+            AccountName = recieverAccountNameTextBox.Texts
+          };
+          string senderExist = accountServices.CheckAccountName(senderAccount, user);
+          string recieverExist = accountServices.CheckAccountName(recieverAccount, user);
+
+          if (senderExist != senderAccountNameTextBox.Texts)
+          {
+            MessageBox.Show("Sending account name does not exist.");
+          }
+          else if (recieverExist != recieverAccountNameTextBox.Texts)
+          {
+            MessageBox.Show("Recieving account name does not exist.");
           }
           else
           {
-            MessageBox.Show("An Unexpected error Occured. Sign up failed.");
+            int success = accountServices.TransferBalance(senderAccount, recieverAccount, user, amount);
+            if (success > 0)
+            {
+              senderAccountNameTextBox.Texts = "";
+              recieverAccountNameTextBox.Texts = "";
+              amountTextBox.Texts = "";
+              MessageBox.Show("Transfer Successfull.");
+              parentForm.UpdateDataGrid();
+            }
+            else
+            {
+              MessageBox.Show("An Unexpected error Occured. Sign up failed.");
+            }
           }
         }
       }

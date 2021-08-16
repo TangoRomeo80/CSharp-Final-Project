@@ -44,7 +44,12 @@ namespace WalletBuddy.Executor
 
     public string CheckAccountName(Account account, User user)
     {
-      return this.accountDataAccess.CheckAccountName(account, user);
+      return accountDataAccess.CheckAccountName(account, user);
+    }
+
+    public int CheckAccountBalance(Account account, User user)
+    {
+      return accountDataAccess.CheckAccountBalance(account, user);
     }
 
     public int TransferBalance(Account senderAccount, Account recieverAccount, User user, int amount)

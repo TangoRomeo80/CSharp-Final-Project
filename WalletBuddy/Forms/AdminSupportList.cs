@@ -40,30 +40,36 @@ namespace WalletBuddy.Forms
       UpdateDataGrid();
     }
 
-    private void completeButton_Click(object sender, EventArgs e)
+    public void completeToken()
     {
       TokenServices tokenServices = new TokenServices();
-      if (tokenDataGridView.SelectedRows.Count <= 0)
+      SupportToken token = new SupportToken()
       {
-        MessageBox.Show("No user is selected.");
+        TokenId = Convert.ToInt32(tokenDataGridView.SelectedRows[0].Cells[0].Value)
+      };
+      int success = tokenServices.ChangeStatus(token);
+      if (success > 0)
+      {
+        UpdateDataGrid();
       }
       else
       {
-        SupportToken token = new SupportToken()
-        {
-          TokenId = Convert.ToInt32(tokenDataGridView.SelectedRows[0].Cells[0].Value)
-        };
-        int success = tokenServices.ChangeStatus(token);
-        if(success > 0)
-        {
-          MessageBox.Show("Token status changed successfully");
-          UpdateDataGrid();
-        }
-        else
-        {
-          MessageBox.Show("An Unexpected error Occured. Status could not be changed.");
-        }
+        MessageBox.Show("An Unexpected error Occured. Status could not be changed.");
+      }
+    }
 
+    private void completeButton_Click(object sender, EventArgs e)
+    {
+
+      if (tokenDataGridView.SelectedRows.Count <= 0)
+      {
+        MessageBox.Show("No user is selected.");
+      } 
+      else
+      {
+        SendResponse sendResponse = new SendResponse(tokenDataGridView.SelectedRows[0].Cells[2].Value.ToString());
+        sendResponse.Show();
+        completeToken();
       }
     }
   }

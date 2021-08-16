@@ -54,11 +54,11 @@ namespace WalletBuddy.Forms
       this.completeButton.Image = ((System.Drawing.Image)(resources.GetObject("completeButton.Image")));
       this.completeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.completeButton.Location = new System.Drawing.Point(13, 5);
-      this.completeButton.Margin = new System.Windows.Forms.Padding(2);
+      this.completeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
       this.completeButton.Name = "completeButton";
       this.completeButton.Size = new System.Drawing.Size(180, 37);
       this.completeButton.TabIndex = 5;
-      this.completeButton.Text = "Set status to complete";
+      this.completeButton.Text = "Send Response";
       this.completeButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
       this.completeButton.TextColor = System.Drawing.Color.SlateGray;
       this.completeButton.UseVisualStyleBackColor = false;
@@ -80,6 +80,7 @@ namespace WalletBuddy.Forms
       this.tokenDataGridView.Location = new System.Drawing.Point(13, 47);
       this.tokenDataGridView.Name = "tokenDataGridView";
       this.tokenDataGridView.ReadOnly = true;
+      this.tokenDataGridView.RowHeadersWidth = 51;
       this.tokenDataGridView.Size = new System.Drawing.Size(903, 369);
       this.tokenDataGridView.StateCommon.Background.Color1 = System.Drawing.Color.LightGray;
       this.tokenDataGridView.StateCommon.Background.Color2 = System.Drawing.Color.LightGray;
@@ -93,30 +94,35 @@ namespace WalletBuddy.Forms
       // TokenId
       // 
       this.TokenId.HeaderText = "Token Id";
+      this.TokenId.MinimumWidth = 6;
       this.TokenId.Name = "TokenId";
       this.TokenId.ReadOnly = true;
       // 
       // SenderNameColumn
       // 
       this.SenderNameColumn.HeaderText = "Sender Name";
+      this.SenderNameColumn.MinimumWidth = 6;
       this.SenderNameColumn.Name = "SenderNameColumn";
       this.SenderNameColumn.ReadOnly = true;
       // 
       // SenderEmailColumn
       // 
       this.SenderEmailColumn.HeaderText = "Sender E-mail";
+      this.SenderEmailColumn.MinimumWidth = 6;
       this.SenderEmailColumn.Name = "SenderEmailColumn";
       this.SenderEmailColumn.ReadOnly = true;
       // 
       // DescriptionColumn
       // 
       this.DescriptionColumn.HeaderText = "Description";
+      this.DescriptionColumn.MinimumWidth = 6;
       this.DescriptionColumn.Name = "DescriptionColumn";
       this.DescriptionColumn.ReadOnly = true;
       // 
       // StatusColumn
       // 
       this.StatusColumn.HeaderText = "Status";
+      this.StatusColumn.MinimumWidth = 6;
       this.StatusColumn.Name = "StatusColumn";
       this.StatusColumn.ReadOnly = true;
       // 

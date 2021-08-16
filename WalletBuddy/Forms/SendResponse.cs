@@ -37,11 +37,15 @@ namespace WalletBuddy.Forms
       }
       else
       {
-        MailMessage mail = new MailMessage("tanzeemRahatVal@gmail.com", eMail, "Response to your feedback from Wallet Buddy", descriptionTextBox.Texts);
+        string senderMail = "tanzeemRahatVal@gmail.com";
+        string subject = "Response to your feedback from Wallet Buddy";
+        string credentialName = "tanzeemRahatVal@gmail.com";
+        string credentialPassword = "rahatOTG2769";
+        MailMessage mail = new MailMessage(senderMail, eMail, subject, descriptionTextBox.Texts);
         SmtpClient client = new SmtpClient("smtp.gmail.com");
         client.UseDefaultCredentials = false;
         client.Port = 587;
-        client.Credentials = new System.Net.NetworkCredential("tanzeemRahatVal@gmail.com", "rahatOTG2769");
+        client.Credentials = new System.Net.NetworkCredential(credentialName, credentialPassword);
         client.EnableSsl = true;
         client.Send(mail);
         MessageBox.Show("Response sent successfully.");

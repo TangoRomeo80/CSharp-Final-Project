@@ -29,13 +29,15 @@ namespace WalletBuddy.Forms
     /// </summary>
     private void InitializeComponent()
     {
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserRecords));
       this.recordsDataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-      this.recordWeeklyRadio = new System.Windows.Forms.RadioButton();
-      this.recordMonthlyRadio = new System.Windows.Forms.RadioButton();
-      this.recordYearlyRadio = new System.Windows.Forms.RadioButton();
       this.TransactionTypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.AmountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.recordWeeklyRadio = new System.Windows.Forms.RadioButton();
+      this.recordMonthlyRadio = new System.Windows.Forms.RadioButton();
+      this.recordYearlyRadio = new System.Windows.Forms.RadioButton();
+      this.printButton = new WalletBuddy.CustomControl.RJButton();
       ((System.ComponentModel.ISupportInitialize)(this.recordsDataGridView)).BeginInit();
       this.SuspendLayout();
       // 
@@ -62,6 +64,24 @@ namespace WalletBuddy.Forms
       this.recordsDataGridView.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.Gray;
       this.recordsDataGridView.StateCommon.HeaderColumn.Back.Color2 = System.Drawing.Color.Gray;
       this.recordsDataGridView.TabIndex = 4;
+      // 
+      // TransactionTypeColumn
+      // 
+      this.TransactionTypeColumn.HeaderText = "Transaction Type";
+      this.TransactionTypeColumn.Name = "TransactionTypeColumn";
+      this.TransactionTypeColumn.ReadOnly = true;
+      // 
+      // AmountColumn
+      // 
+      this.AmountColumn.HeaderText = "Amount";
+      this.AmountColumn.Name = "AmountColumn";
+      this.AmountColumn.ReadOnly = true;
+      // 
+      // DateColumn
+      // 
+      this.DateColumn.HeaderText = "Date";
+      this.DateColumn.Name = "DateColumn";
+      this.DateColumn.ReadOnly = true;
       // 
       // recordWeeklyRadio
       // 
@@ -114,29 +134,36 @@ namespace WalletBuddy.Forms
       this.recordYearlyRadio.UseVisualStyleBackColor = false;
       this.recordYearlyRadio.CheckedChanged += new System.EventHandler(this.recordYearlyRadio_CheckedChanged);
       // 
-      // TransactionTypeColumn
+      // printButton
       // 
-      this.TransactionTypeColumn.HeaderText = "Transaction Type";
-      this.TransactionTypeColumn.Name = "TransactionTypeColumn";
-      this.TransactionTypeColumn.ReadOnly = true;
-      // 
-      // AmountColumn
-      // 
-      this.AmountColumn.HeaderText = "Amount";
-      this.AmountColumn.Name = "AmountColumn";
-      this.AmountColumn.ReadOnly = true;
-      // 
-      // DateColumn
-      // 
-      this.DateColumn.HeaderText = "Date";
-      this.DateColumn.Name = "DateColumn";
-      this.DateColumn.ReadOnly = true;
+      this.printButton.BackColor = System.Drawing.Color.White;
+      this.printButton.BackgroundColor = System.Drawing.Color.White;
+      this.printButton.BorderColor = System.Drawing.Color.Black;
+      this.printButton.BorderRadius = 10;
+      this.printButton.BorderSize = 1;
+      this.printButton.FlatAppearance.BorderSize = 0;
+      this.printButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.printButton.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.printButton.ForeColor = System.Drawing.Color.SlateGray;
+      this.printButton.Image = ((System.Drawing.Image)(resources.GetObject("printButton.Image")));
+      this.printButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      this.printButton.Location = new System.Drawing.Point(836, 6);
+      this.printButton.Margin = new System.Windows.Forms.Padding(2);
+      this.printButton.Name = "printButton";
+      this.printButton.Size = new System.Drawing.Size(80, 37);
+      this.printButton.TabIndex = 6;
+      this.printButton.Text = "Print";
+      this.printButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+      this.printButton.TextColor = System.Drawing.Color.SlateGray;
+      this.printButton.UseVisualStyleBackColor = false;
+      this.printButton.Click += new System.EventHandler(this.printButton_Click);
       // 
       // UserRecords
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(928, 421);
+      this.Controls.Add(this.printButton);
       this.Controls.Add(this.recordYearlyRadio);
       this.Controls.Add(this.recordMonthlyRadio);
       this.Controls.Add(this.recordWeeklyRadio);
@@ -158,5 +185,6 @@ namespace WalletBuddy.Forms
     private System.Windows.Forms.DataGridViewTextBoxColumn TransactionTypeColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn AmountColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn DateColumn;
+    private CustomControl.RJButton printButton;
   }
 }

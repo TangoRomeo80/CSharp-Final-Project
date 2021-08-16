@@ -126,4 +126,14 @@
   <metadata name="DateColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="printButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAACnSURBVEhL7dWxDcJAEETRows6gRYQvUAjUBRCtIER0AUB/JXIZgJ83iOA+9KTA++tJQd26f11
+        JzwnOmJ0blGN0bklNXrSGne415XhhhWkuOEOZLpCcoMtSG6oBckNtSC5oVCb2xUkNxRqc7uCNH9fW/aN
+        Z3xe/Encq8l0gHSGG840QNrDDWfaQVrCDWdaQJrhAncgQ3yn4xm2LR5wB6eInRv0ej9bKS9kjF/2vPMB
+        1QAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

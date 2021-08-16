@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WalletBuddy.Executor;
 using WalletBuddy.Model;
+using DGVPrinterHelper;
 
 namespace WalletBuddy.Forms
 {
@@ -108,6 +109,21 @@ namespace WalletBuddy.Forms
     {
       if (recordYearlyRadio.Checked) UpdateYearlyDataGrid();
       else UpdateDataGrid();
+    }
+
+    private void printButton_Click(object sender, EventArgs e)
+    {
+      DGVPrinter printer = new DGVPrinter();
+      printer.Title = "Records report";
+      printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
+      printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+      printer.PageNumbers = true;
+      printer.PageNumberInHeader = false;
+      printer.PorportionalColumns = true;
+      printer.HeaderCellAlignment = StringAlignment.Near;
+      printer.Footer = "Wallet Buddy";
+      printer.FooterSpacing = 15;
+      printer.PrintDataGridView(recordsDataGridView);
     }
   }
 }

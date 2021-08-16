@@ -87,6 +87,7 @@
     <Compile Include="DB\TransactionDataAccess.cs" />
     <Compile Include="DB\UserDataAccess.cs" />
     <Compile Include="Executor\AccountServices.cs" />
+    <Compile Include="DGVPrinter.cs" />
     <Compile Include="Executor\ExpenseServices.cs" />
     <Compile Include="Executor\GoalsServices.cs" />
     <Compile Include="Executor\IncomeServices.cs" />
@@ -373,6 +374,7 @@
     <Content Include="Resources\Log Out Icon.png" />
     <Content Include="Resources\Main Logo.ico" />
     <Content Include="Resources\Main Logo.png" />
+    <Content Include="Resources\Print Icon.png" />
     <Content Include="Resources\Remove Icon Account.png" />
     <Content Include="Resources\Reports icon.png" />
     <Content Include="Resources\Search icon.png" />

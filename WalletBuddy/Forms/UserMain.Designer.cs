@@ -391,6 +391,7 @@ namespace WalletBuddy.Forms
       this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "Wallet Buddy";
+      this.Activated += new System.EventHandler(this.UserMain_Activated);
       ((System.ComponentModel.ISupportInitialize)(this.headerPanel)).EndInit();
       this.headerPanel.ResumeLayout(false);
       this.headerPanel.PerformLayout();

@@ -10,7 +10,7 @@ namespace WalletBuddy.Model
   {
     //Properties
     public int GoalId { set; get; }
-    public string UserName { set; get; }
+    public int UserId { set; get; }
     public string GoalDuration { set; get; }
     public int TargetSavings { set; get; }
     public int CurrentExpense { set; get; }
@@ -20,7 +20,7 @@ namespace WalletBuddy.Model
     public Goals()
     {
       GoalId = 0;
-      UserName = "";
+      UserId = 0;
       GoalDuration = "";
       TargetSavings = 0;
       CurrentExpense = 0;
@@ -28,10 +28,10 @@ namespace WalletBuddy.Model
     }
 
     //parameterized constructor
-    public Goals(int goalId, string userName, string goalDuration, int targetSavings, int currentExpense, int remainingExpense)
+    public Goals(int goalId, int userId, string goalDuration, int targetSavings, int currentExpense, int remainingExpense)
     {
       GoalId = goalId;
-      UserName = userName;
+      UserId = userId;
       GoalDuration = goalDuration;
       TargetSavings = targetSavings;
       CurrentExpense = currentExpense;

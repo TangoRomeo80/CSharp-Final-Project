@@ -1,4 +1,5 @@
-﻿//Login page
+﻿
+//Login page
 
 using System;
 using System.Windows.Forms;
@@ -59,6 +60,7 @@ namespace WalletBuddy.Forms
           {
             User user = new User()
             {
+              UserId = userServices.GetUserId(userNameTextBox.Texts),
               UserName = userNameTextBox.Texts
             };
 
@@ -70,6 +72,7 @@ namespace WalletBuddy.Forms
           {
             User user = new User()
             {
+              UserId = userServices.GetUserId(userNameTextBox.Texts),
               UserName = userNameTextBox.Texts
             };
             AdminMain adminMain = new AdminMain(user);

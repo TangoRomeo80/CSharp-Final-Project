@@ -41,7 +41,7 @@ namespace WalletBuddy.Forms
         Payment payment = new Payment()
         {
           PaymentName = paymentNameTextBox.Texts,
-          UserName = user.UserName,
+          UserId = user.UserId,
           PaymentReciever = paymentRecieverTextBox.Texts,
           Description = descriptionTextBox.Texts,
           Amount = Convert.ToInt32(paymentAmountTextBox.Texts),

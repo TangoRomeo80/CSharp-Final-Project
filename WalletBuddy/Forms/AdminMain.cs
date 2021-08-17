@@ -142,5 +142,11 @@ namespace WalletBuddy.Forms
       }
     }
 
+    private void AdminMain_Activated(object sender, EventArgs e)
+    {
+      UserServices userServices = new UserServices();
+      this.topAdminLabel.Text = userServices.GetUserName(this.user.UserId);
+      this.userPicBox.Image = userServices.GetProfilePicture(this.user);
+    }
   }
 }

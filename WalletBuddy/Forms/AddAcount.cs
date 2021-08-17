@@ -40,7 +40,7 @@ namespace WalletBuddy.Forms
         AccountServices accountServices = new AccountServices();
         Account account = new Account()
         {
-          UserName = user.UserName,
+          UserId = user.UserId,
           StartingAmount = Convert.ToInt32(startingAmountTextBox.Texts),
           AccountName = accountNameTextBox.Texts,
           Balance = 0 + Convert.ToInt32(startingAmountTextBox.Texts),

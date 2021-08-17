@@ -10,7 +10,7 @@ namespace WalletBuddy.Model
   {
     //properties
     public int AccountId { set; get; }
-    public string UserName { set; get; }
+    public int UserId { set; get; }
     public string AccountName { set; get; }
     public string AccountDescription { set; get; }
     public int StartingAmount { set; get; }
@@ -20,7 +20,7 @@ namespace WalletBuddy.Model
     public Account()
     {
       AccountId = 0;
-      UserName = "";
+      UserId = 0;
       AccountName = "";
       AccountDescription = "";
       StartingAmount = 0;
@@ -28,10 +28,10 @@ namespace WalletBuddy.Model
     }
 
     //parameterized constructor
-    public Account(int accountId, string userName, string accountName, string accountDescription, int startingAmount, int balance)
+    public Account(int accountId, int userId, string accountName, string accountDescription, int startingAmount, int balance)
     {
       AccountId = accountId;
-      UserName = userName;
+      UserId = userId;
       AccountName = accountName;
       AccountDescription = accountDescription;
       StartingAmount = startingAmount;

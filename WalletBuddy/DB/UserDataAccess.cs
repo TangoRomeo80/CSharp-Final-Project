@@ -36,7 +36,7 @@ namespace WalletBuddy.DB
 
     public Image GetProfilePicture(User user)
     {
-      string query = "SELECT * FROM USER_TBL WHERE USER_NAME= '" + user.UserName + "'";
+      string query = "SELECT * FROM USER_TBL WHERE USER_ID= '" + user.UserId + "'";
       SqlCommand cmd = new SqlCommand(query, connection);
       SqlDataAdapter da = new SqlDataAdapter(cmd);
       DataTable table = new DataTable();     
@@ -46,6 +46,34 @@ namespace WalletBuddy.DB
       Image image = Image.FromStream(ms);
       da.Dispose();
       return image;
+    }
+
+    public int GetUserId(string userName)
+    {
+      string query = "SELECT * FROM USER_TBL WHERE USER_NAME='" + userName + "'";
+      SqlDataReader reader = GetData(query);
+      if (reader.Read())
+      {
+        return Convert.ToInt32(reader["USER_ID"]);
+      }
+      else
+      {
+        return 0;
+      }
+    }
+
+    public string GetUserName(int userId)
+    {
+      string query = "SELECT * FROM USER_TBL WHERE USER_ID='" + userId + "'";
+      SqlDataReader reader = GetData(query);
+      if (reader.Read())
+      {
+        return reader["USER_NAME"].ToString();
+      }
+      else
+      {
+        return null;
+      }
     }
 
     public int AddUser(User user)
@@ -69,7 +97,7 @@ namespace WalletBuddy.DB
 
     public int RemoveUser(User user)
     {
-      string sql = "DELETE FROM USER_TBL WHERE USER_NAME= '" + user.UserName + "'";
+      string sql = "DELETE FROM USER_TBL WHERE USER_ID= '" + user.UserId + "'";
       return this.ExecuteQuery(sql);
     }
 
@@ -86,7 +114,7 @@ namespace WalletBuddy.DB
 
     public string CheckUserType(User user)
     {
-      string query = "SELECT * FROM USER_TBL WHERE USER_NAME='" + user.UserName + "'";
+      string query = "SELECT * FROM USER_TBL WHERE USER_ID='" + user.UserId + "'";
       SqlDataReader reader = GetData(query);
       if (reader.Read())
       {
@@ -100,7 +128,7 @@ namespace WalletBuddy.DB
 
     public bool UserLoginValidate(User user)
     {
-      string query = "SELECT * FROM USER_TBL WHERE USER_NAME='" + user.UserName + "'";
+      string query = "SELECT * FROM USER_TBL WHERE USER_ID='" + user.UserId + "'";
       SqlDataReader reader = GetData(query);
       if (reader.Read())
       {
@@ -114,7 +142,7 @@ namespace WalletBuddy.DB
 
     public User GetUserInfo(User user)
     {
-      string query = "SELECT * FROM USER_TBL WHERE USER_NAME='" + user.UserName + "'";
+      string query = "SELECT * FROM USER_TBL WHERE USER_ID='" + user.UserId + "'";
       SqlDataReader reader = GetData(query);
       if (reader.Read())
       {
@@ -153,20 +181,20 @@ namespace WalletBuddy.DB
                    "USER_EMAIL=@USER_EMAIL, " +
                    "IMAGE=@IMAGE, " +
                    "USER_NAME=@USER_NAME" +
-                   " WHERE USER_NAME=@MODIFY_USER_NAME";
+                   " WHERE USER_ID=@MODIFY_USER_ID";
       SqlCommand cmd = new SqlCommand(sql, connection);
       cmd.Parameters.AddWithValue("@USER_NAME", user.UserName);
       cmd.Parameters.AddWithValue("@USER_EMAIL", user.UserEmail);
       cmd.Parameters.AddWithValue("@USER_TYPE", user.UserType);
       cmd.Parameters.AddWithValue("@IMAGE", user.Image);
-      cmd.Parameters.AddWithValue("@MODIFY_USER_NAME", userToModify.UserName);
+      cmd.Parameters.AddWithValue("@MODIFY_USER_ID", userToModify.UserId);
 
       return cmd.ExecuteNonQuery();
     }
 
     public int ChangePassword(User user, User userToModify)
     {
-      string query = "UPDATE USER_TBL SET USER_PASSWORD = '" + user.UserPassword + "' WHERE USER_NAME = '" + userToModify.UserName + "'";
+      string query = "UPDATE USER_TBL SET USER_PASSWORD = '" + user.UserPassword + "' WHERE USER_ID = '" + userToModify.UserId + "'";
       return this.ExecuteQuery(query);
     }
 

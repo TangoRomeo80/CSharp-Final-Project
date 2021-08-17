@@ -10,7 +10,7 @@ namespace WalletBuddy.Model
   { 
     //Properties
     public int TransactionId { set; get; }
-    public string UserName { set; get; }
+    public int UserId { set; get; }
     public int Amount { set; get; }
     public string TransactionType { set; get; }
     public DateTime Date { set; get; }
@@ -19,17 +19,17 @@ namespace WalletBuddy.Model
     public Transaction()
     {
       TransactionId = 0;
-      UserName = "";
+      UserId = 0;
       Amount = 0;
       TransactionType = "";
       Date = DateTime.Now;
     }
 
     //Parameterized constructor
-    public Transaction(int transactionId, string userName, int amount, string transactionType, DateTime date)
+    public Transaction(int transactionId, int userId, int amount, string transactionType, DateTime date)
     {
       TransactionId = transactionId;
-      UserName = userName;
+      UserId = userId;
       Amount = amount;
       TransactionType = transactionType;
       Date = date;

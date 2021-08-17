@@ -10,7 +10,7 @@ namespace WalletBuddy.Model
   {
     //properties
     public int PaymentId { set; get; }
-    public string UserName { set; get; }
+    public int UserId { set; get; }
     public string PaymentName { set; get; }
     public string PaymentReciever { set; get; }
     public string Description { set; get; }
@@ -22,7 +22,7 @@ namespace WalletBuddy.Model
     public Payment()
     {
       PaymentId = 0;
-      UserName = "";
+      UserId = 0;
       PaymentName = "";
       PaymentReciever = "";
       Description = "";
@@ -31,10 +31,10 @@ namespace WalletBuddy.Model
     }
 
     //parameterized constructor
-    public Payment(int paymentId, string userName, string paymentName, string paymentReciever, string description, int amount, DateTime date)
+    public Payment(int paymentId, int userId, string paymentName, string paymentReciever, string description, int amount, DateTime date)
     {
       PaymentId = paymentId;
-      UserName = userName;
+      UserId = userId;
       PaymentName = paymentName;
       PaymentReciever = paymentReciever;
       Description = description;

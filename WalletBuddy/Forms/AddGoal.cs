@@ -44,7 +44,7 @@ namespace WalletBuddy.Forms
         GoalsServices goalsServices = new GoalsServices();
         Goals goal = new Goals()
         {
-          UserName = user.UserName,
+          UserId = user.UserId,
           GoalDuration = durationComboBox.SelectedItem.ToString(),
           TargetSavings = Convert.ToInt32(targetSavingTextBox.Texts),
           

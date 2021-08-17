@@ -12,7 +12,7 @@ namespace WalletBuddy.DB
   {
     public List<Payment> GetPaymentList(User user)
     {
-      string query = "SELECT * FROM PAYMENT_TBL WHERE USER_NAME= '" + user.UserName + "'";
+      string query = "SELECT * FROM PAYMENT_TBL WHERE USER_ID= '" + user.UserId + "'";
       SqlDataReader reader = GetData(query);
       List<Payment> paymentList = new List<Payment>();
       while (reader.Read())
@@ -20,7 +20,7 @@ namespace WalletBuddy.DB
         Payment income = new Payment()
         {
           PaymentId = Convert.ToInt32(reader["PAYMENT_ID"]),
-          UserName = reader["USER_NAME"].ToString(),
+          UserId = Convert.ToInt32(reader["USER_ID"]),
           Amount = Convert.ToInt32(reader["AMOUNT"]),
           PaymentReciever = reader["PAYMENT_RECIEVER"].ToString(),
           Description = reader["DESCRIPTION"].ToString(),
@@ -34,7 +34,7 @@ namespace WalletBuddy.DB
 
     public int AddPayment(Payment payment)
     {
-      string sql = "INSERT INTO PAYMENT_TBL(USER_NAME,PAYMENT_NAME,PAYMENT_RECIEVER,DESCRIPTION,AMOUNT,DATE) VALUES('" + payment.UserName + "','" + payment.PaymentName + "','" + payment.PaymentReciever + "','" + payment.Description + "','" + payment.Amount + "','" + payment.Date.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
+      string sql = "INSERT INTO PAYMENT_TBL(USER_ID,PAYMENT_NAME,PAYMENT_RECIEVER,DESCRIPTION,AMOUNT,DATE) VALUES('" + payment.UserId + "','" + payment.PaymentName + "','" + payment.PaymentReciever + "','" + payment.Description + "','" + payment.Amount + "','" + payment.Date.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
       return this.ExecuteQuery(sql);
     }
 

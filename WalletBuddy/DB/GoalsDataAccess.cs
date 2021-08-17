@@ -13,7 +13,7 @@ namespace WalletBuddy.DB
   {
     public List<Goals> GetGoalsList(User user)
     {
-      string query = "SELECT * FROM GOALS_TBL WHERE USER_NAME= '" + user.UserName + "'";
+      string query = "SELECT * FROM GOALS_TBL WHERE USER_ID= '" + user.UserId + "'";
       SqlDataReader reader = GetData(query);
       List<Goals> goalsList = new List<Goals>();
       while (reader.Read())
@@ -21,7 +21,7 @@ namespace WalletBuddy.DB
         Goals goals = new Goals()
         {
           GoalId = Convert.ToInt32(reader["GOAL_ID"]),
-          UserName = reader["USER_NAME"].ToString(),
+          UserId = Convert.ToInt32(reader["USER_ID"]),
           GoalDuration = reader["GOAL_DURATION"].ToString(),
           TargetSavings = Convert.ToInt32(reader["TARGET_SAVINGS"]),
           CurrentExpense = Convert.ToInt32(reader["CURRENT_EXPENSE"]),
@@ -34,7 +34,7 @@ namespace WalletBuddy.DB
 
     public int AddGoals(Goals goals)
     {
-      string sql = "INSERT INTO GOALS_TBL(USER_NAME,GOAL_DURATION,TARGET_SAVINGS,CURRENT_EXPENSE,REMAINING_EXPENSE) VALUES('" + goals.UserName + "','" + goals.GoalDuration + "','" + goals.TargetSavings + "','" + goals.CurrentExpense + "','" + goals.RemainingExpense + "')";
+      string sql = "INSERT INTO GOALS_TBL(USER_ID,GOAL_DURATION,TARGET_SAVINGS,CURRENT_EXPENSE,REMAINING_EXPENSE) VALUES('" + goals.UserId + "','" + goals.GoalDuration + "','" + goals.TargetSavings + "','" + goals.CurrentExpense + "','" + goals.RemainingExpense + "')";
       return this.ExecuteQuery(sql);
     }
 
@@ -48,30 +48,30 @@ namespace WalletBuddy.DB
         if(goal.GoalDuration == "Week")
         {
           goal.CurrentExpense = expenseServices.GetWeeklyExpense(user);
-          string query = "UPDATE GOALS_TBL SET CURRENT_EXPENSE = '" + goal.CurrentExpense + "' WHERE GOAL_ID= '" + goal.GoalId + "' AND USER_NAME = '" + user.UserName + "'";
+          string query = "UPDATE GOALS_TBL SET CURRENT_EXPENSE = '" + goal.CurrentExpense + "' WHERE GOAL_ID= '" + goal.GoalId + "' AND USER_ID = '" + user.UserId + "'";
           this.ExecuteQuery(query);
           goal.RemainingExpense = incomeServices.GetWeeklyIncome(user) - goal.TargetSavings - goal.CurrentExpense;
-          string query2 = "UPDATE GOALS_TBL SET REMAINING_EXPENSE = '" + goal.RemainingExpense + "' WHERE GOAL_ID= '" + goal.GoalId + "' AND USER_NAME = '" + user.UserName + "'";
+          string query2 = "UPDATE GOALS_TBL SET REMAINING_EXPENSE = '" + goal.RemainingExpense + "' WHERE GOAL_ID= '" + goal.GoalId + "' AND USER_ID = '" + user.UserId + "'";
           this.ExecuteQuery(query2);
         }
 
         else if (goal.GoalDuration == "Month")
         {
           goal.CurrentExpense = expenseServices.GetMonthlyExpense(user);
-          string query = "UPDATE GOALS_TBL SET CURRENT_EXPENSE = '" + goal.CurrentExpense + "' WHERE GOAL_ID= '" + goal.GoalId + "' AND USER_NAME = '" + user.UserName + "'";
+          string query = "UPDATE GOALS_TBL SET CURRENT_EXPENSE = '" + goal.CurrentExpense + "' WHERE GOAL_ID= '" + goal.GoalId + "' AND USER_ID = '" + user.UserId + "'";
           this.ExecuteQuery(query);
           goal.RemainingExpense = incomeServices.GetMonthlyIncome(user) - goal.TargetSavings - goal.CurrentExpense;
-          string query2 = "UPDATE GOALS_TBL SET REMAINING_EXPENSE = '" + goal.RemainingExpense + "' WHERE GOAL_ID= '" + goal.GoalId + "' AND USER_NAME = '" + user.UserName + "'";
+          string query2 = "UPDATE GOALS_TBL SET REMAINING_EXPENSE = '" + goal.RemainingExpense + "' WHERE GOAL_ID= '" + goal.GoalId + "' AND USER_ID = '" + user.UserId + "'";
           this.ExecuteQuery(query2);
         }
 
         else if (goal.GoalDuration == "Year")
         {
           goal.CurrentExpense = expenseServices.GetYearlyExpense(user);
-          string query = "UPDATE GOALS_TBL SET CURRENT_EXPENSE = '" + goal.CurrentExpense + "' WHERE GOAL_ID= '" + goal.GoalId + "' AND USER_NAME = '" + user.UserName + "'";
+          string query = "UPDATE GOALS_TBL SET CURRENT_EXPENSE = '" + goal.CurrentExpense + "' WHERE GOAL_ID= '" + goal.GoalId + "' AND USER_ID = '" + user.UserId + "'";
           this.ExecuteQuery(query);
           goal.RemainingExpense = incomeServices.GetYearlyIncome(user) - goal.TargetSavings - goal.CurrentExpense;
-          string query2 = "UPDATE GOALS_TBL SET REMAINING_EXPENSE = '" + goal.RemainingExpense + "' WHERE GOAL_ID= '" + goal.GoalId + "' AND USER_NAME = '" + user.UserName + "'";
+          string query2 = "UPDATE GOALS_TBL SET REMAINING_EXPENSE = '" + goal.RemainingExpense + "' WHERE GOAL_ID= '" + goal.GoalId + "' AND USER_ID = '" + user.UserId + "'";
           this.ExecuteQuery(query2);
         }
 

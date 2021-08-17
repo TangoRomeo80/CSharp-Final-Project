@@ -15,13 +15,13 @@ namespace WalletBuddy.Forms
   public partial class ChangeInfo : Form
   {
     private User userToModify;
-    public SettingsInfo ParentFormP { set; get; }
+    public SettingsInfo parentForm;
 
     public ChangeInfo(User userToModify, SettingsInfo parentForm)
     {
       InitializeComponent();
       this.userToModify = userToModify;
-      this.ParentFormP = parentForm;
+      this.parentForm = parentForm;
     }
 
     private void cancelButton_Click(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace WalletBuddy.Forms
       {
         MessageBox.Show("New userName or email fields cannot be empty.");
       }
-      else if(userExists == newUsernameTextBox.Texts)
+      else if (userExists == newUsernameTextBox.Texts)
       {
         MessageBox.Show("Username is already taken, please try different Username");
       }
@@ -51,12 +51,12 @@ namespace WalletBuddy.Forms
           Image = userServices.ConvertToByte(profilePictureBox.Image)
         };
         int success = userServices.ChangeInfo(user, userToModify);
-        if(success > 0)
+        if (success > 0)
         {
           newUsernameTextBox.Texts = "";
           newEmailTextBox.Texts = "";
           MessageBox.Show("Information changed successfully");
-          ParentFormP.UpdateUserInfo(user);
+          parentForm.UpdateUserInfo(userToModify);
         }
         else
         {

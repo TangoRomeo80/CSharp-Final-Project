@@ -66,6 +66,7 @@ namespace WalletBuddy.Forms
       {
         User oldUser = new User()
         {
+          UserId = userServices.GetUserId(userListDataGridView.SelectedRows[0].Cells[0].Value.ToString()),
           UserName = userListDataGridView.SelectedRows[0].Cells[0].Value.ToString()
         };
         User newUser = new User()
@@ -102,6 +103,7 @@ namespace WalletBuddy.Forms
       {
         User userToRemove = new User()
         {
+          UserId = userServices.GetUserId(userListDataGridView.SelectedRows[0].Cells[0].Value.ToString()),
           UserName = userListDataGridView.SelectedRows[0].Cells[0].Value.ToString(),
         };
         int success = userServices.RemoveUser(userToRemove);

@@ -49,6 +49,7 @@ namespace WalletBuddy.Forms
       {
         User user = new User()
         {
+          UserId = userToModify.UserId,
           UserName = userToModify.UserName,
           UserPassword = newPasswordTextBox.Texts
         };

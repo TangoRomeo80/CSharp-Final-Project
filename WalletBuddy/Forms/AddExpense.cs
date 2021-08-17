@@ -66,7 +66,7 @@ namespace WalletBuddy.Forms
           ExpenseServices expenseServices = new ExpenseServices();
           Expense expense = new Expense()
           {
-            UserName = user.UserName,
+            UserId = user.UserId,
             Amount = Convert.ToInt32(paymentAmountTextBox.Texts),
             PaymentTo = paymentToTextBox.Texts,
             Description = descriptionTextBox.Texts,

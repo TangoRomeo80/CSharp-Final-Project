@@ -121,7 +121,7 @@ namespace WalletBuddy.Executor
 
       Transaction transaction = new Transaction()
       {
-        UserName = expense.UserName,
+        UserId = expense.UserId,
         Amount = expense.Amount,
         TransactionType = "Expense",
         Date = expense.Date

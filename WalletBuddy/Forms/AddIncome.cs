@@ -55,7 +55,7 @@ namespace WalletBuddy.Forms
         IncomeServices incomeServices = new IncomeServices();
         Income income = new Income()
         {
-          UserName = user.UserName,
+          UserId = user.UserId,
           Amount = Convert.ToInt32(paymentAmountTextBox.Texts),
           PaymentFrom = paymentFromTextBox.Texts,
           Description = descriptionTextBox.Texts,

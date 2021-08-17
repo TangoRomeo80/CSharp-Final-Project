@@ -29,6 +29,16 @@ namespace WalletBuddy.Executor
       return userDataAccess.GetProfilePicture(user);
     }
 
+    public int GetUserId(string userName)
+    {
+      return userDataAccess.GetUserId(userName);
+    }
+
+    public string GetUserName(int userId)
+    {
+      return userDataAccess.GetUserName(userId);
+    }
+
     public int AddUser(User user)
     {
       return userDataAccess.AddUser(user);
@@ -58,6 +68,7 @@ namespace WalletBuddy.Executor
     {
       User user = new User()
       {
+        UserId = GetUserId(userName),
         UserName = userName
       };
 
@@ -68,6 +79,7 @@ namespace WalletBuddy.Executor
     {
       User user = new User()
       {
+        UserId = GetUserId(userName),
         UserName = userName,
         UserPassword = userPassword
       };

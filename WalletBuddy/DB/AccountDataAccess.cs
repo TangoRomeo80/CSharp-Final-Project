@@ -12,7 +12,7 @@ namespace WalletBuddy.DB
   {
     public List<Account> GetAccountList(User user)
     {
-      string query = "SELECT * FROM ACCOUNT_TBL WHERE USER_NAME= '" + user.UserName + "'";
+      string query = "SELECT * FROM ACCOUNT_TBL WHERE USER_ID= '" + user.UserId + "'";
       SqlDataReader reader = GetData(query);
       List<Account> accountList = new List<Account>();
       while (reader.Read())
@@ -20,7 +20,7 @@ namespace WalletBuddy.DB
         Account account = new Account()
         {
           AccountId = Convert.ToInt32(reader["ACCOUNT_ID"]),
-          UserName = reader["USER_NAME"].ToString(),
+          UserId = Convert.ToInt32(reader["USER_ID"]),
           StartingAmount = Convert.ToInt32(reader["STARTING_AMOUNT"]),
           AccountName = reader["ACCOUNT_NAME"].ToString(),
           Balance = Convert.ToInt32(reader["BALANCE"]),
@@ -33,19 +33,19 @@ namespace WalletBuddy.DB
 
     public int AddAccount(Account account)
     {
-      string sql = "INSERT INTO ACCOUNT_TBL(USER_NAME,ACCOUNT_NAME,ACCOUNT_DESCRIPTION,STARTING_AMOUNT,BALANCE) VALUES('" + account.UserName + "','" + account.AccountName + "','" + account.AccountDescription + "','" + account.StartingAmount + "','" + account.Balance + "')";
+      string sql = "INSERT INTO ACCOUNT_TBL(USER_ID,ACCOUNT_NAME,ACCOUNT_DESCRIPTION,STARTING_AMOUNT,BALANCE) VALUES('" + account.UserId + "','" + account.AccountName + "','" + account.AccountDescription + "','" + account.StartingAmount + "','" + account.Balance + "')";
       return this.ExecuteQuery(sql);
     }
 
     public int RemoveAccount(User user, Account account)
     {
-      string sql = "DELETE FROM ACCOUNT_TBL WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_NAME = '" + user.UserName + "'";
+      string sql = "DELETE FROM ACCOUNT_TBL WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_ID = '" + user.UserId + "'";
       return this.ExecuteQuery(sql);
     }
 
     public int AddIncomeToAccount(Account account, User user, int amount)
     {
-      string query = "SELECT * FROM ACCOUNT_TBL WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_NAME = '" + user.UserName + "'";
+      string query = "SELECT * FROM ACCOUNT_TBL WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_ID = '" + user.UserId + "'";
       SqlDataReader reader = GetData(query);
       int balance = 0;
       while (reader.Read())
@@ -53,13 +53,13 @@ namespace WalletBuddy.DB
         balance = Convert.ToInt32(reader["BALANCE"]);
       }
       balance += amount;
-      string query2 = "UPDATE ACCOUNT_TBL SET BALANCE = '" + balance + "' WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_NAME = '" + user.UserName + "'";
+      string query2 = "UPDATE ACCOUNT_TBL SET BALANCE = '" + balance + "' WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_ID = '" + user.UserId + "'";
       return this.ExecuteQuery(query2);
     }
 
     public int AddExpenseToAccount(Account account, User user, int amount)
     {
-      string query = "SELECT * FROM ACCOUNT_TBL WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_NAME = '" + user.UserName + "'";
+      string query = "SELECT * FROM ACCOUNT_TBL WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_ID = '" + user.UserId + "'";
       SqlDataReader reader = GetData(query);
       int balance = 0;
       while (reader.Read())
@@ -67,13 +67,13 @@ namespace WalletBuddy.DB
         balance = Convert.ToInt32(reader["BALANCE"]);
       }
       balance -= amount;
-      string query2 = "UPDATE ACCOUNT_TBL SET BALANCE = '" + balance + "' WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_NAME = '" + user.UserName + "'";
+      string query2 = "UPDATE ACCOUNT_TBL SET BALANCE = '" + balance + "' WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_ID = '" + user.UserId + "'";
       return this.ExecuteQuery(query2);
     }
 
     public string CheckAccountName(Account account, User user)
     {
-      string query = "SELECT * FROM ACCOUNT_TBL WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_NAME = '" + user.UserName + "'";
+      string query = "SELECT * FROM ACCOUNT_TBL WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_ID = '" + user.UserId + "'";
       SqlDataReader reader = GetData(query);
       if (reader.Read())
       {
@@ -84,7 +84,7 @@ namespace WalletBuddy.DB
 
     public int CheckAccountBalance(Account account, User user)
     {
-      string query = "SELECT * FROM ACCOUNT_TBL WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_NAME = '" + user.UserName + "'";
+      string query = "SELECT * FROM ACCOUNT_TBL WHERE ACCOUNT_NAME= '" + account.AccountName + "' AND USER_ID = '" + user.UserId + "'";
       SqlDataReader reader = GetData(query);
       if (reader.Read())
       {

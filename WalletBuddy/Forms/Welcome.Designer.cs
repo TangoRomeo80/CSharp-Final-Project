@@ -39,6 +39,7 @@ namespace WalletBuddy.Forms
       this.pictureBox2 = new System.Windows.Forms.PictureBox();
       this.aboutButton = new WalletBuddy.CustomControl.RJButton();
       this.startButton = new WalletBuddy.CustomControl.RJButton();
+      this.aboutUsButton = new WalletBuddy.CustomControl.RJButton();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
       this.SuspendLayout();
@@ -127,7 +128,7 @@ namespace WalletBuddy.Forms
       this.aboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.aboutButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.aboutButton.ForeColor = System.Drawing.Color.White;
-      this.aboutButton.Location = new System.Drawing.Point(169, 517);
+      this.aboutButton.Location = new System.Drawing.Point(237, 448);
       this.aboutButton.Margin = new System.Windows.Forms.Padding(2);
       this.aboutButton.Name = "aboutButton";
       this.aboutButton.Size = new System.Drawing.Size(113, 50);
@@ -148,7 +149,7 @@ namespace WalletBuddy.Forms
       this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.startButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.startButton.ForeColor = System.Drawing.Color.White;
-      this.startButton.Location = new System.Drawing.Point(169, 448);
+      this.startButton.Location = new System.Drawing.Point(104, 448);
       this.startButton.Margin = new System.Windows.Forms.Padding(2);
       this.startButton.Name = "startButton";
       this.startButton.Size = new System.Drawing.Size(113, 50);
@@ -157,6 +158,27 @@ namespace WalletBuddy.Forms
       this.startButton.TextColor = System.Drawing.Color.White;
       this.startButton.UseVisualStyleBackColor = false;
       this.startButton.Click += new System.EventHandler(this.startButton_Click);
+      // 
+      // aboutUsButton
+      // 
+      this.aboutUsButton.BackColor = System.Drawing.Color.Blue;
+      this.aboutUsButton.BackgroundColor = System.Drawing.Color.Blue;
+      this.aboutUsButton.BorderColor = System.Drawing.Color.Blue;
+      this.aboutUsButton.BorderRadius = 20;
+      this.aboutUsButton.BorderSize = 1;
+      this.aboutUsButton.FlatAppearance.BorderSize = 0;
+      this.aboutUsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.aboutUsButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.aboutUsButton.ForeColor = System.Drawing.Color.White;
+      this.aboutUsButton.Location = new System.Drawing.Point(176, 514);
+      this.aboutUsButton.Margin = new System.Windows.Forms.Padding(2);
+      this.aboutUsButton.Name = "aboutUsButton";
+      this.aboutUsButton.Size = new System.Drawing.Size(113, 50);
+      this.aboutUsButton.TabIndex = 1;
+      this.aboutUsButton.Text = "ABOUT US";
+      this.aboutUsButton.TextColor = System.Drawing.Color.White;
+      this.aboutUsButton.UseVisualStyleBackColor = false;
+      this.aboutUsButton.Click += new System.EventHandler(this.aboutUsButton_Click);
       // 
       // Welcome
       // 
@@ -169,6 +191,7 @@ namespace WalletBuddy.Forms
       this.Controls.Add(this.tagLabel1);
       this.Controls.Add(this.titleLabel);
       this.Controls.Add(this.pictureBox1);
+      this.Controls.Add(this.aboutUsButton);
       this.Controls.Add(this.aboutButton);
       this.Controls.Add(this.startButton);
       this.DoubleBuffered = true;
@@ -197,5 +220,6 @@ namespace WalletBuddy.Forms
     private System.Windows.Forms.Label tagLabel2;
     private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
     private System.Windows.Forms.PictureBox pictureBox2;
+    private CustomControl.RJButton aboutUsButton;
   }
 }

@@ -25,5 +25,12 @@ namespace WalletBuddy.Forms
       contactSupport.Show();
       this.Hide();
     }
+
+    private void aboutUsButton_Click(object sender, EventArgs e)
+    {
+      AboutUs aboutUs = new AboutUs();
+      aboutUs.Show();
+      this.Hide();
+    }
   }
 }

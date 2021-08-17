@@ -142,23 +142,5 @@ namespace WalletBuddy.Forms
       }
     }
 
-    private void AdminMain_Activated(object sender, EventArgs e)
-    {
-      UserServices userServices = new UserServices();
-      this.topAdminLabel.Text = this.user.UserName;
-      this.userPicBox.Image = userServices.GetProfilePicture(this.user);
-      AdminUserList childForm = new AdminUserList(this.user);
-      if (activeForm != null)
-        activeForm.Close();
-      ActivateButton(userListButton);
-      activeForm = childForm;
-      childForm.TopLevel = false;
-      childForm.FormBorderStyle = FormBorderStyle.None;
-      childForm.Dock = DockStyle.Fill;
-      this.panelDesktopPane.Controls.Add(childForm);
-      this.panelDesktopPane.Tag = childForm;
-      childForm.BringToFront();
-      childForm.Show();
-    }
   }
 }

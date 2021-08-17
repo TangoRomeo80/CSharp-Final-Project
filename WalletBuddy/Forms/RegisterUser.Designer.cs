@@ -49,8 +49,11 @@ namespace WalletBuddy.Forms
       this.passwordTextBox = new WalletBuddy.CustomControl.RJTextBox();
       this.emailTextBox = new WalletBuddy.CustomControl.RJTextBox();
       this.userNameTextBox = new WalletBuddy.CustomControl.RJTextBox();
+      this.profilePictureBox = new System.Windows.Forms.PictureBox();
+      this.uploadButton = new WalletBuddy.CustomControl.RJButton();
       this.headerPanel.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.profilePictureBox)).BeginInit();
       this.SuspendLayout();
       // 
       // mainLabel
@@ -109,7 +112,7 @@ namespace WalletBuddy.Forms
       this.userNameLabel.BackColor = System.Drawing.Color.Transparent;
       this.userNameLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.userNameLabel.ForeColor = System.Drawing.Color.DimGray;
-      this.userNameLabel.Location = new System.Drawing.Point(11, 120);
+      this.userNameLabel.Location = new System.Drawing.Point(51, 252);
       this.userNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.userNameLabel.Name = "userNameLabel";
       this.userNameLabel.Size = new System.Drawing.Size(75, 19);
@@ -122,7 +125,7 @@ namespace WalletBuddy.Forms
       this.emailLabel.BackColor = System.Drawing.Color.Transparent;
       this.emailLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.emailLabel.ForeColor = System.Drawing.Color.DimGray;
-      this.emailLabel.Location = new System.Drawing.Point(10, 183);
+      this.emailLabel.Location = new System.Drawing.Point(76, 289);
       this.emailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.emailLabel.Name = "emailLabel";
       this.emailLabel.Size = new System.Drawing.Size(50, 19);
@@ -135,7 +138,7 @@ namespace WalletBuddy.Forms
       this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
       this.passwordLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.passwordLabel.ForeColor = System.Drawing.Color.DimGray;
-      this.passwordLabel.Location = new System.Drawing.Point(10, 246);
+      this.passwordLabel.Location = new System.Drawing.Point(55, 326);
       this.passwordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.passwordLabel.Name = "passwordLabel";
       this.passwordLabel.Size = new System.Drawing.Size(71, 19);
@@ -148,7 +151,7 @@ namespace WalletBuddy.Forms
       this.showPassCheckBox.BackColor = System.Drawing.Color.Transparent;
       this.showPassCheckBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.showPassCheckBox.ForeColor = System.Drawing.Color.DimGray;
-      this.showPassCheckBox.Location = new System.Drawing.Point(10, 365);
+      this.showPassCheckBox.Location = new System.Drawing.Point(11, 408);
       this.showPassCheckBox.Margin = new System.Windows.Forms.Padding(2);
       this.showPassCheckBox.Name = "showPassCheckBox";
       this.showPassCheckBox.Size = new System.Drawing.Size(121, 23);
@@ -163,7 +166,7 @@ namespace WalletBuddy.Forms
       this.haveAccountLabel.BackColor = System.Drawing.Color.Transparent;
       this.haveAccountLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.haveAccountLabel.ForeColor = System.Drawing.Color.DimGray;
-      this.haveAccountLabel.Location = new System.Drawing.Point(122, 552);
+      this.haveAccountLabel.Location = new System.Drawing.Point(123, 574);
       this.haveAccountLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.haveAccountLabel.Name = "haveAccountLabel";
       this.haveAccountLabel.Size = new System.Drawing.Size(175, 19);
@@ -177,7 +180,7 @@ namespace WalletBuddy.Forms
       this.backToLoginLabel.Cursor = System.Windows.Forms.Cursors.Hand;
       this.backToLoginLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.backToLoginLabel.ForeColor = System.Drawing.Color.CornflowerBlue;
-      this.backToLoginLabel.Location = new System.Drawing.Point(296, 552);
+      this.backToLoginLabel.Location = new System.Drawing.Point(297, 574);
       this.backToLoginLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.backToLoginLabel.Name = "backToLoginLabel";
       this.backToLoginLabel.Size = new System.Drawing.Size(52, 19);
@@ -202,7 +205,7 @@ namespace WalletBuddy.Forms
       this.confirmPasswordLabel.BackColor = System.Drawing.Color.Transparent;
       this.confirmPasswordLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.confirmPasswordLabel.ForeColor = System.Drawing.Color.DimGray;
-      this.confirmPasswordLabel.Location = new System.Drawing.Point(12, 308);
+      this.confirmPasswordLabel.Location = new System.Drawing.Point(6, 363);
       this.confirmPasswordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.confirmPasswordLabel.Name = "confirmPasswordLabel";
       this.confirmPasswordLabel.Size = new System.Drawing.Size(125, 19);
@@ -220,7 +223,7 @@ namespace WalletBuddy.Forms
       this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.clearButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.clearButton.ForeColor = System.Drawing.Color.White;
-      this.clearButton.Location = new System.Drawing.Point(132, 488);
+      this.clearButton.Location = new System.Drawing.Point(133, 510);
       this.clearButton.Margin = new System.Windows.Forms.Padding(2);
       this.clearButton.Name = "clearButton";
       this.clearButton.Size = new System.Drawing.Size(205, 50);
@@ -241,7 +244,7 @@ namespace WalletBuddy.Forms
       this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.signUpButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.signUpButton.ForeColor = System.Drawing.Color.White;
-      this.signUpButton.Location = new System.Drawing.Point(132, 423);
+      this.signUpButton.Location = new System.Drawing.Point(133, 445);
       this.signUpButton.Margin = new System.Windows.Forms.Padding(2);
       this.signUpButton.Name = "signUpButton";
       this.signUpButton.Size = new System.Drawing.Size(205, 50);
@@ -260,7 +263,7 @@ namespace WalletBuddy.Forms
       this.confirmPasswordTextBox.BorderSize = 2;
       this.confirmPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.confirmPasswordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.confirmPasswordTextBox.Location = new System.Drawing.Point(10, 330);
+      this.confirmPasswordTextBox.Location = new System.Drawing.Point(132, 363);
       this.confirmPasswordTextBox.Margin = new System.Windows.Forms.Padding(4);
       this.confirmPasswordTextBox.Multiline = false;
       this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
@@ -268,7 +271,7 @@ namespace WalletBuddy.Forms
       this.confirmPasswordTextBox.PasswordChar = true;
       this.confirmPasswordTextBox.PlaceholderColor = System.Drawing.Color.Silver;
       this.confirmPasswordTextBox.PlaceholderText = "Confirm Password";
-      this.confirmPasswordTextBox.Size = new System.Drawing.Size(448, 29);
+      this.confirmPasswordTextBox.Size = new System.Drawing.Size(326, 29);
       this.confirmPasswordTextBox.TabIndex = 3;
       this.confirmPasswordTextBox.Texts = "";
       this.confirmPasswordTextBox.UnderlinedStyle = false;
@@ -282,7 +285,7 @@ namespace WalletBuddy.Forms
       this.passwordTextBox.BorderSize = 2;
       this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.passwordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.passwordTextBox.Location = new System.Drawing.Point(11, 268);
+      this.passwordTextBox.Location = new System.Drawing.Point(132, 326);
       this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4);
       this.passwordTextBox.Multiline = false;
       this.passwordTextBox.Name = "passwordTextBox";
@@ -290,7 +293,7 @@ namespace WalletBuddy.Forms
       this.passwordTextBox.PasswordChar = true;
       this.passwordTextBox.PlaceholderColor = System.Drawing.Color.Silver;
       this.passwordTextBox.PlaceholderText = "Password";
-      this.passwordTextBox.Size = new System.Drawing.Size(448, 29);
+      this.passwordTextBox.Size = new System.Drawing.Size(327, 29);
       this.passwordTextBox.TabIndex = 2;
       this.passwordTextBox.Texts = "";
       this.passwordTextBox.UnderlinedStyle = false;
@@ -304,7 +307,7 @@ namespace WalletBuddy.Forms
       this.emailTextBox.BorderSize = 2;
       this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.emailTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.emailTextBox.Location = new System.Drawing.Point(12, 205);
+      this.emailTextBox.Location = new System.Drawing.Point(132, 289);
       this.emailTextBox.Margin = new System.Windows.Forms.Padding(4);
       this.emailTextBox.Multiline = false;
       this.emailTextBox.Name = "emailTextBox";
@@ -312,7 +315,7 @@ namespace WalletBuddy.Forms
       this.emailTextBox.PasswordChar = false;
       this.emailTextBox.PlaceholderColor = System.Drawing.Color.Silver;
       this.emailTextBox.PlaceholderText = "E-mail";
-      this.emailTextBox.Size = new System.Drawing.Size(448, 29);
+      this.emailTextBox.Size = new System.Drawing.Size(327, 29);
       this.emailTextBox.TabIndex = 1;
       this.emailTextBox.Texts = "";
       this.emailTextBox.UnderlinedStyle = false;
@@ -326,7 +329,7 @@ namespace WalletBuddy.Forms
       this.userNameTextBox.BorderSize = 2;
       this.userNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.userNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-      this.userNameTextBox.Location = new System.Drawing.Point(10, 143);
+      this.userNameTextBox.Location = new System.Drawing.Point(133, 252);
       this.userNameTextBox.Margin = new System.Windows.Forms.Padding(4);
       this.userNameTextBox.Multiline = false;
       this.userNameTextBox.Name = "userNameTextBox";
@@ -334,10 +337,41 @@ namespace WalletBuddy.Forms
       this.userNameTextBox.PasswordChar = false;
       this.userNameTextBox.PlaceholderColor = System.Drawing.Color.Silver;
       this.userNameTextBox.PlaceholderText = "Username";
-      this.userNameTextBox.Size = new System.Drawing.Size(448, 29);
+      this.userNameTextBox.Size = new System.Drawing.Size(326, 29);
       this.userNameTextBox.TabIndex = 0;
       this.userNameTextBox.Texts = "";
       this.userNameTextBox.UnderlinedStyle = false;
+      // 
+      // profilePictureBox
+      // 
+      this.profilePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("profilePictureBox.Image")));
+      this.profilePictureBox.Location = new System.Drawing.Point(166, 100);
+      this.profilePictureBox.Name = "profilePictureBox";
+      this.profilePictureBox.Size = new System.Drawing.Size(150, 145);
+      this.profilePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+      this.profilePictureBox.TabIndex = 7;
+      this.profilePictureBox.TabStop = false;
+      // 
+      // uploadButton
+      // 
+      this.uploadButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
+      this.uploadButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
+      this.uploadButton.BorderColor = System.Drawing.Color.Blue;
+      this.uploadButton.BorderRadius = 10;
+      this.uploadButton.BorderSize = 1;
+      this.uploadButton.FlatAppearance.BorderSize = 0;
+      this.uploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.uploadButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.uploadButton.ForeColor = System.Drawing.Color.White;
+      this.uploadButton.Location = new System.Drawing.Point(321, 214);
+      this.uploadButton.Margin = new System.Windows.Forms.Padding(2);
+      this.uploadButton.Name = "uploadButton";
+      this.uploadButton.Size = new System.Drawing.Size(91, 31);
+      this.uploadButton.TabIndex = 6;
+      this.uploadButton.Text = "Upload";
+      this.uploadButton.TextColor = System.Drawing.Color.White;
+      this.uploadButton.UseVisualStyleBackColor = false;
+      this.uploadButton.Click += new System.EventHandler(this.signUpButton_Click);
       // 
       // RegisterUser
       // 
@@ -345,7 +379,9 @@ namespace WalletBuddy.Forms
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.White;
       this.ClientSize = new System.Drawing.Size(468, 612);
+      this.Controls.Add(this.profilePictureBox);
       this.Controls.Add(this.clearButton);
+      this.Controls.Add(this.uploadButton);
       this.Controls.Add(this.signUpButton);
       this.Controls.Add(this.showPassCheckBox);
       this.Controls.Add(this.confirmPasswordTextBox);
@@ -370,6 +406,7 @@ namespace WalletBuddy.Forms
       this.headerPanel.ResumeLayout(false);
       this.headerPanel.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.profilePictureBox)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -395,5 +432,7 @@ namespace WalletBuddy.Forms
     private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
     private System.Windows.Forms.Label confirmPasswordLabel;
     private CustomControl.RJTextBox confirmPasswordTextBox;
+    private System.Windows.Forms.PictureBox profilePictureBox;
+    private CustomControl.RJButton uploadButton;
   }
 }

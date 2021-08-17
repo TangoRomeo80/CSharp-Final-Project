@@ -286,12 +286,12 @@ namespace WalletBuddy.Forms
       this.label9.BackColor = System.Drawing.Color.Transparent;
       this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.label9.ForeColor = System.Drawing.Color.DimGray;
-      this.label9.Location = new System.Drawing.Point(673, 428);
+      this.label9.Location = new System.Drawing.Point(659, 428);
       this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.label9.Name = "label9";
-      this.label9.Size = new System.Drawing.Size(108, 19);
+      this.label9.Size = new System.Drawing.Size(133, 19);
       this.label9.TabIndex = 3;
-      this.label9.Text = "Tanzeem Rahat";
+      this.label9.Text = "Md Tanzeem Rahat";
       // 
       // label10
       // 

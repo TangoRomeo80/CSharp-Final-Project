@@ -15,13 +15,13 @@ namespace WalletBuddy.Forms
   public partial class ChangeInfo : Form
   {
     private User userToModify;
-    private SettingsInfo parentForm;
+    public SettingsInfo ParentFormP { set; get; }
 
     public ChangeInfo(User userToModify, SettingsInfo parentForm)
     {
       InitializeComponent();
       this.userToModify = userToModify;
-      this.parentForm = parentForm;
+      this.ParentFormP = parentForm;
     }
 
     private void cancelButton_Click(object sender, EventArgs e)
@@ -47,7 +47,8 @@ namespace WalletBuddy.Forms
         {
           UserName = newUsernameTextBox.Texts,
           UserEmail = newEmailTextBox.Texts,
-          UserType = userToModify.UserType
+          UserType = userToModify.UserType,
+          Image = userServices.ConvertToByte(profilePictureBox.Image)
         };
         int success = userServices.ChangeInfo(user, userToModify);
         if(success > 0)
@@ -55,12 +56,23 @@ namespace WalletBuddy.Forms
           newUsernameTextBox.Texts = "";
           newEmailTextBox.Texts = "";
           MessageBox.Show("Information changed successfully");
-          parentForm.UpdateUserInfo(user);
+          ParentFormP.UpdateUserInfo(user);
         }
         else
         {
           MessageBox.Show("An Unexpected error Occured. Information could not be changed.");
         }
+      }
+    }
+
+    private void uploadButton_Click(object sender, EventArgs e)
+    {
+      OpenFileDialog ofd = new OpenFileDialog();
+      ofd.Title = "Select Image";
+      ofd.Filter = "All Files *.*|*.*";
+      if (ofd.ShowDialog() == DialogResult.OK)
+      {
+        profilePictureBox.Image = new Bitmap(ofd.FileName);
       }
     }
   }

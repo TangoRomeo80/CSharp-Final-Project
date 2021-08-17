@@ -29,6 +29,7 @@ namespace WalletBuddy.Forms
     /// </summary>
     private void InitializeComponent()
     {
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangeInfo));
       this.newUsernameLabel = new System.Windows.Forms.Label();
       this.panel1 = new System.Windows.Forms.Panel();
       this.cancelButton = new WalletBuddy.CustomControl.RJButton();
@@ -36,7 +37,11 @@ namespace WalletBuddy.Forms
       this.newEmailTextBox = new WalletBuddy.CustomControl.RJTextBox();
       this.newUsernameTextBox = new WalletBuddy.CustomControl.RJTextBox();
       this.newEmailLabel = new System.Windows.Forms.Label();
+      this.newImageLabel = new System.Windows.Forms.Label();
+      this.profilePictureBox = new System.Windows.Forms.PictureBox();
+      this.uploadButton = new WalletBuddy.CustomControl.RJButton();
       this.panel1.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.profilePictureBox)).BeginInit();
       this.SuspendLayout();
       // 
       // newUsernameLabel
@@ -55,10 +60,13 @@ namespace WalletBuddy.Forms
       // panel1
       // 
       this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+      this.panel1.Controls.Add(this.uploadButton);
+      this.panel1.Controls.Add(this.profilePictureBox);
       this.panel1.Controls.Add(this.cancelButton);
       this.panel1.Controls.Add(this.changeButton);
       this.panel1.Controls.Add(this.newEmailTextBox);
       this.panel1.Controls.Add(this.newUsernameTextBox);
+      this.panel1.Controls.Add(this.newImageLabel);
       this.panel1.Controls.Add(this.newEmailLabel);
       this.panel1.Controls.Add(this.newUsernameLabel);
       this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -165,6 +173,50 @@ namespace WalletBuddy.Forms
       this.newEmailLabel.TabIndex = 6;
       this.newEmailLabel.Text = "New Email";
       // 
+      // newImageLabel
+      // 
+      this.newImageLabel.AutoSize = true;
+      this.newImageLabel.BackColor = System.Drawing.Color.Transparent;
+      this.newImageLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.newImageLabel.ForeColor = System.Drawing.Color.Black;
+      this.newImageLabel.Location = new System.Drawing.Point(66, 111);
+      this.newImageLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.newImageLabel.Name = "newImageLabel";
+      this.newImageLabel.Size = new System.Drawing.Size(132, 19);
+      this.newImageLabel.TabIndex = 6;
+      this.newImageLabel.Text = "New Profile picture";
+      // 
+      // profilePictureBox
+      // 
+      this.profilePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("profilePictureBox.Image")));
+      this.profilePictureBox.Location = new System.Drawing.Point(204, 111);
+      this.profilePictureBox.Name = "profilePictureBox";
+      this.profilePictureBox.Size = new System.Drawing.Size(150, 145);
+      this.profilePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+      this.profilePictureBox.TabIndex = 10;
+      this.profilePictureBox.TabStop = false;
+      // 
+      // uploadButton
+      // 
+      this.uploadButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
+      this.uploadButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(5)))), ((int)(((byte)(227)))));
+      this.uploadButton.BorderColor = System.Drawing.Color.Blue;
+      this.uploadButton.BorderRadius = 10;
+      this.uploadButton.BorderSize = 1;
+      this.uploadButton.FlatAppearance.BorderSize = 0;
+      this.uploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.uploadButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.uploadButton.ForeColor = System.Drawing.Color.White;
+      this.uploadButton.Location = new System.Drawing.Point(359, 218);
+      this.uploadButton.Margin = new System.Windows.Forms.Padding(2);
+      this.uploadButton.Name = "uploadButton";
+      this.uploadButton.Size = new System.Drawing.Size(140, 38);
+      this.uploadButton.TabIndex = 11;
+      this.uploadButton.Text = "Upload";
+      this.uploadButton.TextColor = System.Drawing.Color.White;
+      this.uploadButton.UseVisualStyleBackColor = false;
+      this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
+      // 
       // ChangeInfo
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +230,7 @@ namespace WalletBuddy.Forms
       this.Text = "AddIncome";
       this.panel1.ResumeLayout(false);
       this.panel1.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.profilePictureBox)).EndInit();
       this.ResumeLayout(false);
 
     }
@@ -191,5 +244,8 @@ namespace WalletBuddy.Forms
     private System.Windows.Forms.Label newEmailLabel;
     private CustomControl.RJButton cancelButton;
     private CustomControl.RJButton changeButton;
+    private System.Windows.Forms.Label newImageLabel;
+    private System.Windows.Forms.PictureBox profilePictureBox;
+    private CustomControl.RJButton uploadButton;
   }
 }

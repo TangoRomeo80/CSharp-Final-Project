@@ -151,7 +151,7 @@ namespace WalletBuddy.Forms
       this.showPassCheckBox.BackColor = System.Drawing.Color.Transparent;
       this.showPassCheckBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.showPassCheckBox.ForeColor = System.Drawing.Color.DimGray;
-      this.showPassCheckBox.Location = new System.Drawing.Point(11, 408);
+      this.showPassCheckBox.Location = new System.Drawing.Point(133, 398);
       this.showPassCheckBox.Margin = new System.Windows.Forms.Padding(2);
       this.showPassCheckBox.Name = "showPassCheckBox";
       this.showPassCheckBox.Size = new System.Drawing.Size(121, 23);

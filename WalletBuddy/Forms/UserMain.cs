@@ -112,6 +112,8 @@ namespace WalletBuddy.Forms
       childForm.Show();
     }
 
+
+
     private void dashButton_Click(object sender, EventArgs e)
     {
       OpenChildForm(new UserDash(this.user), sender);
@@ -161,6 +163,25 @@ namespace WalletBuddy.Forms
         login.Show();
         this.Hide();
       }
+    }
+
+    private void UserMain_Activated(object sender, EventArgs e)
+    {
+      UserServices userServices = new UserServices();
+      this.topUserNameLabel.Text = this.user.UserName;
+      this.userPicBox.Image = userServices.GetProfilePicture(this.user);
+      UserDash childForm = new UserDash(this.user);
+      if (activeForm != null)
+        activeForm.Close();
+      ActivateButton(dashButton);
+      activeForm = childForm;
+      childForm.TopLevel = false;
+      childForm.FormBorderStyle = FormBorderStyle.None;
+      childForm.Dock = DockStyle.Fill;
+      this.panelDesktopPane.Controls.Add(childForm);
+      this.panelDesktopPane.Tag = childForm;
+      childForm.BringToFront();
+      childForm.Show();
     }
   }
 }

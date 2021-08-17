@@ -35,7 +35,6 @@ namespace WalletBuddy.Forms
       this.headerPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
       this.logOutLabel = new System.Windows.Forms.Label();
       this.topUserNameLabel = new System.Windows.Forms.Label();
-      this.label1 = new System.Windows.Forms.Label();
       this.logoutPicBox = new System.Windows.Forms.PictureBox();
       this.userPicBox = new System.Windows.Forms.PictureBox();
       this.mainLabel = new System.Windows.Forms.Label();
@@ -70,7 +69,6 @@ namespace WalletBuddy.Forms
       // 
       this.headerPanel.Controls.Add(this.logOutLabel);
       this.headerPanel.Controls.Add(this.topUserNameLabel);
-      this.headerPanel.Controls.Add(this.label1);
       this.headerPanel.Controls.Add(this.logoutPicBox);
       this.headerPanel.Controls.Add(this.userPicBox);
       this.headerPanel.Controls.Add(this.mainLabel);
@@ -104,25 +102,12 @@ namespace WalletBuddy.Forms
       this.topUserNameLabel.BackColor = System.Drawing.Color.Transparent;
       this.topUserNameLabel.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.topUserNameLabel.ForeColor = System.Drawing.Color.White;
-      this.topUserNameLabel.Location = new System.Drawing.Point(797, 25);
+      this.topUserNameLabel.Location = new System.Drawing.Point(804, 25);
       this.topUserNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.topUserNameLabel.Name = "topUserNameLabel";
       this.topUserNameLabel.Size = new System.Drawing.Size(71, 17);
       this.topUserNameLabel.TabIndex = 4;
       this.topUserNameLabel.Text = "User Name";
-      // 
-      // label1
-      // 
-      this.label1.AutoSize = true;
-      this.label1.BackColor = System.Drawing.Color.Transparent;
-      this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label1.ForeColor = System.Drawing.Color.White;
-      this.label1.Location = new System.Drawing.Point(797, 25);
-      this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-      this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(71, 17);
-      this.label1.TabIndex = 4;
-      this.label1.Text = "User Name";
       // 
       // logoutPicBox
       // 
@@ -430,7 +415,6 @@ namespace WalletBuddy.Forms
     private CustomControl.RJButton incomeButton;
     private CustomControl.RJButton dashButton;
     private System.Windows.Forms.PictureBox userPicBox;
-    private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Panel panelDesktopPane;
     private CustomControl.RJButton recordsButton;
     private CustomControl.RJButton paymentButton;

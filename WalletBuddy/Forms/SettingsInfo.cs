@@ -16,7 +16,7 @@ namespace WalletBuddy.Forms
   {
     private User user;
     private User userToModify;
-
+ 
     public SettingsInfo(User user)
     {
       InitializeComponent();
@@ -39,6 +39,7 @@ namespace WalletBuddy.Forms
     public void UpdateUserInfo(User user)
     {
       UserServices userServices = new UserServices();
+      profilePictureBox.Image = userServices.GetProfilePicture(user);
       userToModify = userServices.GetUserInfo(user);
       usernameTextLabel.Text = userToModify.UserName;
       emailTextlabel.Text = userToModify.UserEmail;

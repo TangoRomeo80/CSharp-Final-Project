@@ -134,7 +134,7 @@ namespace WalletBuddy.DB
       }
     }
 
-    public int ChangeInfo(User user, User userToModify)
+    /*public int ChangeInfo(User user, User userToModify)
     {
       int success = 0;
       string query = "UPDATE USER_TBL SET USER_TYPE = '" + user.UserType + "' WHERE USER_NAME = '" + userToModify.UserName + "'";
@@ -145,6 +145,23 @@ namespace WalletBuddy.DB
       success = this.ExecuteQuery(query);
 
       return success;
+    }*/
+
+    public int ChangeInfo(User user, User userToModify)
+    {
+      string sql = "UPDATE USER_TBL SET USER_TYPE=@USER_TYPE, " +
+                   "USER_EMAIL=@USER_EMAIL, " +
+                   "IMAGE=@IMAGE, " +
+                   "USER_NAME=@USER_NAME" +
+                   " WHERE USER_NAME=@MODIFY_USER_NAME";
+      SqlCommand cmd = new SqlCommand(sql, connection);
+      cmd.Parameters.AddWithValue("@USER_NAME", user.UserName);
+      cmd.Parameters.AddWithValue("@USER_EMAIL", user.UserEmail);
+      cmd.Parameters.AddWithValue("@USER_TYPE", user.UserType);
+      cmd.Parameters.AddWithValue("@IMAGE", user.Image);
+      cmd.Parameters.AddWithValue("@MODIFY_USER_NAME", userToModify.UserName);
+
+      return cmd.ExecuteNonQuery();
     }
 
     public int ChangePassword(User user, User userToModify)

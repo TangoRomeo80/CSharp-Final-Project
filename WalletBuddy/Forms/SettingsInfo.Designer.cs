@@ -29,20 +29,24 @@ namespace WalletBuddy.Forms
     /// </summary>
     private void InitializeComponent()
     {
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsInfo));
       this.panel1 = new System.Windows.Forms.Panel();
+      this.changePasswordButton = new WalletBuddy.CustomControl.RJButton();
+      this.changeInfoButton = new WalletBuddy.CustomControl.RJButton();
       this.emailTextlabel = new System.Windows.Forms.Label();
       this.emailLabel = new System.Windows.Forms.Label();
       this.usernameTextLabel = new System.Windows.Forms.Label();
       this.userNameLabel = new System.Windows.Forms.Label();
       this.HeaderLabel = new System.Windows.Forms.Label();
-      this.changePasswordButton = new WalletBuddy.CustomControl.RJButton();
-      this.changeInfoButton = new WalletBuddy.CustomControl.RJButton();
+      this.profilePictureBox = new System.Windows.Forms.PictureBox();
       this.panel1.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.profilePictureBox)).BeginInit();
       this.SuspendLayout();
       // 
       // panel1
       // 
       this.panel1.BackColor = System.Drawing.Color.White;
+      this.panel1.Controls.Add(this.profilePictureBox);
       this.panel1.Controls.Add(this.changePasswordButton);
       this.panel1.Controls.Add(this.changeInfoButton);
       this.panel1.Controls.Add(this.emailTextlabel);
@@ -54,73 +58,6 @@ namespace WalletBuddy.Forms
       this.panel1.Name = "panel1";
       this.panel1.Size = new System.Drawing.Size(904, 397);
       this.panel1.TabIndex = 0;
-      // 
-      // emailTextlabel
-      // 
-      this.emailTextlabel.AutoSize = true;
-      this.emailTextlabel.BackColor = System.Drawing.Color.White;
-      this.emailTextlabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      this.emailTextlabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.emailTextlabel.ForeColor = System.Drawing.Color.Black;
-      this.emailTextlabel.Location = new System.Drawing.Point(346, 128);
-      this.emailTextlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-      this.emailTextlabel.Name = "emailTextlabel";
-      this.emailTextlabel.Size = new System.Drawing.Size(59, 25);
-      this.emailTextlabel.TabIndex = 6;
-      this.emailTextlabel.Text = "E-mail";
-      // 
-      // emailLabel
-      // 
-      this.emailLabel.AutoSize = true;
-      this.emailLabel.BackColor = System.Drawing.Color.Transparent;
-      this.emailLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.emailLabel.ForeColor = System.Drawing.Color.DimGray;
-      this.emailLabel.Location = new System.Drawing.Point(227, 128);
-      this.emailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-      this.emailLabel.Name = "emailLabel";
-      this.emailLabel.Size = new System.Drawing.Size(57, 23);
-      this.emailLabel.TabIndex = 6;
-      this.emailLabel.Text = "E-mail";
-      // 
-      // usernameTextLabel
-      // 
-      this.usernameTextLabel.AutoSize = true;
-      this.usernameTextLabel.BackColor = System.Drawing.Color.White;
-      this.usernameTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      this.usernameTextLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.usernameTextLabel.ForeColor = System.Drawing.Color.Black;
-      this.usernameTextLabel.Location = new System.Drawing.Point(346, 78);
-      this.usernameTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-      this.usernameTextLabel.Name = "usernameTextLabel";
-      this.usernameTextLabel.Size = new System.Drawing.Size(91, 25);
-      this.usernameTextLabel.TabIndex = 5;
-      this.usernameTextLabel.Text = "Username";
-      // 
-      // userNameLabel
-      // 
-      this.userNameLabel.AutoSize = true;
-      this.userNameLabel.BackColor = System.Drawing.Color.Transparent;
-      this.userNameLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.userNameLabel.ForeColor = System.Drawing.Color.DimGray;
-      this.userNameLabel.Location = new System.Drawing.Point(227, 78);
-      this.userNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-      this.userNameLabel.Name = "userNameLabel";
-      this.userNameLabel.Size = new System.Drawing.Size(89, 23);
-      this.userNameLabel.TabIndex = 5;
-      this.userNameLabel.Text = "Username";
-      // 
-      // HeaderLabel
-      // 
-      this.HeaderLabel.AutoSize = true;
-      this.HeaderLabel.BackColor = System.Drawing.Color.Transparent;
-      this.HeaderLabel.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.HeaderLabel.ForeColor = System.Drawing.Color.DimGray;
-      this.HeaderLabel.Location = new System.Drawing.Point(340, 13);
-      this.HeaderLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-      this.HeaderLabel.Name = "HeaderLabel";
-      this.HeaderLabel.Size = new System.Drawing.Size(209, 33);
-      this.HeaderLabel.TabIndex = 4;
-      this.HeaderLabel.Text = "User Information";
       // 
       // changePasswordButton
       // 
@@ -164,6 +101,83 @@ namespace WalletBuddy.Forms
       this.changeInfoButton.UseVisualStyleBackColor = false;
       this.changeInfoButton.Click += new System.EventHandler(this.changeInfoButton_Click);
       // 
+      // emailTextlabel
+      // 
+      this.emailTextlabel.AutoSize = true;
+      this.emailTextlabel.BackColor = System.Drawing.Color.White;
+      this.emailTextlabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      this.emailTextlabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.emailTextlabel.ForeColor = System.Drawing.Color.Black;
+      this.emailTextlabel.Location = new System.Drawing.Point(553, 130);
+      this.emailTextlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.emailTextlabel.Name = "emailTextlabel";
+      this.emailTextlabel.Size = new System.Drawing.Size(59, 25);
+      this.emailTextlabel.TabIndex = 6;
+      this.emailTextlabel.Text = "E-mail";
+      // 
+      // emailLabel
+      // 
+      this.emailLabel.AutoSize = true;
+      this.emailLabel.BackColor = System.Drawing.Color.Transparent;
+      this.emailLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.emailLabel.ForeColor = System.Drawing.Color.DimGray;
+      this.emailLabel.Location = new System.Drawing.Point(434, 130);
+      this.emailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.emailLabel.Name = "emailLabel";
+      this.emailLabel.Size = new System.Drawing.Size(57, 23);
+      this.emailLabel.TabIndex = 6;
+      this.emailLabel.Text = "E-mail";
+      // 
+      // usernameTextLabel
+      // 
+      this.usernameTextLabel.AutoSize = true;
+      this.usernameTextLabel.BackColor = System.Drawing.Color.White;
+      this.usernameTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      this.usernameTextLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.usernameTextLabel.ForeColor = System.Drawing.Color.Black;
+      this.usernameTextLabel.Location = new System.Drawing.Point(553, 80);
+      this.usernameTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.usernameTextLabel.Name = "usernameTextLabel";
+      this.usernameTextLabel.Size = new System.Drawing.Size(91, 25);
+      this.usernameTextLabel.TabIndex = 5;
+      this.usernameTextLabel.Text = "Username";
+      // 
+      // userNameLabel
+      // 
+      this.userNameLabel.AutoSize = true;
+      this.userNameLabel.BackColor = System.Drawing.Color.Transparent;
+      this.userNameLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.userNameLabel.ForeColor = System.Drawing.Color.DimGray;
+      this.userNameLabel.Location = new System.Drawing.Point(434, 80);
+      this.userNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.userNameLabel.Name = "userNameLabel";
+      this.userNameLabel.Size = new System.Drawing.Size(89, 23);
+      this.userNameLabel.TabIndex = 5;
+      this.userNameLabel.Text = "Username";
+      // 
+      // HeaderLabel
+      // 
+      this.HeaderLabel.AutoSize = true;
+      this.HeaderLabel.BackColor = System.Drawing.Color.Transparent;
+      this.HeaderLabel.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.HeaderLabel.ForeColor = System.Drawing.Color.DimGray;
+      this.HeaderLabel.Location = new System.Drawing.Point(340, 13);
+      this.HeaderLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.HeaderLabel.Name = "HeaderLabel";
+      this.HeaderLabel.Size = new System.Drawing.Size(209, 33);
+      this.HeaderLabel.TabIndex = 4;
+      this.HeaderLabel.Text = "User Information";
+      // 
+      // profilePictureBox
+      // 
+      this.profilePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("profilePictureBox.Image")));
+      this.profilePictureBox.Location = new System.Drawing.Point(254, 63);
+      this.profilePictureBox.Name = "profilePictureBox";
+      this.profilePictureBox.Size = new System.Drawing.Size(150, 145);
+      this.profilePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+      this.profilePictureBox.TabIndex = 8;
+      this.profilePictureBox.TabStop = false;
+      // 
       // SettingsInfo
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,6 +189,7 @@ namespace WalletBuddy.Forms
       this.Text = "Settings And Informations";
       this.panel1.ResumeLayout(false);
       this.panel1.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.profilePictureBox)).EndInit();
       this.ResumeLayout(false);
 
     }
@@ -189,5 +204,6 @@ namespace WalletBuddy.Forms
     private System.Windows.Forms.Label usernameTextLabel;
     private CustomControl.RJButton changePasswordButton;
     private CustomControl.RJButton changeInfoButton;
+    private System.Windows.Forms.PictureBox profilePictureBox;
   }
 }

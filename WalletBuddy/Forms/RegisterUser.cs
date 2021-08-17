@@ -2,6 +2,9 @@
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using WalletBuddy.Executor;
+using WalletBuddy.Model;
+using System.Drawing;
+using System.IO;
 
 namespace WalletBuddy.Forms
 {
@@ -64,7 +67,15 @@ namespace WalletBuddy.Forms
         }
         else
         {
-          int success = userServices.AddUser(userNameTextBox.Texts, emailTextBox.Texts, passwordTextBox.Texts, "User");
+          User user = new User()
+          {
+            UserName = userNameTextBox.Texts,
+            UserEmail = emailTextBox.Texts,
+            UserPassword = passwordTextBox.Texts,
+            UserType = "User",
+            Image = userServices.ConvertToByte(profilePictureBox.Image)
+          };
+          int success = userServices.AddUser(user);
           if(success > 0)
           {
             userNameTextBox.Texts = "";
@@ -79,6 +90,17 @@ namespace WalletBuddy.Forms
           }
         }
 
+      }
+    }
+
+    private void uploadButton_Click(object sender, EventArgs e)
+    {
+      OpenFileDialog ofd = new OpenFileDialog();
+      ofd.Title = "Select Image";
+      ofd.Filter = "All Files *.*|*.*";
+      if(ofd.ShowDialog() == DialogResult.OK)
+      {
+        profilePictureBox.Image = new Bitmap(ofd.FileName);
       }
     }
   }

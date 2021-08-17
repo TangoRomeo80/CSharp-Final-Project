@@ -144,7 +144,7 @@ namespace WalletBuddy.Forms
       this.userPicBox.Margin = new System.Windows.Forms.Padding(2);
       this.userPicBox.Name = "userPicBox";
       this.userPicBox.Size = new System.Drawing.Size(30, 30);
-      this.userPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+      this.userPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
       this.userPicBox.TabIndex = 3;
       this.userPicBox.TabStop = false;
       // 

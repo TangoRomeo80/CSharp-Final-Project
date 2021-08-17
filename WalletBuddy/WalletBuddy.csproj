@@ -364,6 +364,7 @@
     <Content Include="Resources\Add Icon Income.png" />
     <Content Include="Resources\Balance Overview Icon.png" />
     <Content Include="Resources\Dash Icon.png" />
+    <Content Include="Resources\Default User.png" />
     <Content Include="Resources\Due Icon.png" />
     <Content Include="Resources\Edit icon.png" />
     <Content Include="Resources\Expense icon.png" />

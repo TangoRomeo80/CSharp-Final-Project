@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using WalletBuddy.DB;
 using WalletBuddy.Model;
+using System.Drawing;
+using System.IO;
 
 namespace WalletBuddy.Executor
 {
@@ -22,12 +24,21 @@ namespace WalletBuddy.Executor
       return userDataAccess.GetAllUserList();
     }
 
-    public int AddUser(string userName, string userEmail, string userPassword, string userType)
+    public Image GetProfilePicture(User user)
     {
-      User user = new User(0, userName, userEmail, userPassword, userType);
+      return userDataAccess.GetProfilePicture(user);
+    }
+
+    public int AddUser(User user)
+    {
+      return userDataAccess.AddUser(user);
+    }
+
+    /*public int AddUser(User user)
+    {
       this.userDataAccess = new UserDataAccess();
       return this.userDataAccess.AddUser(user);
-    }
+    }*/
 
     public int RemoveUser(User user)
     {
@@ -77,6 +88,13 @@ namespace WalletBuddy.Executor
     public int ChangePassword(User user, User userToModify)
     {
       return userDataAccess.ChangePassword(user, userToModify);
+    }
+
+    public byte[] ConvertToByte(Image image)
+    {
+      MemoryStream ms = new MemoryStream();
+      image.Save(ms, image.RawFormat);
+      return ms.GetBuffer();
     }
 
   }

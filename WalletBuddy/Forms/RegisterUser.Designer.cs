@@ -371,7 +371,7 @@ namespace WalletBuddy.Forms
       this.uploadButton.Text = "Upload";
       this.uploadButton.TextColor = System.Drawing.Color.White;
       this.uploadButton.UseVisualStyleBackColor = false;
-      this.uploadButton.Click += new System.EventHandler(this.signUpButton_Click);
+      this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
       // 
       // RegisterUser
       // 

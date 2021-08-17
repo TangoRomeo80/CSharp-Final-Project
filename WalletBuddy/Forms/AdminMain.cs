@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using WalletBuddy.Model;
+using WalletBuddy.Executor;
 
 namespace WalletBuddy.Forms
 {
@@ -93,7 +94,9 @@ namespace WalletBuddy.Forms
 
     private void Init_Load(object sender, System.EventArgs e)
     {
+      UserServices userServices = new UserServices();
       this.topAdminLabel.Text = this.user.UserName;
+      this.userPicBox.Image = userServices.GetProfilePicture(this.user);
       AdminUserList childForm = new AdminUserList(this.user);
       if (activeForm != null)
         activeForm.Close();

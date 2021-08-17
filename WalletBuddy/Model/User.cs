@@ -14,6 +14,7 @@ namespace WalletBuddy.Model
     public string UserEmail { set; get; }
     public string UserPassword { set; get; }
     public string UserType { set; get; }
+    public byte[] Image { set; get; }
 
     //default constructor
     public User()

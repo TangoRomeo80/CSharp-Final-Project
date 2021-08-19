@@ -73,7 +73,8 @@ namespace WalletBuddy.Forms
         {
           UserName = userNameTextBox.Texts,
           UserEmail = emailTextBox.Texts,
-          UserType = userTypeTextBox.Texts
+          UserType = userTypeTextBox.Texts,
+          Image = userServices.ConvertToByte(userServices.GetProfilePicture(oldUser))
         };
         int success = userServices.ChangeInfo(newUser, oldUser);
         if(success > 0)

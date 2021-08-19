@@ -52,6 +52,9 @@ namespace WalletBuddy.Forms
       this.label9 = new System.Windows.Forms.Label();
       this.label10 = new System.Windows.Forms.Label();
       this.pictureBox5 = new System.Windows.Forms.PictureBox();
+      this.label11 = new System.Windows.Forms.Label();
+      this.label12 = new System.Windows.Forms.Label();
+      this.label13 = new System.Windows.Forms.Label();
       this.headerPanel.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -138,7 +141,7 @@ namespace WalletBuddy.Forms
       this.backToWelcomeLabel.Cursor = System.Windows.Forms.Cursors.Hand;
       this.backToWelcomeLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.backToWelcomeLabel.ForeColor = System.Drawing.Color.CornflowerBlue;
-      this.backToWelcomeLabel.Location = new System.Drawing.Point(394, 519);
+      this.backToWelcomeLabel.Location = new System.Drawing.Point(393, 543);
       this.backToWelcomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.backToWelcomeLabel.Name = "backToWelcomeLabel";
       this.backToWelcomeLabel.Size = new System.Drawing.Size(157, 19);
@@ -151,8 +154,8 @@ namespace WalletBuddy.Forms
       this.supervisorLabel.AutoSize = true;
       this.supervisorLabel.BackColor = System.Drawing.Color.Transparent;
       this.supervisorLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.supervisorLabel.ForeColor = System.Drawing.Color.DimGray;
-      this.supervisorLabel.Location = new System.Drawing.Point(419, 91);
+      this.supervisorLabel.ForeColor = System.Drawing.Color.Black;
+      this.supervisorLabel.Location = new System.Drawing.Point(421, 78);
       this.supervisorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.supervisorLabel.Name = "supervisorLabel";
       this.supervisorLabel.Size = new System.Drawing.Size(98, 19);
@@ -162,7 +165,7 @@ namespace WalletBuddy.Forms
       // pictureBox2
       // 
       this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-      this.pictureBox2.Location = new System.Drawing.Point(419, 113);
+      this.pictureBox2.Location = new System.Drawing.Point(421, 100);
       this.pictureBox2.Name = "pictureBox2";
       this.pictureBox2.Size = new System.Drawing.Size(100, 101);
       this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -174,13 +177,13 @@ namespace WalletBuddy.Forms
       this.label2.AutoSize = true;
       this.label2.BackColor = System.Drawing.Color.Transparent;
       this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label2.ForeColor = System.Drawing.Color.DimGray;
-      this.label2.Location = new System.Drawing.Point(394, 217);
+      this.label2.ForeColor = System.Drawing.Color.Black;
+      this.label2.Location = new System.Drawing.Point(391, 204);
       this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(142, 19);
+      this.label2.Size = new System.Drawing.Size(159, 19);
       this.label2.TabIndex = 3;
-      this.label2.Text = "Md. Nazmul Hossain";
+      this.label2.Text = "MD. NAZMUL HOSSAIN";
       // 
       // label3
       // 
@@ -188,12 +191,12 @@ namespace WalletBuddy.Forms
       this.label3.BackColor = System.Drawing.Color.Transparent;
       this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.label3.ForeColor = System.Drawing.Color.DimGray;
-      this.label3.Location = new System.Drawing.Point(426, 236);
+      this.label3.Location = new System.Drawing.Point(442, 223);
       this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(85, 19);
+      this.label3.Size = new System.Drawing.Size(62, 19);
       this.label3.TabIndex = 3;
-      this.label3.Text = "Lecturer, CS";
+      this.label3.Text = "Lecturer";
       // 
       // label6
       // 
@@ -201,7 +204,7 @@ namespace WalletBuddy.Forms
       this.label6.BackColor = System.Drawing.Color.Transparent;
       this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.label6.ForeColor = System.Drawing.Color.DimGray;
-      this.label6.Location = new System.Drawing.Point(93, 447);
+      this.label6.Location = new System.Drawing.Point(93, 505);
       this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.label6.Name = "label6";
       this.label6.Size = new System.Drawing.Size(236, 19);
@@ -213,18 +216,18 @@ namespace WalletBuddy.Forms
       this.label5.AutoSize = true;
       this.label5.BackColor = System.Drawing.Color.Transparent;
       this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label5.ForeColor = System.Drawing.Color.DimGray;
-      this.label5.Location = new System.Drawing.Point(146, 428);
+      this.label5.ForeColor = System.Drawing.Color.Black;
+      this.label5.Location = new System.Drawing.Point(141, 486);
       this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.label5.Name = "label5";
-      this.label5.Size = new System.Drawing.Size(109, 19);
+      this.label5.Size = new System.Drawing.Size(124, 19);
       this.label5.TabIndex = 3;
-      this.label5.Text = "Tanjila Rahman";
+      this.label5.Text = "TANJILA RAHMAN";
       // 
       // pictureBox3
       // 
       this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-      this.pictureBox3.Location = new System.Drawing.Point(154, 324);
+      this.pictureBox3.Location = new System.Drawing.Point(154, 382);
       this.pictureBox3.Name = "pictureBox3";
       this.pictureBox3.Size = new System.Drawing.Size(96, 101);
       this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -237,7 +240,7 @@ namespace WalletBuddy.Forms
       this.label4.BackColor = System.Drawing.Color.Transparent;
       this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.label4.ForeColor = System.Drawing.Color.DimGray;
-      this.label4.Location = new System.Drawing.Point(402, 255);
+      this.label4.Location = new System.Drawing.Point(408, 280);
       this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.label4.Name = "label4";
       this.label4.Size = new System.Drawing.Size(125, 19);
@@ -249,13 +252,13 @@ namespace WalletBuddy.Forms
       this.label7.AutoSize = true;
       this.label7.BackColor = System.Drawing.Color.Transparent;
       this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label7.ForeColor = System.Drawing.Color.DimGray;
-      this.label7.Location = new System.Drawing.Point(388, 428);
+      this.label7.ForeColor = System.Drawing.Color.Black;
+      this.label7.Location = new System.Drawing.Point(387, 486);
       this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.label7.Name = "label7";
-      this.label7.Size = new System.Drawing.Size(162, 19);
+      this.label7.Size = new System.Drawing.Size(182, 19);
       this.label7.TabIndex = 3;
-      this.label7.Text = "Mahmudul Hassan Anik";
+      this.label7.Text = "MAHMUDUL HASSAN ANIK";
       // 
       // label8
       // 
@@ -263,7 +266,7 @@ namespace WalletBuddy.Forms
       this.label8.BackColor = System.Drawing.Color.Transparent;
       this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.label8.ForeColor = System.Drawing.Color.DimGray;
-      this.label8.Location = new System.Drawing.Point(362, 447);
+      this.label8.Location = new System.Drawing.Point(368, 505);
       this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.label8.Name = "label8";
       this.label8.Size = new System.Drawing.Size(217, 19);
@@ -273,7 +276,7 @@ namespace WalletBuddy.Forms
       // pictureBox4
       // 
       this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-      this.pictureBox4.Location = new System.Drawing.Point(419, 324);
+      this.pictureBox4.Location = new System.Drawing.Point(425, 382);
       this.pictureBox4.Name = "pictureBox4";
       this.pictureBox4.Size = new System.Drawing.Size(100, 101);
       this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -285,13 +288,13 @@ namespace WalletBuddy.Forms
       this.label9.AutoSize = true;
       this.label9.BackColor = System.Drawing.Color.Transparent;
       this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label9.ForeColor = System.Drawing.Color.DimGray;
-      this.label9.Location = new System.Drawing.Point(659, 428);
+      this.label9.ForeColor = System.Drawing.Color.Black;
+      this.label9.Location = new System.Drawing.Point(652, 486);
       this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.label9.Name = "label9";
-      this.label9.Size = new System.Drawing.Size(133, 19);
+      this.label9.Size = new System.Drawing.Size(147, 19);
       this.label9.TabIndex = 3;
-      this.label9.Text = "Md Tanzeem Rahat";
+      this.label9.Text = "MD TANZEEM RAHAT";
       // 
       // label10
       // 
@@ -299,7 +302,7 @@ namespace WalletBuddy.Forms
       this.label10.BackColor = System.Drawing.Color.Transparent;
       this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.label10.ForeColor = System.Drawing.Color.DimGray;
-      this.label10.Location = new System.Drawing.Point(627, 447);
+      this.label10.Location = new System.Drawing.Point(627, 505);
       this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
       this.label10.Name = "label10";
       this.label10.Size = new System.Drawing.Size(195, 19);
@@ -309,19 +312,60 @@ namespace WalletBuddy.Forms
       // pictureBox5
       // 
       this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-      this.pictureBox5.Location = new System.Drawing.Point(679, 324);
+      this.pictureBox5.Location = new System.Drawing.Point(679, 382);
       this.pictureBox5.Name = "pictureBox5";
       this.pictureBox5.Size = new System.Drawing.Size(96, 101);
       this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
       this.pictureBox5.TabIndex = 10;
       this.pictureBox5.TabStop = false;
       // 
+      // label11
+      // 
+      this.label11.AutoSize = true;
+      this.label11.BackColor = System.Drawing.Color.Transparent;
+      this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.label11.ForeColor = System.Drawing.Color.DimGray;
+      this.label11.Location = new System.Drawing.Point(351, 242);
+      this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.label11.Name = "label11";
+      this.label11.Size = new System.Drawing.Size(230, 19);
+      this.label11.TabIndex = 11;
+      this.label11.Text = "Faculty of Science and Technology";
+      // 
+      // label12
+      // 
+      this.label12.AutoSize = true;
+      this.label12.BackColor = System.Drawing.Color.Transparent;
+      this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.label12.ForeColor = System.Drawing.Color.DimGray;
+      this.label12.Location = new System.Drawing.Point(312, 261);
+      this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.label12.Name = "label12";
+      this.label12.Size = new System.Drawing.Size(307, 19);
+      this.label12.TabIndex = 11;
+      this.label12.Text = "American International University-Bangladesh";
+      // 
+      // label13
+      // 
+      this.label13.AutoSize = true;
+      this.label13.BackColor = System.Drawing.Color.Transparent;
+      this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.label13.ForeColor = System.Drawing.Color.Black;
+      this.label13.Location = new System.Drawing.Point(417, 332);
+      this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+      this.label13.Name = "label13";
+      this.label13.Size = new System.Drawing.Size(112, 19);
+      this.label13.TabIndex = 3;
+      this.label13.Text = "Developer team";
+      // 
       // AboutUs
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.White;
-      this.ClientSize = new System.Drawing.Size(927, 566);
+      this.ClientSize = new System.Drawing.Size(927, 580);
+      this.Controls.Add(this.label12);
+      this.Controls.Add(this.label11);
       this.Controls.Add(this.pictureBox4);
       this.Controls.Add(this.pictureBox5);
       this.Controls.Add(this.pictureBox3);
@@ -336,6 +380,7 @@ namespace WalletBuddy.Forms
       this.Controls.Add(this.label4);
       this.Controls.Add(this.label3);
       this.Controls.Add(this.label2);
+      this.Controls.Add(this.label13);
       this.Controls.Add(this.supervisorLabel);
       this.Controls.Add(this.infoLabel);
       this.Controls.Add(this.headerPanel);
@@ -381,5 +426,8 @@ namespace WalletBuddy.Forms
     private System.Windows.Forms.Label label9;
     private System.Windows.Forms.Label label10;
     private System.Windows.Forms.PictureBox pictureBox5;
+    private System.Windows.Forms.Label label11;
+    private System.Windows.Forms.Label label12;
+    private System.Windows.Forms.Label label13;
   }
 }

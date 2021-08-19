@@ -21,5 +21,6 @@ namespace WalletBuddy.Forms
       welcome.Show();
       this.Hide();
     }
+
   }
 }

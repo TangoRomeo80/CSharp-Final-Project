@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="WalletBuddy.exe" version="1.0.0.1" publicKeyToken="337ec87e05a16dbf" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="WalletBuddy" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="WalletBuddy.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ComponentFactory.Krypton.Docking.dll" size="338432">
+      <assemblyIdentity name="ComponentFactory.Krypton.Docking" version="4.6.0.0" publicKeyToken="A87E673E9ECB6E8E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>DAH7JSJRMeW0kP/HSKMEYilIT0+jgZ3LbaVf+pdbgw4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ComponentFactory.Krypton.Navigator.dll" size="547840">
+      <assemblyIdentity name="ComponentFactory.Krypton.Navigator" version="4.6.0.0" publicKeyToken="A87E673E9ECB6E8E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>+kklBYXX0fRNFohXH53wIOVbkmY9npRVfuHyKOvygLc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ComponentFactory.Krypton.Ribbon.dll" size="1209856">
+      <assemblyIdentity name="ComponentFactory.Krypton.Ribbon" version="4.6.0.0" publicKeyToken="A87E673E9ECB6E8E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>FX0b61gxdxkB8toPSKDqM8FChzCIBkmxem1mWrKgvdc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ComponentFactory.Krypton.Toolkit.dll" size="2965504">
+      <assemblyIdentity name="ComponentFactory.Krypton.Toolkit" version="4.6.0.0" publicKeyToken="A87E673E9ECB6E8E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>jGn13xELwaYb3D2HVOv9P0nZ2ZW53RKazK+INxznHjA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ComponentFactory.Krypton.Workspace.dll" size="288768">
+      <assemblyIdentity name="ComponentFactory.Krypton.Workspace" version="4.6.0.0" publicKeyToken="A87E673E9ECB6E8E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>aZWqrV3O0GWeLdix48Y6Rs18hnVE8n3jF3JSyk2fptw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WalletBuddy.exe" size="1881552">
+      <assemblyIdentity name="WalletBuddy" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>2x5mpbaXFmb++tn0pwMrogSmDPmooaN4bfK9PPQkbog=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Resources\Accounts icon.png" size="469">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sxmlAafAQsESWhobFPn3HgQgU1LNYZbj+txKZAn6+CM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Add Icon Account.png" size="405">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TUhzZWgFRjxelinRlX24E32FtE1UthQUmp8u0sy6GkQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Add Icon Expense.png" size="658">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GkofYNTgrnJzGdaocRg7+figMBVBUd5Aa64iZ2LIcAE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Add Icon Goals.png" size="649">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+pYBq2Ajj+7M0R82XsLT4oUeYmcopOWKlsb4QBKdLsA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Add Icon Income.png" size="638">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8hvc3vHbGREZhbPTOnlYIfqcQvT5hnWrE6JETZUAo7A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Balance Overview Icon.png" size="1057">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>W6dJvAGyI/KgrH+/sqyxn52oSNfmqC1khIYs6VGTKjQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Dash Icon.png" size="1718">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>elVXu5hSElfEdKryZIcX4ULQh05u5fNbd5gFAckIUak=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Default User.png" size="56750">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JhcUPrXzWhWkDQ0pBd/0oU0BLLPm9kqdMH+jYIEplt4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Due Icon.png" size="401">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OxjUc1J7m7xNfTlB1HMb1caC3FukYYpGAjLPJ80swUQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Edit icon.png" size="425">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>uCGVyD2IZB2SJxLwS0ZAuDSUjLT8eAoxJxX6PPYEmK4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Expense icon.png" size="606">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5AyBPY06v/aZReu18xQigNdAM4d/lJOZ+9rTlXZN0s0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Expense Overview Icon.png" size="833">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>yf7apw8U0dakREwHTuafbVk0w+SiXX6zG7AgNn/2UzE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Goals Icon.png" size="699">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>LfYO2maaH/KVCy3aneLZ4E0zG4TdpLjS+4pyQICs03c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Income icon.png" size="929">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QHnVlLPTRSE/NQCo839GhK8IODCK2GZAKr/kc/Nti4k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Income Overview Icon.png" size="523">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Jb31Y5qr3SDQfwUHvZGD2etBqn+pQxm7fV3hLBpFNY4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Log Out Icon.png" size="245">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vDcIlDTILdndXMwHD3tRzy1CeuOJoHmD/Z9tTAA7KEo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Main Logo.ico" size="22349">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8w7iQ1wi0T8MggU3XdWY7Kl7pg3EG8Wc09XlpIuvhDU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Main Logo.png" size="5823">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tSZzMI/CB8u8WM8Z1VtE0DcmOtiuTOwX9juOQ1x92PQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Print Icon.png" size="249">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>gRdN+rBJt/JssY9yQfudPvfIN2WS5UrvL4K/YZ8nQhw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Remove Icon Account.png" size="393">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UUC96eFHsKCWGMYefShRbwNQZOlo5pgitURgoD6xIOw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Reports icon.png" size="521">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>pzkWIZ01JW7prsqbgYHa6tV3R/uNx9iVz1VdVGBQkbI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Search icon.png" size="823">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4Ed2vizBfDAtuheswSRpl25tMH+0RaV51cXo7ZAtiq8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Setting Icon.png" size="1252">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>IcbApxyfSRUUhDQkTYhCLSwukrH7KZIrQIZI5MHpZR0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Splash.png" size="23789">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>EebodSOZ8dykhqte13CyUFCbHFLEbOpHtLLvLk4WyyI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Support Icon.png" size="616">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>c33vmgMvfwhor+isGYThNhdlDzg9HJkAqoZ6eWvRpao=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Tick icon.png" size="203">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NRoYnpUkUSu5u6miTHetWwrNhSuvlp4gXHo9suLGcYg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Transfer icon.png" size="481">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+4Q9K1oa0H/0H4sc3d9AlDiA+zVjpk2EjG/Uh5t9Z04=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\User icon.png" size="391">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BDsBLCopNeomrPcV4y/WN9SDegep1NnYxhryb5/hFl8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\User List Icon.png" size="593">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QUEcsX1Bdqf4/Q7aZ6nZzdgfjLs17aNoiY3gBaS/Yeg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="WalletBuddy.exe.config" size="776">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Tlu+SEHhVkr8QKKT35LEmoymjoWGmIubO/edz/kRD/A=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=LAPTOP-IVRH936A\HP" issuerKeyHash="1c00d94f711139775d9bf7fe7d1828dddde20ad6" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>5+8U+X1XpDOhs41imkB5+UbB/5oDTv8MqekVD9I9ufc=</DigestValue></Reference></SignedInfo><SignatureValue>AQjjs6YCS6R1BBwOk0wRvSZQHuwaW6YOJcNqzY698XNoUAUKHWV6TW+dfPVpWtY+LothAI3otKJOLgx64HDDHVfndhDZYuhWBdfaDZ5ZuD9UOqyaYyrqo3n06vXY8FE97fboqId7x6GrviDyCDhzydBoaq5bfzyVb6eRnCIQ3ME=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>xntXbjLQx4+3JAYxbAnTP5LKYc4wUrhQPpBStpASqUw3yJXPkQVUgZR2nK2qriQts7XSa3NrSbk9YJ6o17wYMVqPoDcjXGtK0OYH0YDP3VADFwrYTWSqkzbglXCCx3Ow1XRyTs6HVFD3muuGAKCgsIQQW1VJg27Cf3ZXR3cyw20=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="f7b93dd20f15e9a90cff4e039affc146f979409a628db3a133a4577df914efe7" Description="" Url=""><as:assemblyIdentity name="WalletBuddy.exe" version="1.0.0.1" publicKeyToken="337ec87e05a16dbf" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LAPTOP-IVRH936A\HP</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>rdP6ia0H17/udyZDzqJJD/L6hPlNXnmVSdehYbIP3ec=</DigestValue></Reference></SignedInfo><SignatureValue>jeuPEnYc+fXdC9OLYHC2MYaKoCigQU1MUF23bGFCsbCNMRENtmdqDhF84LmKodmIK97k/CsQ7M4AKwLhBhxqyDnIBg99GCJ4FtyXZgJXOqPOv73U0NI51z5ZSZ9+h51iOjurg08JiLcXniQZK3ikyLEFd7u0pLtKJZoYO+/h0G0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xntXbjLQx4+3JAYxbAnTP5LKYc4wUrhQPpBStpASqUw3yJXPkQVUgZR2nK2qriQts7XSa3NrSbk9YJ6o17wYMVqPoDcjXGtK0OYH0YDP3VADFwrYTWSqkzbglXCCx3Ow1XRyTs6HVFD3muuGAKCgsIQQW1VJg27Cf3ZXR3cyw20=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQcAc4fe63kJRIiQmIMXt7DTANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDHiQATABBAFAAVABPAFAALQBJAFYAUgBIADkAMwA2AEEAXABIAFAwHhcNMjEwODE5MDUzMDA5WhcNMjIwODE5MTEzMDA5WjAvMS0wKwYDVQQDHiQATABBAFAAVABPAFAALQBJAFYAUgBIADkAMwA2AEEAXABIAFAwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMZ7V24y0MePtyQGMWwJ0z+SymHOMFK4UD6QUraQEqlMN8iVz5EFVIGUdpytqq4kLbO10mtza0m5PWCeqNe8GDFaj6A3I1xrStDmB9GAz91QAxcK2E1kqpM24JVwgsdzsNV0ck7Oh1RQ95rrhgCgoLCEEFtVSYNuwn92V0d3MsNtAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAsAraGhzXEKVT3xVVeCt63HJboB/wISD2qXp/6ssWu0zhisA64m02iyfTEWFhdOa5DVjCbMjrG34TDpfaSuOfTUAbPzIU1u4WBWRQHhrBl7brJoabf6//hWVm7pBcmFwChNDiB4OQ+ElJ7IiBnCviDwBUqa3LYJN+C6Cd8Kpdu9s=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
